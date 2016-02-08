@@ -1,7 +1,8 @@
 \documentclass{article}
 \usepackage{graphicx}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=1in]{geometry}
 \usepackage{dingbat}
+\usepackage{placeins}
 
 \graphicspath{ {Images/} }
 
@@ -17,7 +18,7 @@
 }
 
 
-\title{Summary of  “A Practical Attack to De-Anonymize Social Network Users “}
+\title{Summary of  "A Practical Attack to De-Anonymize Social Network Users"}
 \author{Saranya Radhakrishnan}
 \date{02/08/2015}
 
@@ -60,6 +61,7 @@ The authors applied a  two-phase crawling method , In the first pass .they  gene
 
 After a studying other social networking sites, the authors tabulated their findings as shown below
 
+\FloatBarrier
 \begin{table}[h!]
 \centering
 \begin{center}
@@ -85,6 +87,8 @@ Vulnerable &  \checkmark & \checkmark & \checkmark & \checkmark  \\
 \label{table:1}
 \end{center}
 \end{table}
+
+
 
 
 Further the authors proposed mitigation techniques to counter the attacks as stated below
