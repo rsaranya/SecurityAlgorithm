@@ -1,3 +1,5 @@
+package driver;
+
 /**
  * @author Saranya
  * @CWID 20062589
@@ -83,13 +85,11 @@ public class AesCipher {
     //Used to hold the W Matrix, which contains the user entered 
     //and the computed columns 
     private String[][] larWMatrix = new String[4][44];
-    
+
     /**
-     * Constructor to the Key generation class 
-     * It accepts a hex key as its input
-     * 
-     * @param pstrInputKey 
-     *        : Contains hex key from the user 
+     * Constructor to the Key generation class It accepts a hex key as its input
+     *
+     * @param pstrInputKey : Contains hex key from the user
      */
     public AesCipher(String pstrInputKey) {
         lstrInputKey = pstrInputKey;
@@ -158,11 +158,7 @@ public class AesCipher {
                         int wRowValue = col == 3 ? 0 : col + 1;
                         String[] larSplitHexValue
                                 = larWMatrix[wRowValue][colCount - 1].split("");
-                        int sRowValue
-                                = Integer.parseInt(larSplitHexValue[0], 16);
-                        int sColValue
-                                = Integer.parseInt(larSplitHexValue[1], 16);
-                        larWnew[0][col] = S_BOX[sRowValue][sColValue];
+                        larWnew[0][col] = aesSBox(larSplitHexValue);
                     }
 
                     // Step 3b.(iv) Get the Round value, Rcon(j/4),from the Table
@@ -171,8 +167,8 @@ public class AesCipher {
                     // = [(Rcon(j) XOR S(W[1][j-1])) S(W[2][j-1]) S(W[3][j-1]) S(W[0][j-1])]
                     // The row element in larRoundTable[row][col] is calculated 
                     // as (colCount/4)/16 = (colCount / 64)
-                    String lstrRconValue
-                            = ROUND_KEY_TABLE[(int) Math.floor(colCount / 64)][colCount / 4];
+                    String lstrRconValue = aesRcon((int) Math.floor(colCount / 64),colCount / 4 );
+                    
                     larWnew[0][0] = computeXOR(lstrRconValue, larWnew[0][0]);
 
                     // Step 3b. (vi) :  W(j) = W(j - 4) ^ W_new 
@@ -229,8 +225,8 @@ public class AesCipher {
             // Convert the integer to its equivalent Hex 
             // and return in string format
             String lstrXorResult = Integer.toHexString(lintXorResult);
-            return lstrXorResult.length() == 1?
-                    ("0" + lstrXorResult) : lstrXorResult;
+            return lstrXorResult.length() == 1
+                    ? ("0" + lstrXorResult) : lstrXorResult;
         } catch (Exception ex) {
             System.out.println("Exception in computeXOR is : " + ex);
             return "";
@@ -257,6 +253,51 @@ public class AesCipher {
             } while (counter != 0);
         } catch (Exception ex) {
             System.out.println("Exception in printRoundKeys is : " + ex);
+        }
+    }
+
+    /**
+     * Fetches the hex value from the S-Box 
+     * and Returns it in string format
+     * 
+     * @param larSplitHexValue 
+     *        : Contains the hex value in string format which is used to retrieve
+     *          the equivalent value from the S-Box
+     * @return : string value retrieved from the S-Box
+     */
+    private String aesSBox(String[] larSplitHexValue) {
+        try {
+
+            int sRowValue
+                    = Integer.parseInt(larSplitHexValue[0], 16);
+            int sColValue
+                    = Integer.parseInt(larSplitHexValue[1], 16);
+            return S_BOX[sRowValue][sColValue];
+
+        } catch (Exception ex) {
+            System.out.println("Exception in aesSBox is : " + ex);
+            return "";
+        }
+    }
+
+    /**
+     * Returns a value from the Round-Key Table  
+     * using the specified row and column values
+     * 
+     * @param pintRow 
+     *        : Contains the row number from which the value is to be fetched
+     *          from the Round key table.
+     * @param pintCol
+     *        : Contains the column number from which the value is to be fetched
+     *          from the Round key table.
+     * @return : The retrieved value from the round table. 
+     */
+    private String aesRcon(int pintRow, int pintCol) {
+        try{
+            return ROUND_KEY_TABLE[pintRow][pintCol];
+        } catch (Exception ex) {
+            System.out.println("Exception in aesRcon is : " + ex);
+            return "";
         }
     }
 }
