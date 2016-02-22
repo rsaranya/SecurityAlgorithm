@@ -1,4 +1,8 @@
-
+/**
+ * @author Saranya
+ * @CWID 20062589
+ * @Program Generates 10 round keys for AES algorithm based on an input key
+ */
 public class AesCipher {
 
     private String lstrInputKey = "";
@@ -80,6 +84,13 @@ public class AesCipher {
     //and the computed columns 
     private String[][] larWMatrix = new String[4][44];
     
+    /**
+     * Constructor to the Key generation class 
+     * It accepts a hex key as its input
+     * 
+     * @param pstrInputKey 
+     *        : Contains hex key from the user 
+     */
     public AesCipher(String pstrInputKey) {
         lstrInputKey = pstrInputKey;
     }
@@ -89,7 +100,14 @@ public class AesCipher {
      */
     public final void aesRoundKeys() {
         try {
-           
+            //Step 1: Generate a Matrix of the user entered key.
+            generateKeyMatrix();
+
+            //Step 2: Generate the W matrix containing the key generated.
+            generateWMatrix();
+
+            //Step 3: Print first 10 round keys generated.
+            printRoundKeys();
         } catch (Exception ex) {
             System.out.println("Exception in aesRoundKeys is : " + ex);
         }
