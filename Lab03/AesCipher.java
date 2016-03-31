@@ -1,14 +1,11 @@
-package driver;
-
-
 /**
  * @author Saranya
  * @CWID 20062589
- * @Program Generates 10 round keys for AES algorithm based on an input key
+ * @Program Generates 10 round keys for AES algorithm based on an input key.
+ * Used the input key and input plain text to generate cipher text
  */
 public class AesCipher {
 
-  // private String lstrInputKey = "";
   //S-Box array
   private static final String[][] S_BOX = {
     {"63", "7C", "77", "7B", "F2", "6B", "6F", "C5", "30", "01", "67", "2B",
@@ -85,7 +82,7 @@ public class AesCipher {
   //Used to hold the entered Data in the form of an Array
   private final String[][] larInputData = new String[4][4];
 
-//The fixed matrix used for column mixing
+  //The fixed matrix used for column mixing
   static String[][] GaloisMatrix = {
     {"02", "03", "01", "01"},
     {"01", "02", "03", "01"},
@@ -100,8 +97,8 @@ public class AesCipher {
   /**
    * Makes the function calls to generate the round keys and print them
    *
-   * @param pstrInputText
-   * @param pstrInputKey
+   * @param pstrInputText : Contains the plain text from the input file.
+   * @param pstrInputKey : Contains the input key from the input file.
    */
   public final void aesRoundKeys(String pstrInputText, String pstrInputKey) {
     try {
@@ -193,6 +190,8 @@ public class AesCipher {
 
   /**
    * Creates a 4 * 4 Matrix from the given input key
+   *
+   * @param pstrInputKey : Input key from the input file.
    */
   private void generateKeyMatrix(String pstrInputKey) {
     try {
@@ -301,10 +300,11 @@ public class AesCipher {
     }
   }
 
-  /* This function xors two 4*4 matrices and outputs the result
-   * @param sHex is the first input matrix
-   * @param keyHex is the second input matrix
-   * @return outStateHex is the xored result
+  /* XOR's two 4*4 matrices and outputs the result
+   *  
+   * @param sHex : Input plain text Matrix.
+   * @param keyHex : Input Key Matrix.
+   * @return outStateHex : XOR result of key and plain text
    */
   protected String[][] aesStateXOR(String[][] sHex, String[][] keyHex) {
     String[][] outStateHex = new String[4][4];
@@ -316,9 +316,10 @@ public class AesCipher {
     return outStateHex;
   }
 
-  /* This function substitutes each element of a 4*4 matrix using the AES S-box 
-    * @param inStateHex is the input matrix
-    * @return outStateHex is the substituted matrix
+  /* Substitutes each element of a 4*4 matrix using the S-box 
+   * 
+   * @param inStateHex : Output received from State XOR.
+   * @return outStateHex : S-box substituted matrix.
    */
   protected String[][] aesNibbleSub(String[][] inStateHex) {
     String[][] outStateHex = new String[4][4];
@@ -330,9 +331,9 @@ public class AesCipher {
     return outStateHex;
   }
 
-  /* This function left shifts each element by their row number 
-     * @param inStateHex is the 4*4 input matrix
-     * @return outStateHex is the 4*4 shifted matrix
+  /* Left shifts each element by their row number 
+   * @param inStateHex : Output received from Nibble Substitution.
+   * @return outStateHex : Matrix after Shifting the Rows.
    */
   protected String[][] aesShiftRow(String[][] inStateHex) {
     String[][] outStateHex = new String[4][4];
@@ -346,9 +347,10 @@ public class AesCipher {
   }
 
   /*
-     This method uses GaloisMatrix to mix/multiply the columns of the 4*4 input matrix
-     @param inStateHex the input matrix
-     @return mixed/multiplied Matrix which is 4*4
+   * GaloisMatrix is used to multiply the columns of the 4*4 input matrix
+   *
+   * @param inStateHex : Output from ShiftRows
+   * @return returnMatrix : Matrx after row shift
    */
   public String[][] aesMixColumn(String[][] inStateHex) {
     String sum = "0";
@@ -360,24 +362,28 @@ public class AesCipher {
       for (int row = 0; row < 4 && stateCol < 4; row++, rowCount++) {
         sum = "0";
         for (int col = 0, stateRow = 0; col < 4; col++, stateRow++) {
-          // Contains the integer value for the hex input
-          // valueInInteger = Integer.toHexString(inStateHex[j][k]);
-          // System.out.println("valueInInteger "+valueInInteger);
-          if (GaloisMatrix[row][col] == "02") {
-            sum = computeXOR(sum,
-              multiplication(inStateHex[stateRow][stateCol]));
-          } else if (GaloisMatrix[row][col] == "03") {
-            // Split it as 02 and 01
-            // Multiply 02 with first part of hex
-            String temp = computeXOR(
-              inStateHex[stateRow][stateCol],
-              multiplication(inStateHex[stateRow][stateCol]));
-            sum = computeXOR(sum, temp);
-          } else if (GaloisMatrix[row][col] == "01") {
-            sum = computeXOR(sum, inStateHex[stateRow][stateCol]);
+          if (null != GaloisMatrix[row][col]) {
+            switch (GaloisMatrix[row][col]) {
+              case "02":
+                sum = computeXOR(sum,
+                  shiftBit(inStateHex[stateRow][stateCol]));
+                break;
+              case "03":
+                // Split it as 02 and 01
+                // Multiply 02 with first part of hex
+                String temp = computeXOR(
+                  inStateHex[stateRow][stateCol],
+                  shiftBit(inStateHex[stateRow][stateCol]));
+                sum = computeXOR(sum, temp);
+                break;
+              case "01":
+                sum = computeXOR(sum, inStateHex[stateRow][stateCol]);
+                break;
+              default:
+                break;
+            }
           }
         }
-        System.out.println(sum);
         returnMatrix[row][stateCol] = sum;
         if (rowCount == 3) {
           stateCol++;
@@ -385,22 +391,19 @@ public class AesCipher {
         }
       }
     }
-
-    System.out.println("Return Matrix");
-    for (int i = 0; i < 4; i++) {
-      for (int j = 0; j < 4; j++) {
-        System.out.print(returnMatrix[i][j] + "\t");
-      }
-      System.out.println();
-    }
     return returnMatrix;
   }
 
-  public String multiplication(String valueIn) {
+  /**
+   * Shifts the value by 1 and performs the desired operations for matrix
+   * multiplication.
+   *
+   * @param pstrHexValue : Value for matrix multiplication.
+   * @return : Value that has been bit shifted.
+   */
+  public String shiftBit(String pstrHexValue) {
     // Binary value in string format for the input integer
-    // System.out.println("Hex is : " + valueIn);
-    String binary = Integer.toBinaryString(Integer.parseInt(valueIn, 16));
-    // System.out.println("binary of hex " + binary);
+    String binary = Integer.toBinaryString(Integer.parseInt(pstrHexValue, 16));
 
     // If the length of the binary string is less than 8 then pad.
     while (binary.length() < 8) {
@@ -414,7 +417,7 @@ public class AesCipher {
       .substring(1) : shiftedBinary);
 
     // check if upper significatn bit is 1,
-    // then XOR by 25
+    // then XOR by 27
     // else return the original value
     if (binary.substring(0, 1).equals("1")) {
       String constant = Integer.toString(27, 2);
@@ -429,14 +432,17 @@ public class AesCipher {
     }
   }
 
-  /*   This methods performs one full round of AES encryption
-     @param input is the intermediate AES result
-     @param RoundNum is the round number
-     @return the next intermediate AES result
+  /** Computes data for one full round of AES encryption
+  
+    @param larRoundData : Intermediate Round Data
+    @param larRoundKey : Intermediate Round Keys
+	  @param pintRoundCount : Round Number
+    @return larInputToNextStep: Intermediate Round Data
+	  to be used in the next step.
    */
   protected String[][] computeDataForEachRound(String[][] larRoundData, String[][] larRoundKey, int pintRoundCount) {
-    String[][] larInputToNextStep
-      = null;
+    String[][] larInputToNextStep;
+    larInputToNextStep = null;
 
     //Step 1: Perform XOR of the data and round key.
     larInputToNextStep = aesStateXOR(larRoundData, larRoundKey);
@@ -460,10 +466,10 @@ public class AesCipher {
     return larInputToNextStep;
   }
 
-  /* This function encrypts the plaintexr with the key to produce a ciphertext
-     @param pTextHex is the plaintext
-     @param keyHex is the key
-     @return the ciphertext in a 4*4 matrix
+  /** Encrypts the plaintext with the key to produce a ciphertext.
+  
+     @param pstrInputText : Plain text taken from the input file
+     @param pstrInputKey : Key taken from the input file
    */
   protected void aes(String pstrInputText, String pstrInputKey) {
     if (!(pstrInputText.trim().equals("") && pstrInputKey.trim().equals(""))) {
@@ -482,18 +488,25 @@ public class AesCipher {
         for (int row = 0; row < larWMatrix.length; row++) {
           System.arraycopy(larWMatrix[row], increment, larRoundKey[row], 0, 4);
         }
-
         roundCount++;
-
-        larRoundData = computeDataForEachRound(larRoundData, larRoundKey, roundCount);
-
+        if (roundCount >= 10) {
+          larRoundData = aesStateXOR(larRoundData, larRoundKey);
+        } else {
+          larRoundData = computeDataForEachRound(larRoundData, larRoundKey, roundCount);
+        }
       }
+
       if (larRoundData != null) {
         printRoundData(larRoundData);
       }
     }
   }
 
+  /**
+   * Generates the matrix for the input text from the file.
+   * 
+   * @param pstrInputText : Input text received from the file
+   */
   private void generateDataMatrix(String pstrInputText) {
     try {
       int col = 0;
@@ -511,6 +524,11 @@ public class AesCipher {
     }
   }
 
+  /**
+   * Prints the cipher generated by AES algorithm
+   * 
+   * @param larRoundData : Final Cipher text generated by the algorithm.
+   */
   private void printRoundData(String[][] larRoundData) {
     try {
       for (int row = 0; row < 4; row++, row++) {
