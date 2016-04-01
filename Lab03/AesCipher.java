@@ -92,7 +92,7 @@ public class AesCipher {
 
   //Used to hold the W Matrix, which contains the user entered 
   //and the computed columns 
-  private String[][] larWMatrix = new String[4][44];
+  private final String[][] larWMatrix = new String[4][44];
 
   /**
    * Makes the function calls to generate the round keys and print them
@@ -110,11 +110,12 @@ public class AesCipher {
 
       //Step 3: Print first 10 round keys generated.
       // printRoundKeys();
-      //Step 4 : Generate a Matrix of the user entered data or plain text.
+      
+	  //Step 4 : Generate a Matrix of the user entered data or plain text.
       generateDataMatrix(pstrInputText);
 
     } catch (Exception ex) {
-      System.out.println("Exception in aesRoundKeys is : " + ex);
+      System.out.println("Exception in aesRoundKeys is : " + ex.getMessage());
     }
   }
 
@@ -184,7 +185,7 @@ public class AesCipher {
         }
       }
     } catch (Exception ex) {
-      System.out.println("Exception in generateWMatrix is : " + ex);
+      System.out.println("Exception in generateWMatrix is : " + ex.getMessage());
     }
   }
 
@@ -206,7 +207,7 @@ public class AesCipher {
         }
       }
     } catch (Exception ex) {
-      System.out.println("Exception in generateKeyMatrix is : " + ex);
+      System.out.println("Exception in generateKeyMatrix is : " + ex.getMessage());
     }
   }
 
@@ -233,7 +234,7 @@ public class AesCipher {
       return lstrXorResult.length() == 1
         ? ("0" + lstrXorResult) : lstrXorResult;
     } catch (Exception ex) {
-      System.out.println("Exception in computeXOR is : " + ex);
+      System.out.println("Exception in computeXOR is : " + ex.getMessage());
       return "";
     }
   }
@@ -257,7 +258,7 @@ public class AesCipher {
         counter--;
       } while (counter != 0);
     } catch (Exception ex) {
-      System.out.println("Exception in printRoundKeys is : " + ex);
+      System.out.println("Exception in printRoundKeys is : " + ex.getMessage());
     }
   }
 
@@ -276,7 +277,7 @@ public class AesCipher {
         = Integer.parseInt(larSplitHexValue[1], 16);
       return S_BOX[sRowValue][sColValue];
     } catch (Exception ex) {
-      System.out.println("Exception in aesSBox is : " + ex);
+      System.out.println("Exception in aesSBox is : " + ex.getMessage());
       return "";
     }
   }
@@ -295,7 +296,7 @@ public class AesCipher {
     try {
       return ROUND_KEY_TABLE[pintRow][pintCol];
     } catch (Exception ex) {
-      System.out.println("Exception in aesRcon is : " + ex);
+      System.out.println("Exception in aesRcon is : " + ex.getMessage());
       return "";
     }
   }
@@ -440,7 +441,8 @@ public class AesCipher {
     @return larInputToNextStep: Intermediate Round Data
 	  to be used in the next step.
    */
-  protected String[][] computeDataForEachRound(String[][] larRoundData, String[][] larRoundKey, int pintRoundCount) {
+  protected String[][] computeDataForEachRound(
+    String[][] larRoundData, String[][] larRoundKey, int pintRoundCount) {
     String[][] larInputToNextStep;
     larInputToNextStep = null;
 
@@ -463,7 +465,8 @@ public class AesCipher {
         larInputToNextStep = aesMixColumn(larInputToNextStep);
       }
     }
-    return larInputToNextStep;
+	
+	return larInputToNextStep;
   }
 
   /** Encrypts the plaintext with the key to produce a ciphertext.
@@ -482,23 +485,24 @@ public class AesCipher {
       for (int row = 0; row < larWMatrix.length; row++) {
         System.arraycopy(larInputData[row], 0, larRoundData[row], 0, 4);
       }
-
-      for (int increment = 0; increment < 44; increment += 4) {
-        // Take 4x4 matrix from 4x44 as round keys
-        for (int row = 0; row < larWMatrix.length; row++) {
-          System.arraycopy(larWMatrix[row], increment, larRoundKey[row], 0, 4);
-        }
-        roundCount++;
-        if (roundCount >= 10) {
-          larRoundData = aesStateXOR(larRoundData, larRoundKey);
-        } else {
-          larRoundData = computeDataForEachRound(larRoundData, larRoundKey, roundCount);
-        }
-      }
-
+	   for (int increment = 0; increment < larWMatrix[0].length ; 
+       increment += 4) {
+         // Take 4x4 matrix from 4x44 as round keys
+         for (int row = 0; row < larWMatrix.length; row++) {
+           System.arraycopy(larWMatrix[row], increment, larRoundKey[row], 0, 4);
+         }
+		 if(roundCount == 10)
+			 larRoundData = aesStateXOR(larRoundData, larRoundKey);
+		 else
+		 {
+         roundCount++;
+         larRoundData = computeDataForEachRound(
+           larRoundData, larRoundKey, roundCount);
+		 }
+       }
       if (larRoundData != null) {
-        printRoundData(larRoundData);
-      }
+         printRoundData(larRoundData);
+       }
     }
   }
 
@@ -520,7 +524,7 @@ public class AesCipher {
         }
       }
     } catch (Exception ex) {
-      System.out.println("Exception in generateDataMatrix is : " + ex);
+      System.out.println("Exception in generateDataMatrix is : " + ex.getMessage());
     }
   }
 
@@ -531,13 +535,13 @@ public class AesCipher {
    */
   private void printRoundData(String[][] larRoundData) {
     try {
-      for (int row = 0; row < 4; row++, row++) {
-        for (int cols = 0; cols < 4; cols++) {
+      for (int cols = 0; cols < 4; cols++) {
+        for (int row = 0; row < 4; row++) {
           System.out.print(larRoundData[row][cols]);
         }
       }
     } catch (Exception ex) {
-      System.out.println("Exception in printRoundData is : " + ex);
+      System.out.println("Exception in printRoundData is : " + ex.getMessage());
     }
   }
 }
