@@ -537,9 +537,10 @@ public class AesCipher {
     try {
       for (int cols = 0; cols < 4; cols++) {
         for (int row = 0; row < 4; row++) {
-          System.out.print(larRoundData[row][cols]);
+          System.out.print(larRoundData[row][cols].toUpperCase());
         }
       }
+	  System.out.println();
     } catch (Exception ex) {
       System.out.println("Exception in printRoundData is : " + ex.getMessage());
     }
