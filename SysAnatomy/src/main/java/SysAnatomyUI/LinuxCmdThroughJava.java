@@ -6,6 +6,7 @@
 package SysAnatomyUI;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
@@ -28,6 +29,9 @@ public class LinuxCmdThroughJava {
     String s;
     Process p;
     try {
+      String mylibname = System.mapLibraryName("sigar-amd64-winnt");
+      System.load(new File("../lib", mylibname).getAbsolutePath());
+      
       p = Runtime.getRuntime().exec("cat /proc/cpuinfo");
 
       BufferedReader br = new BufferedReader(
