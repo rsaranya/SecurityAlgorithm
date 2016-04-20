@@ -50,6 +50,7 @@
                     <compilerArguments>
                         <endorseddirs>${endorsed.dir}</endorseddirs>
                     </compilerArguments>
+                    <argLine>java.library.path=${basedir}/src/main/java/lib</argLine>
                 </configuration>
             </plugin>
             <plugin>
@@ -79,6 +80,24 @@
                                     <artifactId>javaee-endorsed-api</artifactId>
                                     <version>7.0</version>
                                     <type>jar</type>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>copy</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <includes>**/sigar-bin/lib/*</includes>
+                                    <excludes>**/sigar-bin/lib/*jar</excludes>
+                                    <includeGroupIds>org.hyperic</includeGroupIds>
+                                    <includeArtifactIds>sigar-dist</includeArtifactIds>
+                                    <outputDirectory>${project.build.directory}/depends</outputDirectory>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
