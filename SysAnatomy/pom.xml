@@ -83,9 +83,33 @@
                             </artifactItems>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>native-dep</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <stripVersion>true</stripVersion>
+                            <outputDirectory>${project.build.directory}/lib</outputDirectory>
+                            <includeGroupIds>org.hyperic</includeGroupIds>
+                            <includeTypes>dll,so</includeTypes>
+                        </configuration>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
+        
+        <resources> 
+            <resource> 
+                <directory>libs</directory> 
+                <includes> 
+                    <include>sigar-x86-winnt.dll</include> 
+                    <include>libsigar-x86-freebsd-5.so</include> 
+                    <include>libsigar-x86-freebsd-6.so</include> 
+                </includes> 
+            </resource> 
+        </resources>
     </build>
 
 </project>
