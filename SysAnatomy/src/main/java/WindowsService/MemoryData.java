@@ -17,14 +17,16 @@ import org.hyperic.sigar.SigarException;
 public class MemoryData {
 
   private static final Logger LOGGER = Logger.getLogger(MemoryData.class.getName());
-  //private static final Sigar sigar = new Sigar();
+  private static Sigar sigar = new Sigar();
+  
+  public MemoryData()
+  {
+    getDataFromMemClass();
+  }
+  
 
-  public static void getDataFromMemClass(Sigar sigar) {
-    LOGGER.info("inside getDataFromMemClass");
-    LOGGER.info("**************************************");
-    LOGGER.info("*** Informations about the Memory: ***");
-    LOGGER.info("**************************************\n");
-
+  public static void getDataFromMemClass() {
+   
     Mem mem = null;
     try {
       mem = sigar.getMem();
