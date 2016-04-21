@@ -10,13 +10,12 @@ import org.hyperic.sigar.SigarException;
 
 public class StartProgram {
 
-  // private static final Logger LOGGER = Logger.getLogger(StartProgram.class.getName());
+  private static final Logger LOGGER = Logger.getLogger(StartProgram.class.getName());
   private static final Sigar sigar = new Sigar();
 
   public static void main(String[] args) {
-    CpuData.getCpuData(sigar);
-    MemoryData.getMemoryData(sigar);
+    CpuData.getDataFromCpu(sigar);
+    MemoryData.getDataFromMemClass(sigar);
     SystemData.getSystemStatistics(sigar);
   }
-
 }

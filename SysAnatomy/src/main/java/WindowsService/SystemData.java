@@ -12,6 +12,7 @@ import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.Cpu;
 import org.hyperic.sigar.CpuPerc;
 import org.hyperic.sigar.FileSystemUsage;
+import org.hyperic.sigar.SysInfo;
 
 /**
  *
@@ -20,7 +21,6 @@ import org.hyperic.sigar.FileSystemUsage;
 public class SystemData {
 
   private static final Logger LOGGER = Logger.getLogger(MemoryData.class.getName());
-  //private static final Sigar sigar = new Sigar();
 
   public static void getSystemStatistics(Sigar sigar) {
     Mem mem = null;
@@ -37,5 +37,16 @@ public class SystemData {
     LOGGER.info(mem.getUsedPercent() + "\t");
     LOGGER.info((cpuperc.getCombined() * 100) + "\t");
     LOGGER.info(filesystemusage.getUsePercent() + "\n");
+  }
+
+  public static void getSystemDetails(Sigar sigar) {
+    SysInfo lsysInfoInstance = new SysInfo();
+
+    LOGGER.info("System Architecture : \t" + lsysInfoInstance.getArch());
+    LOGGER.info("System Description : \t" + lsysInfoInstance.getDescription());
+    LOGGER.info("Machine : \t" + lsysInfoInstance.getMachine());
+    LOGGER.info("Machine Name : \t" + lsysInfoInstance.getName());
+    LOGGER.info("Machine Vendor : \t" + lsysInfoInstance.getVendor());
+    LOGGER.info("Machine Vendor Name : \t" + lsysInfoInstance.getVendorName());
   }
 }

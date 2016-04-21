@@ -19,8 +19,8 @@ public class MemoryData {
   private static final Logger LOGGER = Logger.getLogger(MemoryData.class.getName());
   //private static final Sigar sigar = new Sigar();
 
-  public static void getMemoryData(Sigar sigar) {
-    LOGGER.info("inside getInformationsAboutMemory");
+  public static void getDataFromMemClass(Sigar sigar) {
+    LOGGER.info("inside getDataFromMemClass");
     LOGGER.info("**************************************");
     LOGGER.info("*** Informations about the Memory: ***");
     LOGGER.info("**************************************\n");
@@ -46,6 +46,11 @@ public class MemoryData {
     LOGGER.info("Total used system memory.......: " + mem.getUsed()
       / 1024 / 1024 + " MB");
 
+    LOGGER.info("Used Percentage................: " + mem.getUsedPercent()
+      / 1024 / 1024 + " MB");
+    LOGGER.info("Free Percentage................: " + mem.getFreePercent()
+      / 1024 / 1024 + " MB");
+    
     LOGGER.info("\n**************************************\n");
 
   }
