@@ -16,8 +16,15 @@ import org.hyperic.sigar.Cpu;
 public class CpuData {
 
   private static final Logger LOGGER = Logger.getLogger(CpuData.class.getName());
+  private static Sigar sigar = new Sigar();
   
-  public static void getCpuData(Sigar sigar) {
+  public CpuData(Sigar psigar)
+  {
+    this.sigar = psigar;
+    getCpuData();
+  }
+  
+  private void getCpuData() {
     try {
       Cpu cpuInfo = new Cpu();
       cpuInfo.gather(sigar);
