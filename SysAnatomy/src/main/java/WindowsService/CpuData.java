@@ -17,13 +17,21 @@ public class CpuData {
 
   private static final Logger LOGGER = Logger.getLogger(CpuData.class.getName());
   private static Sigar sigar = new Sigar();
-  
-  public CpuData(Sigar psigar)
+  /**
+   * 
+   * @param psigar
+   */
+  public CpuData()
   {
-    this.sigar = psigar;
-    getCpuData();
+    getDataFromCpu();
+    getDataFromCpuInfo();
+    getDataFromMultiProcCpu();
   }
-  public static void getDataFromCpu(Sigar sigar) {
+  
+  /**
+   * 
+   */
+  private static void getDataFromCpu() {
     LOGGER.info("inside getDataFromCpuClass");
     LOGGER.info("**************************************");
     LOGGER.info("*** Informations about the CPU: ***");
@@ -62,7 +70,10 @@ public class CpuData {
     LOGGER.info("\n**************************************\n");
   }
 
-  public static void getDataFromCpuInfo(Sigar sigar) {
+  /**
+   * 
+   */
+  private static void getDataFromCpuInfo() {
     LOGGER.info("inside getDataFromCpuInfoClass");
     LOGGER.info("**************************************");
     LOGGER.info("*** Informations about the CPU: ***");
@@ -77,14 +88,17 @@ public class CpuData {
       LOGGER.info("Total CPU cores (logical) : " + lcpuInfoInstance.getTotalCores());
       LOGGER.info("Total CPU sockets (physical) : " + lcpuInfoInstance.getTotalSockets());
       LOGGER.info("CPU vendor id : " + lcpuInfoInstance.getVendor());
-    } catch (SigarException sigarEx) {
+    } catch (Exception sigarEx) {
       LOGGER.error("Exception encountered : " + sigarEx.getMessage());
     }
 
     LOGGER.info("\n**************************************\n");
   }
   
-  public static void getDataFromMultiProcCpu(Sigar sigar) {
+  /**
+   * 
+   */
+  private static void getDataFromMultiProcCpu() {
     LOGGER.info("inside getDataFromCpuInfoClass");
     LOGGER.info("**************************************");
     LOGGER.info("*** Informations about the CPU: ***");
@@ -99,7 +113,7 @@ public class CpuData {
       LOGGER.info("Total CPU cores (logical) : " + lcpuInfoInstance.getTotalCores());
       LOGGER.info("Total CPU sockets (physical) : " + lcpuInfoInstance.getTotalSockets());
       LOGGER.info("CPU vendor id : " + lcpuInfoInstance.getVendor());
-    } catch (SigarException sigarEx) {
+    } catch (Exception sigarEx) {
       LOGGER.error("Exception encountered : " + sigarEx.getMessage());
     }
 

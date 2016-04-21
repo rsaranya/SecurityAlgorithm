@@ -25,3 +25,146 @@
 2016-04-21 16:35:15 INFO  SystemData:36 - 13.350000000000001	
 2016-04-21 16:35:15 INFO  SystemData:37 - 0.56
 
+2016-04-21 16:50:22 INFO  CpuData:35 - inside getDataFromCpuClass
+2016-04-21 16:50:22 INFO  CpuData:36 - **************************************
+2016-04-21 16:50:22 INFO  CpuData:37 - *** Informations about the CPU: ***
+2016-04-21 16:50:22 INFO  CpuData:38 - **************************************
+
+2016-04-21 16:50:22 INFO  CpuData:45 - Total system cpu idle time : 266912061
+2016-04-21 16:50:22 INFO  CpuData:47 - Total system cpu time servicing interrupts : 1447467
+2016-04-21 16:50:22 INFO  CpuData:49 - Total system cpu nice time : 0
+2016-04-21 16:50:22 INFO  CpuData:51 - Total system cpu time servicing softirqs : 0
+2016-04-21 16:50:22 INFO  CpuData:53 - Total system cpu involuntary wait time : 0
+2016-04-21 16:50:22 INFO  CpuData:55 - Total system cpu kernel time : 17558124
+2016-04-21 16:50:22 INFO  CpuData:57 - Total system cpu time : 844501099
+2016-04-21 16:50:22 INFO  CpuData:59 - Total system cpu user time : 53330060
+2016-04-21 16:50:22 INFO  CpuData:61 - Total system cpu io wait time : 0
+2016-04-21 16:50:22 INFO  CpuData:65 - CPU cache size : 0
+2016-04-21 16:50:22 INFO  CpuData:70 - 
+**************************************
+
+2016-04-21 16:50:22 INFO  CpuData:77 - inside getDataFromCpuInfoClass
+2016-04-21 16:50:22 INFO  CpuData:78 - **************************************
+2016-04-21 16:50:22 INFO  CpuData:79 - *** Informations about the CPU: ***
+2016-04-21 16:50:22 INFO  CpuData:80 - **************************************
+
+2016-04-21 16:50:22 INFO  CpuData:84 - CPU cache size : 0
+2016-04-21 16:50:22 INFO  CpuData:85 - Number of CPU cores per CPU socket : 0
+2016-04-21 16:50:22 INFO  CpuData:86 - CPU speed : 0
+2016-04-21 16:50:22 INFO  CpuData:87 - CPU model : null
+2016-04-21 16:50:22 INFO  CpuData:88 - Total CPU cores (logical) : 0
+2016-04-21 16:50:22 INFO  CpuData:89 - Total CPU sockets (physical) : 0
+2016-04-21 16:50:22 INFO  CpuData:90 - CPU vendor id : null
+2016-04-21 16:50:22 INFO  CpuData:95 - 
+**************************************
+
+2016-04-21 16:50:22 INFO  CpuData:102 - inside getDataFromCpuInfoClass
+2016-04-21 16:50:22 INFO  CpuData:103 - **************************************
+2016-04-21 16:50:22 INFO  CpuData:104 - *** Informations about the CPU: ***
+2016-04-21 16:50:22 INFO  CpuData:105 - **************************************
+
+2016-04-21 16:50:22 INFO  CpuData:109 - CPU cache size : 0
+2016-04-21 16:50:22 INFO  CpuData:110 - Number of CPU cores per CPU socket : 0
+2016-04-21 16:50:22 INFO  CpuData:111 - CPU speed : 0
+2016-04-21 16:50:22 INFO  CpuData:112 - CPU model : null
+2016-04-21 16:50:22 INFO  CpuData:113 - Total CPU cores (logical) : 0
+2016-04-21 16:50:22 INFO  CpuData:114 - Total CPU sockets (physical) : 0
+2016-04-21 16:50:22 INFO  CpuData:115 - CPU vendor id : null
+2016-04-21 16:50:22 INFO  CpuData:120 - 
+**************************************
+
+2016-04-21 16:50:22 INFO  MemoryData:29 - inside getDataFromMemClass
+2016-04-21 16:50:22 INFO  MemoryData:30 - **************************************
+2016-04-21 16:50:22 INFO  MemoryData:31 - *** Informations about the Memory: ***
+2016-04-21 16:50:22 INFO  MemoryData:32 - **************************************
+
+2016-04-21 16:50:22 INFO  MemoryData:42 - Actual total free system memory: 1235 MB
+2016-04-21 16:50:22 INFO  MemoryData:44 - Actual total used system memory: 4791 MB
+2016-04-21 16:50:22 INFO  MemoryData:46 - Total free system memory ......: 1069 MB
+2016-04-21 16:50:22 INFO  MemoryData:48 - System Random Access Memory....: 6032 MB
+2016-04-21 16:50:22 INFO  MemoryData:50 - Total system memory............: 6027 MB
+2016-04-21 16:50:22 INFO  MemoryData:52 - Total used system memory.......: 4957 MB
+2016-04-21 16:50:22 INFO  MemoryData:55 - Used Percentage................: 7.581290490661538E-5 MB
+2016-04-21 16:50:22 INFO  MemoryData:57 - Free Percentage................: 1.955452673400963E-5 MB
+2016-04-21 16:50:22 INFO  MemoryData:60 - 
+**************************************
+
+2016-04-21 16:50:22 INFO  SystemData:44 - 79.51134032109847	
+2016-04-21 16:50:22 INFO  SystemData:45 - 20.981472208312468	
+2016-04-21 16:50:22 INFO  SystemData:46 - 0.56
+
+2016-04-21 16:50:22 INFO  SystemData:52 - System Architecture : 	null
+2016-04-21 16:50:22 INFO  SystemData:53 - System Description : 	null
+2016-04-21 16:50:22 INFO  SystemData:54 - Machine : 	null
+2016-04-21 16:50:22 INFO  SystemData:55 - Machine Name : 	null
+2016-04-21 16:50:22 INFO  SystemData:56 - Machine Vendor : 	null
+2016-04-21 16:50:22 INFO  SystemData:57 - Machine Vendor Name : 	null
+2016-04-21 16:51:02 INFO  CpuData:35 - inside getDataFromCpuClass
+2016-04-21 16:51:02 INFO  CpuData:36 - **************************************
+2016-04-21 16:51:02 INFO  CpuData:37 - *** Informations about the CPU: ***
+2016-04-21 16:51:02 INFO  CpuData:38 - **************************************
+
+2016-04-21 16:51:02 INFO  CpuData:45 - Total system cpu idle time : 267049842
+2016-04-21 16:51:02 INFO  CpuData:47 - Total system cpu time servicing interrupts : 1447952
+2016-04-21 16:51:02 INFO  CpuData:49 - Total system cpu nice time : 0
+2016-04-21 16:51:02 INFO  CpuData:51 - Total system cpu time servicing softirqs : 0
+2016-04-21 16:51:02 INFO  CpuData:53 - Total system cpu involuntary wait time : 0
+2016-04-21 16:51:02 INFO  CpuData:55 - Total system cpu kernel time : 17566154
+2016-04-21 16:51:02 INFO  CpuData:57 - Total system cpu time : 844901410
+2016-04-21 16:51:02 INFO  CpuData:59 - Total system cpu user time : 53344374
+2016-04-21 16:51:02 INFO  CpuData:61 - Total system cpu io wait time : 0
+2016-04-21 16:51:02 INFO  CpuData:65 - CPU cache size : 0
+2016-04-21 16:51:02 INFO  CpuData:70 - 
+**************************************
+
+2016-04-21 16:51:02 INFO  CpuData:77 - inside getDataFromCpuInfoClass
+2016-04-21 16:51:02 INFO  CpuData:78 - **************************************
+2016-04-21 16:51:02 INFO  CpuData:79 - *** Informations about the CPU: ***
+2016-04-21 16:51:02 INFO  CpuData:80 - **************************************
+
+2016-04-21 16:51:02 INFO  CpuData:84 - CPU cache size : 0
+2016-04-21 16:51:02 INFO  CpuData:85 - Number of CPU cores per CPU socket : 0
+2016-04-21 16:51:02 INFO  CpuData:86 - CPU speed : 0
+2016-04-21 16:51:02 INFO  CpuData:87 - CPU model : null
+2016-04-21 16:51:02 INFO  CpuData:88 - Total CPU cores (logical) : 0
+2016-04-21 16:51:02 INFO  CpuData:89 - Total CPU sockets (physical) : 0
+2016-04-21 16:51:02 INFO  CpuData:90 - CPU vendor id : null
+2016-04-21 16:51:02 INFO  CpuData:95 - 
+**************************************
+
+2016-04-21 16:51:02 INFO  CpuData:102 - inside getDataFromCpuInfoClass
+2016-04-21 16:51:02 INFO  CpuData:103 - **************************************
+2016-04-21 16:51:02 INFO  CpuData:104 - *** Informations about the CPU: ***
+2016-04-21 16:51:02 INFO  CpuData:105 - **************************************
+
+2016-04-21 16:51:02 INFO  CpuData:109 - CPU cache size : 0
+2016-04-21 16:51:02 INFO  CpuData:110 - Number of CPU cores per CPU socket : 0
+2016-04-21 16:51:02 INFO  CpuData:111 - CPU speed : 0
+2016-04-21 16:51:02 INFO  CpuData:112 - CPU model : null
+2016-04-21 16:51:02 INFO  CpuData:113 - Total CPU cores (logical) : 0
+2016-04-21 16:51:02 INFO  CpuData:114 - Total CPU sockets (physical) : 0
+2016-04-21 16:51:02 INFO  CpuData:115 - CPU vendor id : null
+2016-04-21 16:51:02 INFO  CpuData:120 - 
+**************************************
+
+2016-04-21 16:51:02 INFO  MemoryData:38 - Actual total free system memory: 1232 MB
+2016-04-21 16:51:02 INFO  MemoryData:40 - Actual total used system memory: 4794 MB
+2016-04-21 16:51:02 INFO  MemoryData:42 - Total free system memory ......: 1066 MB
+2016-04-21 16:51:02 INFO  MemoryData:44 - System Random Access Memory....: 6032 MB
+2016-04-21 16:51:02 INFO  MemoryData:46 - Total system memory............: 6027 MB
+2016-04-21 16:51:02 INFO  MemoryData:48 - Total used system memory.......: 4961 MB
+2016-04-21 16:51:02 INFO  MemoryData:51 - Used Percentage................: 7.585993727664366E-5 MB
+2016-04-21 16:51:02 INFO  MemoryData:53 - Free Percentage................: 1.9507494363981336E-5 MB
+2016-04-21 16:51:02 INFO  MemoryData:56 - 
+**************************************
+
+2016-04-21 16:51:02 INFO  SystemData:44 - 79.545168811946	
+2016-04-21 16:51:02 INFO  SystemData:45 - 5.2935514918190565	
+2016-04-21 16:51:02 INFO  SystemData:46 - 0.56
+
+2016-04-21 16:51:02 INFO  SystemData:52 - System Architecture : 	null
+2016-04-21 16:51:02 INFO  SystemData:53 - System Description : 	null
+2016-04-21 16:51:02 INFO  SystemData:54 - Machine : 	null
+2016-04-21 16:51:02 INFO  SystemData:55 - Machine Name : 	null
+2016-04-21 16:51:02 INFO  SystemData:56 - Machine Vendor : 	null
+2016-04-21 16:51:02 INFO  SystemData:57 - Machine Vendor Name : 	null

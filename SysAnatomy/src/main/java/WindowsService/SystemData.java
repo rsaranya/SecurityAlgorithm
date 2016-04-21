@@ -20,8 +20,16 @@ import org.hyperic.sigar.SysInfo;
 public class SystemData {
 
   private static final Logger LOGGER = Logger.getLogger(SystemData.class.getName());
+  private static Sigar sigar = new Sigar();
   
-  public static void getSystemStatistics(Sigar sigar) {
+  public SystemData()
+  {
+    getSystemStatistics();
+    getSystemDetails();
+  }
+  
+  
+  private static void getSystemStatistics() {
     Mem mem = null;
     CpuPerc cpuperc = null;
     FileSystemUsage filesystemusage = null;
@@ -38,7 +46,7 @@ public class SystemData {
     LOGGER.info(filesystemusage.getUsePercent() + "\n");
   }
 
-  public static void getSystemDetails(Sigar sigar) {
+  public static void getSystemDetails() {
     SysInfo lsysInfoInstance = new SysInfo();
 
     LOGGER.info("System Architecture : \t" + lsysInfoInstance.getArch());
