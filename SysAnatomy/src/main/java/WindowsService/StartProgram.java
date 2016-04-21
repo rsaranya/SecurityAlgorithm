@@ -21,5 +21,4 @@ public class StartProgram {
       LOGGER.error("Eception occured : " + ex.getMessage());
     }
   }
-
 }
