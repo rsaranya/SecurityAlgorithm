@@ -32,11 +32,8 @@ public class CpuData {
    * 
    */
   private static void getDataFromCpu() {
-    LOGGER.info("inside getDataFromCpuClass");
-    LOGGER.info("**************************************");
-    LOGGER.info("*** Informations about the CPU: ***");
-    LOGGER.info("**************************************\n");
-    
+    LOGGER.info("inside getDataFromCpu");
+   
     try {
       Cpu lcpuInstance = new Cpu();
       lcpuInstance.gather(sigar);
@@ -67,17 +64,14 @@ public class CpuData {
     } catch (SigarException sigarEx) {
       LOGGER.error("Exception encountered : " + sigarEx.getMessage());
     }
-    LOGGER.info("\n**************************************\n");
+    LOGGER.info("**************************************\n");
   }
 
   /**
    * 
    */
   private static void getDataFromCpuInfo() {
-    LOGGER.info("inside getDataFromCpuInfoClass");
-    LOGGER.info("**************************************");
-    LOGGER.info("*** Informations about the CPU: ***");
-    LOGGER.info("**************************************\n");
+    LOGGER.info("inside getDataFromCpuInfo");
 
     try {
       CpuInfo lcpuInfoInstance = new CpuInfo();
@@ -99,10 +93,7 @@ public class CpuData {
    * 
    */
   private static void getDataFromMultiProcCpu() {
-    LOGGER.info("inside getDataFromCpuInfoClass");
-    LOGGER.info("**************************************");
-    LOGGER.info("*** Informations about the CPU: ***");
-    LOGGER.info("**************************************\n");
+    LOGGER.info("inside getDataFromMultiProcCpu");
 
     try {
       CpuInfo lcpuInfoInstance = new CpuInfo();
