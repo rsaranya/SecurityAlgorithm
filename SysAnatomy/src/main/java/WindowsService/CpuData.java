@@ -5,12 +5,10 @@
  */
 package WindowsService;
 
-import java.security.SignatureException;
 import org.apache.log4j.Logger;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.Cpu;
-
 /**
  *
  * @author Saranya
@@ -18,8 +16,7 @@ import org.hyperic.sigar.Cpu;
 public class CpuData {
 
   private static final Logger LOGGER = Logger.getLogger(CpuData.class.getName());
-  //private static final Sigar sigar = new Sigar();
-
+  
   public static void getCpuData(Sigar sigar) {
     try {
       Cpu cpuInfo = new Cpu();

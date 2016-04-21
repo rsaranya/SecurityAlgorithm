@@ -9,7 +9,6 @@ import org.apache.log4j.Logger;
 import org.hyperic.sigar.Mem;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
-import org.hyperic.sigar.Cpu;
 import org.hyperic.sigar.CpuPerc;
 import org.hyperic.sigar.FileSystemUsage;
 
@@ -19,9 +18,8 @@ import org.hyperic.sigar.FileSystemUsage;
  */
 public class SystemData {
 
-  private static final Logger LOGGER = Logger.getLogger(MemoryData.class.getName());
-  //private static final Sigar sigar = new Sigar();
-
+  private static final Logger LOGGER = Logger.getLogger(SystemData.class.getName());
+  
   public static void getSystemStatistics(Sigar sigar) {
     Mem mem = null;
     CpuPerc cpuperc = null;
