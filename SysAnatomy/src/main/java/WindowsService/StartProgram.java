@@ -15,32 +15,32 @@ public class StartProgram {
 
   public static void getInformationsAboutMemory() {
     LOGGER.info("inside getInformationsAboutMemory");
-    System.out.println("**************************************");
-    System.out.println("*** Informations about the Memory: ***");
-    System.out.println("**************************************\n");
+    LOGGER.info("**************************************");
+    LOGGER.info("*** Informations about the Memory: ***");
+    LOGGER.info("**************************************\n");
 
     Mem mem = null;
     try {
       mem = sigar.getMem();
 
     } catch (SigarException se) {
-      se.printStackTrace();
+      LOGGER.error(se);
     }
 
-    System.out.println("Actual total free system memory: "
+    LOGGER.info("Actual total free system memory: "
       + mem.getActualFree() / 1024 / 1024 + " MB");
-    System.out.println("Actual total used system memory: "
+    LOGGER.info("Actual total used system memory: "
       + mem.getActualUsed() / 1024 / 1024 + " MB");
-    System.out.println("Total free system memory ......: " + mem.getFree()
+    LOGGER.info("Total free system memory ......: " + mem.getFree()
       / 1024 / 1024 + " MB");
-    System.out.println("System Random Access Memory....: " + mem.getRam()
+    LOGGER.info("System Random Access Memory....: " + mem.getRam()
       + " MB");
-    System.out.println("Total system memory............: " + mem.getTotal()
+    LOGGER.info("Total system memory............: " + mem.getTotal()
       / 1024 / 1024 + " MB");
-    System.out.println("Total used system memory.......: " + mem.getUsed()
+    LOGGER.info("Total used system memory.......: " + mem.getUsed()
       / 1024 / 1024 + " MB");
 
-    System.out.println("\n**************************************\n");
+    LOGGER.info("\n**************************************\n");
 
   }
 
@@ -53,27 +53,27 @@ public class StartProgram {
       cpuperc = sigar.getCpuPerc();
       filesystemusage = sigar.getFileSystemUsage("C:");
     } catch (SigarException se) {
-      se.printStackTrace();
+      LOGGER.error(se);
     }
 
-    System.out.print(mem.getUsedPercent() + "\t");
-    System.out.print((cpuperc.getCombined() * 100) + "\t");
-    System.out.print(filesystemusage.getUsePercent() + "\n");
+    LOGGER.info(mem.getUsedPercent() + "\t");
+    LOGGER.info((cpuperc.getCombined() * 100) + "\t");
+    LOGGER.info(filesystemusage.getUsePercent() + "\n");
   }
 
   public static void FetchUsingSigar() throws SigarException {
     Cpu cpuInfo = new Cpu();
     cpuInfo.gather(sigar);
   //  while (true) {
-      System.out.println("Total system cpu idle time : " + cpuInfo.getIdle());
-      System.out.println("Total system cpu time servicing interrupts : " + cpuInfo.getIrq());
-      System.out.println("Total system cpu nice time : " + cpuInfo.getNice());
-      System.out.println("Total system cpu time servicing softirqs : " + cpuInfo.getSoftIrq());
-      System.out.println("Total system cpu involuntary wait time : " + cpuInfo.getStolen());
-      System.out.println("Total system cpu kernel time : " + cpuInfo.getSys());
-      System.out.println("Total system cpu time : " + cpuInfo.getTotal());
-      System.out.println("Total system cpu user time : " + cpuInfo.getUser());
-      System.out.println("Total system cpu io wait time : " + cpuInfo.getWait());
+    LOGGER.info("Total system cpu idle time : " + cpuInfo.getIdle());
+    LOGGER.info("Total system cpu time servicing interrupts : " + cpuInfo.getIrq());
+    LOGGER.info("Total system cpu nice time : " + cpuInfo.getNice());
+    LOGGER.info("Total system cpu time servicing softirqs : " + cpuInfo.getSoftIrq());
+    LOGGER.info("Total system cpu involuntary wait time : " + cpuInfo.getStolen());
+    LOGGER.info("Total system cpu kernel time : " + cpuInfo.getSys());
+    LOGGER.info("Total system cpu time : " + cpuInfo.getTotal());
+    LOGGER.info("Total system cpu user time : " + cpuInfo.getUser());
+    LOGGER.info("Total system cpu io wait time : " + cpuInfo.getWait());
   //  }
   }
 
@@ -84,7 +84,7 @@ public class StartProgram {
       FetchUsingSigar();
     } catch (SigarException e) {
       // TODO Auto-generated catch block
-      e.printStackTrace();
+      LOGGER.error(e);
     }
   }
 
