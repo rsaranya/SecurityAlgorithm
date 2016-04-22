@@ -43,13 +43,13 @@ public class MemoryData_Test01 {
     
   } catch (Exception se) {
     se.printStackTrace();
-    assert(mem.getActualFree() < x);
-    assert(mem.getActualUsed() > x);
-    assert(mem.getFree() > x);
-    assert(mem.getRam() > x);
-    assert(mem.getTotal() > x);
-    assert(mem.getUsedPercent() > x);
-    assert(mem.getFreePercent() > x);
+    assertTrue(mem.getActualFree() > x);
+    assertTrue(mem.getActualUsed() > x);
+    assertTrue(mem.getFree() > x);
+    assertTrue(mem.getRam() > x);
+    assertTrue(mem.getTotal() > x);
+    assertTrue(mem.getUsedPercent() > x);
+    assertTrue(mem.getFreePercent() > x);
   }
       
 
