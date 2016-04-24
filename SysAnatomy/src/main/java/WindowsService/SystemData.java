@@ -6,54 +6,53 @@
 package WindowsService;
 
 import org.apache.log4j.Logger;
-import org.hyperic.sigar.Mem;
-import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarException;
-import org.hyperic.sigar.CpuPerc;
-import org.hyperic.sigar.FileSystemUsage;
-import org.hyperic.sigar.SysInfo;
+import org.hyperic.sigar.OperatingSystem;
+import org.json.simple.JSONObject;
+
+import Util.GlobalObjects;
 
 /**
  *
  * @author Saranya
  */
-public class SystemData {
+public class SystemData implements Runnable {
 
-  private static final Logger LOGGER = Logger.getLogger(SystemData.class.getName());
-  private static Sigar sigar = new Sigar();
-  
-  public SystemData()
-  {
-    getSystemStatistics();
-    getSystemDetails();
-  }
-  
-  
-  private static void getSystemStatistics() {
-    Mem mem = null;
-    CpuPerc cpuperc = null;
-    FileSystemUsage filesystemusage = null;
-    try {
-      mem = sigar.getMem();
-      cpuperc = sigar.getCpuPerc();
-      filesystemusage = sigar.getFileSystemUsage("C:");
-    } catch (SigarException se) {
-      LOGGER.error(se);
-    }
+	private static final Logger LOGGER = Logger.getLogger(SystemData.class.getName());
+	private JSONObject lobjJsonSystemData = null;
 
-    LOGGER.info(mem.getUsedPercent() + "\t");
-    LOGGER.info((cpuperc.getCombined() * 100) + "\t");
-    LOGGER.info(filesystemusage.getUsePercent() + "\n");
-  }
+	public SystemData() {
+		new Thread(this).start();
+	}
 
-  public static void getSystemDetails() {
-    SysInfo lsysInfoInstance = new SysInfo();
+	public static void getSystemDetails() {
+		OperatingSystem lobjOperatingSystem = OperatingSystem.getInstance();
 
-    LOGGER.info("System Architecture : \t" + lsysInfoInstance.getArch());
-    LOGGER.info("System Description : \t" + lsysInfoInstance.getDescription());
-    LOGGER.info("Machine : \t" + lsysInfoInstance.getMachine());
-    LOGGER.info("Machine Name : \t" + lsysInfoInstance.getName());
-    LOGGER.info("Machine Vendor : \t" + lsysInfoInstance.getVendor());
-    LOGGER.info("Machine Vendor Name : \t" + lsysInfoInstance.getVendorName());
-  }
+		try {
+			if (lobjOperatingSystem != null) {
+				LOGGER.info("System Architecture : " + lobjOperatingSystem.getArch());
+				LOGGER.info("Machine Endian : " + lobjOperatingSystem.getCpuEndian());
+				LOGGER.info("Machine Data Model : " + lobjOperatingSystem.getDataModel());
+				LOGGER.info("System Description : " + lobjOperatingSystem.getDescription());
+				LOGGER.info("Machine Name : " + lobjOperatingSystem.getName());
+				LOGGER.info("Machine Vendor : " + lobjOperatingSystem.getVendor());
+				LOGGER.info("Machine Vendor Code Name : " + lobjOperatingSystem.getVendorCodeName());
+				LOGGER.info("Machine Vendor Name : " + lobjOperatingSystem.getVendorName());
+				LOGGER.info("Machine Vendor Version : " + lobjOperatingSystem.getVendorVersion());
+				LOGGER.info("Machine Version : " + lobjOperatingSystem.getVersion());
+			}
+		} catch (Exception sigarEx) {
+			LOGGER.error("Exception occured : " + sigarEx.getMessage());
+		}
+		LOGGER.info("**************************************");
+	}
+
+	/**
+	 * 
+	 */
+	public void run() {
+		getSystemDetails();
+		synchronized (GlobalObjects.larrlstJson) {
+			GlobalObjects.larrlstJson.add(lobjJsonSystemData);
+		}
+	}
 }
