@@ -9,51 +9,82 @@ import org.apache.log4j.Logger;
 import org.hyperic.sigar.Mem;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
+import org.json.simple.JSONObject;
+
+import Util.GlobalObjects;
 
 /**
  *
  * @author Saranya
  */
-public class MemoryData {
+public class MemoryData implements Runnable {
 
-  private static final Logger LOGGER = Logger.getLogger(MemoryData.class.getName());
-  private static Sigar sigar = new Sigar();
-  
-  public MemoryData()
-  {
-    getDataFromMemClass();
-  }
-  
+	private static final Logger LOGGER = Logger.getLogger(MemoryData.class.getName());
+	private static Sigar lobjSigar = new Sigar();
+	private JSONObject lobjJsonMemData = null;
+	// private boolean isAllDataAdded = false;
 
-  public static void getDataFromMemClass() {
-   
-    Mem mem = null;
-    try {
-      mem = sigar.getMem();
+	public MemoryData() {
+		Thread lthreadMemData = new Thread(this);
+		lthreadMemData.start();
+	}
 
-    } catch (SigarException se) {
-      LOGGER.error(se);
-    }
+	@SuppressWarnings("unchecked")
+	private void getDataFromMemClass() {
 
-    LOGGER.info("Actual total free system memory: "
-      + mem.getActualFree() / 1024 / 1024 + " MB");
-    LOGGER.info("Actual total used system memory: "
-      + mem.getActualUsed() / 1024 / 1024 + " MB");
-    LOGGER.info("Total free system memory ......: " + mem.getFree()
-      / 1024 / 1024 + " MB");
-    LOGGER.info("System Random Access Memory....: " + mem.getRam()
-      + " MB");
-    LOGGER.info("Total system memory............: " + mem.getTotal()
-      / 1024 / 1024 + " MB");
-    LOGGER.info("Total used system memory.......: " + mem.getUsed()
-      / 1024 / 1024 + " MB");
+		Mem lobjMemClass = null;
+		try {
+			lobjMemClass = lobjSigar.getMem();
+			if (lobjMemClass != null) {
+				lobjJsonMemData = new JSONObject();
+				String lstrRetrievedValues = "";
 
-    LOGGER.info("Used Percentage................: " + mem.getUsedPercent()
-      / 1024 / 1024 + " MB");
-    LOGGER.info("Free Percentage................: " + mem.getFreePercent()
-      / 1024 / 1024 + " MB");
-    
-    LOGGER.info("\n**************************************\n");
+				lstrRetrievedValues = "" + lobjMemClass.getActualFree() / 1024 / 1024;
+				lobjJsonMemData.replace("ActualFreeMemory", lstrRetrievedValues);
+				LOGGER.info("Actual total free system memory : " + lstrRetrievedValues + " MB");
 
-  }
+				lstrRetrievedValues = "" + lobjMemClass.getActualUsed() / 1024 / 1024;
+				lobjJsonMemData.replace("ActualUsedMemory", lstrRetrievedValues);
+				LOGGER.info("Actual total used system memory : " + lstrRetrievedValues + " MB");
+
+				lstrRetrievedValues = "" + lobjMemClass.getFree() / 1024 / 1024;
+				lobjJsonMemData.replace("TotalFreeMemory", lstrRetrievedValues);
+				LOGGER.info("Total free system memory : " + lstrRetrievedValues + " MB");
+
+				lstrRetrievedValues = "" + lobjMemClass.getRam();
+				lobjJsonMemData.replace("RAM", lstrRetrievedValues);
+				LOGGER.info("System Random Access Memory : " + lstrRetrievedValues + " MB");
+
+				lstrRetrievedValues = "" + lobjMemClass.getTotal() / 1024 / 1024;
+				lobjJsonMemData.replace("TotalSystemMemory", lstrRetrievedValues);
+				LOGGER.info("Total system memory : " + lstrRetrievedValues + " MB");
+
+				lstrRetrievedValues = "" + lobjMemClass.getUsed() / 1024 / 1024;
+				lobjJsonMemData.replace("UsedSystemMemory", lstrRetrievedValues);
+				LOGGER.info("Total used system memory : " + lstrRetrievedValues + " MB");
+
+				lstrRetrievedValues = "" + lobjMemClass.getUsedPercent();
+				lobjJsonMemData.replace("PercentageOfUsedMemory", lstrRetrievedValues);
+				LOGGER.info("Used Percentage : " + lstrRetrievedValues + " %");
+
+				lstrRetrievedValues = "" + lobjMemClass.getFreePercent();
+				lobjJsonMemData.replace("PercentageOfFreeMemory", lstrRetrievedValues);
+				LOGGER.info("Free Percentage : " + lstrRetrievedValues + " %");
+			}
+
+		} catch (SigarException lsigarEx) {
+			LOGGER.error(lsigarEx);
+		}
+	}
+
+	/**
+	 * 
+	 */
+	public void run() {
+		getDataFromMemClass();
+
+		synchronized (GlobalObjects.larrlstJson) {
+			GlobalObjects.larrlstJson.add(lobjJsonMemData);
+		}
+	}
 }

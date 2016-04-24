@@ -38734,3 +38734,397 @@
 2016-04-21 17:51:50 INFO  SystemData:55 - Machine Name : 	null
 2016-04-21 17:51:50 INFO  SystemData:56 - Machine Vendor : 	null
 2016-04-21 17:51:50 INFO  SystemData:57 - Machine Vendor Name : 	null
+2016-04-21 19:47:47 INFO  CpuData:35 - inside getDataFromCpu
+2016-04-21 19:47:47 INFO  CpuData:42 - Total system cpu idle time : 115305279
+2016-04-21 19:47:47 INFO  CpuData:44 - Total system cpu time servicing interrupts : 1006326
+2016-04-21 19:47:47 INFO  CpuData:46 - Total system cpu nice time : 0
+2016-04-21 19:47:47 INFO  CpuData:48 - Total system cpu time servicing softirqs : 0
+2016-04-21 19:47:47 INFO  CpuData:50 - Total system cpu involuntary wait time : 0
+2016-04-21 19:47:47 INFO  CpuData:52 - Total system cpu kernel time : 12037170
+2016-04-21 19:47:47 INFO  CpuData:54 - Total system cpu time : 389529391
+2016-04-21 19:47:47 INFO  CpuData:56 - Total system cpu user time : 28469139
+2016-04-21 19:47:47 INFO  CpuData:58 - Total system cpu io wait time : 0
+2016-04-21 19:47:47 INFO  CpuData:62 - CPU cache size : 0
+2016-04-21 19:47:47 INFO  CpuData:67 - **************************************
+
+2016-04-21 19:47:47 INFO  CpuData:74 - inside getDataFromCpuInfo
+2016-04-21 19:47:47 INFO  CpuData:78 - CPU cache size : 0
+2016-04-21 19:47:47 INFO  CpuData:79 - Number of CPU cores per CPU socket : 0
+2016-04-21 19:47:47 INFO  CpuData:80 - CPU speed : 0
+2016-04-21 19:47:47 INFO  CpuData:81 - CPU model : null
+2016-04-21 19:47:47 INFO  CpuData:82 - Total CPU cores (logical) : 0
+2016-04-21 19:47:47 INFO  CpuData:83 - Total CPU sockets (physical) : 0
+2016-04-21 19:47:47 INFO  CpuData:84 - CPU vendor id : null
+2016-04-21 19:47:47 INFO  CpuData:89 - 
+**************************************
+
+2016-04-21 19:47:47 INFO  CpuData:96 - inside getDataFromMultiProcCpu
+2016-04-21 19:47:48 INFO  CpuData:100 - CPU cache size : 0
+2016-04-21 19:47:48 INFO  CpuData:101 - Number of CPU cores per CPU socket : 0
+2016-04-21 19:47:48 INFO  CpuData:102 - CPU speed : 0
+2016-04-21 19:47:48 INFO  CpuData:103 - CPU model : null
+2016-04-21 19:47:48 INFO  CpuData:104 - Total CPU cores (logical) : 0
+2016-04-21 19:47:48 INFO  CpuData:105 - Total CPU sockets (physical) : 0
+2016-04-21 19:47:48 INFO  CpuData:106 - CPU vendor id : null
+2016-04-21 19:47:48 INFO  CpuData:111 - 
+**************************************
+
+2016-04-21 19:47:48 INFO  MemoryData:38 - Actual total free system memory: 4341 MB
+2016-04-21 19:47:48 INFO  MemoryData:40 - Actual total used system memory: 3774 MB
+2016-04-21 19:47:48 INFO  MemoryData:42 - Total free system memory ......: 4254 MB
+2016-04-21 19:47:48 INFO  MemoryData:44 - System Random Access Memory....: 8120 MB
+2016-04-21 19:47:48 INFO  MemoryData:46 - Total system memory............: 8115 MB
+2016-04-21 19:47:48 INFO  MemoryData:48 - Total used system memory.......: 3861 MB
+2016-04-21 19:47:48 INFO  MemoryData:51 - Used Percentage................: 4.435213776834163E-5 MB
+2016-04-21 19:47:48 INFO  MemoryData:53 - Free Percentage................: 5.101529387228337E-5 MB
+2016-04-21 19:47:48 INFO  MemoryData:56 - 
+**************************************
+
+2016-04-21 19:47:48 INFO  SystemData:44 - 46.53994445273428	
+2016-04-21 19:47:48 INFO  SystemData:45 - 33.283730158730165	
+2016-04-21 19:47:48 INFO  SystemData:46 - 0.89
+
+2016-04-21 19:47:48 INFO  SystemData:52 - System Architecture : 	null
+2016-04-21 19:47:48 INFO  SystemData:53 - System Description : 	null
+2016-04-21 19:47:48 INFO  SystemData:54 - Machine : 	null
+2016-04-21 19:47:48 INFO  SystemData:55 - Machine Name : 	null
+2016-04-21 19:47:48 INFO  SystemData:56 - Machine Vendor : 	null
+2016-04-21 19:47:48 INFO  SystemData:57 - Machine Vendor Name : 	null
+2016-04-21 19:50:09 INFO  CpuData:35 - inside getDataFromCpu
+2016-04-21 19:50:09 INFO  CpuData:42 - Total system cpu idle time : 115804483
+2016-04-21 19:50:09 INFO  CpuData:44 - Total system cpu time servicing interrupts : 1009904
+2016-04-21 19:50:09 INFO  CpuData:46 - Total system cpu nice time : 0
+2016-04-21 19:50:09 INFO  CpuData:48 - Total system cpu time servicing softirqs : 0
+2016-04-21 19:50:09 INFO  CpuData:50 - Total system cpu involuntary wait time : 0
+2016-04-21 19:50:09 INFO  CpuData:52 - Total system cpu kernel time : 12054905
+2016-04-21 19:50:09 INFO  CpuData:54 - Total system cpu time : 390948614
+2016-04-21 19:50:09 INFO  CpuData:56 - Total system cpu user time : 28519889
+2016-04-21 19:50:09 INFO  CpuData:58 - Total system cpu io wait time : 0
+2016-04-21 19:50:09 INFO  CpuData:62 - CPU cache size : 0
+2016-04-21 19:50:09 INFO  CpuData:67 - **************************************
+
+2016-04-21 19:50:09 INFO  CpuData:74 - inside getDataFromCpuInfo
+2016-04-23 14:20:14 INFO  CpuData:35 - inside getDataFromCpu
+2016-04-23 14:20:14 INFO  MemoryData:42 - Actual total free system memory: 3824 MB
+2016-04-23 14:20:14 INFO  MemoryData:43 - Actual total used system memory: 4290 MB
+2016-04-23 14:20:14 INFO  CpuData:42 - Total system cpu idle time : 80116216
+2016-04-23 14:20:14 INFO  CpuData:43 - Total system cpu time servicing interrupts : 610795
+2016-04-23 14:20:14 INFO  CpuData:44 - Total system cpu nice time : 0
+2016-04-23 14:20:14 INFO  CpuData:45 - Total system cpu time servicing softirqs : 0
+2016-04-23 14:20:14 INFO  MemoryData:44 - Total free system memory ......: 3591 MB
+2016-04-23 14:20:14 INFO  CpuData:46 - Total system cpu involuntary wait time : 0
+2016-04-23 14:20:14 INFO  MemoryData:45 - System Random Access Memory....: 8120 MB
+2016-04-23 14:20:14 INFO  CpuData:47 - Total system cpu kernel time : 7738124
+2016-04-23 14:20:14 INFO  CpuData:48 - Total system cpu time : 285944083
+2016-04-23 14:20:14 INFO  CpuData:49 - Total system cpu user time : 26523124
+2016-04-23 14:20:14 INFO  CpuData:50 - Total system cpu io wait time : 0
+2016-04-23 14:20:14 INFO  CpuData:53 - CPU cache size : 0
+2016-04-23 14:20:14 INFO  CpuData:58 - **************************************
+
+2016-04-23 14:20:14 INFO  CpuData:65 - inside getDataFromCpuInfo
+2016-04-23 14:20:14 INFO  MemoryData:46 - Total system memory............: 8115 MB
+2016-04-23 14:20:14 INFO  MemoryData:47 - Total used system memory.......: 4523 MB
+2016-04-23 14:20:14 INFO  MemoryData:49 - Used Percentage................: 5.042413340390152E-5 MB
+2016-04-23 14:20:14 INFO  MemoryData:50 - Free Percentage................: 4.494329823672348E-5 MB
+2016-04-23 14:20:14 INFO  MemoryData:52 - 
+**************************************
+
+2016-04-23 14:20:14 INFO  SystemData:41 - 52.87353610812944	
+2016-04-23 14:20:14 INFO  SystemData:42 - 80.4	
+2016-04-23 14:20:14 INFO  SystemData:43 - 0.86
+
+2016-04-23 14:20:14 INFO  SystemData:49 - System Architecture : 	null
+2016-04-23 14:20:14 INFO  SystemData:50 - System Description : 	null
+2016-04-23 14:20:14 INFO  SystemData:51 - Machine : 	null
+2016-04-23 14:20:14 INFO  SystemData:52 - Machine Name : 	null
+2016-04-23 14:20:14 INFO  SystemData:53 - Machine Vendor : 	null
+2016-04-23 14:20:14 INFO  SystemData:54 - Machine Vendor Name : 	null
+2016-04-23 14:24:33 INFO  CpuData:35 - inside getDataFromCpu
+2016-04-23 14:24:33 INFO  CpuData:42 - Total system cpu idle time : 81006092
+2016-04-23 14:24:33 INFO  CpuData:43 - Total system cpu time servicing interrupts : 615639
+2016-04-23 14:24:33 INFO  CpuData:44 - Total system cpu nice time : 0
+2016-04-23 14:24:33 INFO  CpuData:45 - Total system cpu time servicing softirqs : 0
+2016-04-23 14:24:33 INFO  CpuData:46 - Total system cpu involuntary wait time : 0
+2016-04-23 14:24:33 INFO  CpuData:47 - Total system cpu kernel time : 7786513
+2016-04-23 14:24:33 INFO  CpuData:48 - Total system cpu time : 288533141
+2016-04-23 14:24:33 INFO  CpuData:49 - Total system cpu user time : 26620482
+2016-04-23 14:24:33 INFO  CpuData:50 - Total system cpu io wait time : 0
+2016-04-23 14:24:33 INFO  CpuData:53 - CPU cache size : 0
+2016-04-23 14:24:33 INFO  CpuData:58 - **************************************
+
+2016-04-23 14:24:33 INFO  CpuData:65 - inside getDataFromCpuInfo
+2016-04-23 14:24:33 INFO  MemoryData:44 - Actual total free system memory: 4060864512
+2016-04-23 14:24:33 INFO  MemoryData:45 - Actual total used system memory: 4242 MB
+2016-04-23 14:24:33 INFO  MemoryData:46 - Total free system memory ......: 3637 MB
+2016-04-23 14:24:33 INFO  MemoryData:47 - System Random Access Memory....: 8120 MB
+2016-04-23 14:24:33 INFO  MemoryData:48 - Total system memory............: 8115 MB
+2016-04-23 14:24:33 INFO  MemoryData:49 - Total used system memory.......: 4477 MB
+2016-04-23 14:24:33 INFO  MemoryData:51 - Used Percentage................: 4.985652203633346E-5 MB
+2016-04-23 14:24:33 INFO  MemoryData:52 - Free Percentage................: 4.551090960429154E-5 MB
+2016-04-23 14:24:33 INFO  MemoryData:54 - 
+**************************************
+
+2016-04-23 14:24:33 INFO  SystemData:41 - 52.27835245077039	
+2016-04-23 14:24:33 INFO  SystemData:42 - 33.31680713931582	
+2016-04-23 14:24:33 INFO  SystemData:43 - 0.86
+
+2016-04-23 14:24:33 INFO  SystemData:49 - System Architecture : 	null
+2016-04-23 14:24:33 INFO  SystemData:50 - System Description : 	null
+2016-04-23 14:24:33 INFO  SystemData:51 - Machine : 	null
+2016-04-23 14:24:33 INFO  SystemData:52 - Machine Name : 	null
+2016-04-23 14:24:33 INFO  SystemData:53 - Machine Vendor : 	null
+2016-04-23 14:24:33 INFO  SystemData:54 - Machine Vendor Name : 	null
+2016-04-23 17:47:55 INFO  MemoryData:48 - Actual total free system memory : 4005 MB
+2016-04-23 17:47:55 INFO  MemoryData:52 - Actual total used system memory : 4109 MB
+2016-04-23 17:47:55 INFO  MemoryData:56 - Total free system memory : 3813 MB
+2016-04-23 17:47:55 INFO  MemoryData:60 - System Random Access Memory : 8120 MB
+2016-04-23 17:47:55 INFO  MemoryData:64 - Total system memory : 8115 MB
+2016-04-23 17:47:55 INFO  MemoryData:68 - Total used system memory : 4301 MB
+2016-04-23 17:47:55 INFO  MemoryData:72 - Used Percentage : 4.8291815115595486E-5 MB
+2016-04-23 17:47:55 INFO  MemoryData:76 - Free Percentage : 4.7075616525029514E-5 MB
+2016-04-23 17:48:22 INFO  MemoryData:48 - Actual total free system memory : 3997 MB
+2016-04-23 17:48:22 INFO  MemoryData:52 - Actual total used system memory : 4117 MB
+2016-04-23 17:48:22 INFO  MemoryData:56 - Total free system memory : 3806 MB
+2016-04-23 17:48:22 INFO  MemoryData:60 - System Random Access Memory : 8120 MB
+2016-04-23 17:48:22 INFO  MemoryData:64 - Total system memory : 8115 MB
+2016-04-23 17:48:22 INFO  MemoryData:68 - Total used system memory : 4308 MB
+2016-04-23 17:48:22 INFO  MemoryData:72 - Used Percentage : 4.8387342754569135E-5 MB
+2016-04-23 17:48:22 INFO  MemoryData:76 - Free Percentage : 4.6980088886055865E-5 MB
+2016-04-23 17:49:05 INFO  MemoryData:48 - Actual total free system memory : 4050 MB
+2016-04-23 17:49:05 INFO  MemoryData:52 - Actual total used system memory : 4064 MB
+2016-04-23 17:49:05 INFO  MemoryData:56 - Total free system memory : 3857 MB
+2016-04-23 17:49:05 INFO  MemoryData:60 - System Random Access Memory : 8120 MB
+2016-04-23 17:49:05 INFO  MemoryData:64 - Total system memory : 8115 MB
+2016-04-23 17:49:05 INFO  MemoryData:68 - Total used system memory : 4257 MB
+2016-04-23 17:49:05 INFO  MemoryData:72 - Used Percentage : 4.776253415578475E-5 MB
+2016-04-23 17:49:05 INFO  MemoryData:76 - Free Percentage : 4.760489748484025E-5 MB
+2016-04-23 17:50:57 INFO  MemoryData:48 - Actual total free system memory : 4048 MB
+2016-04-23 17:50:57 INFO  MemoryData:52 - Actual total used system memory : 4067 MB
+2016-04-23 17:50:57 INFO  MemoryData:56 - Total free system memory : 3857 MB
+2016-04-23 17:50:57 INFO  MemoryData:60 - System Random Access Memory : 8120 MB
+2016-04-23 17:50:57 INFO  MemoryData:64 - Total system memory : 8115 MB
+2016-04-23 17:50:57 INFO  MemoryData:68 - Total used system memory : 4257 MB
+2016-04-23 17:50:57 INFO  MemoryData:72 - Used Percentage : 4.779407067090964E-5 MB
+2016-04-23 17:50:57 INFO  MemoryData:76 - Free Percentage : 4.757336096971536E-5 MB
+2016-04-23 17:55:05 INFO  MemoryData:48 - Actual total free system memory : 3999 MB
+2016-04-23 17:55:05 INFO  MemoryData:52 - Actual total used system memory : 4115 MB
+2016-04-23 17:55:05 INFO  MemoryData:56 - Total free system memory : 3806 MB
+2016-04-23 17:55:05 INFO  MemoryData:60 - System Random Access Memory : 8120 MB
+2016-04-23 17:55:05 INFO  MemoryData:64 - Total system memory : 8115 MB
+2016-04-23 17:55:05 INFO  MemoryData:68 - Total used system memory : 4308 MB
+2016-04-23 17:55:05 INFO  MemoryData:72 - Used Percentage : 50.71561629065564 %
+2016-04-23 17:55:05 INFO  MemoryData:76 - Free Percentage : 49.28438370934436 %
+2016-04-23 18:16:15 INFO  SystemData:46 - 50.46199536945671	
+2016-04-23 18:16:15 INFO  SystemData:47 - 34.33433433433433	
+2016-04-23 18:16:15 INFO  SystemData:48 - 0.86
+
+2016-04-23 18:16:15 INFO  SystemData:54 - System Architecture : 	null
+2016-04-23 18:16:15 INFO  SystemData:55 - System Description : 	null
+2016-04-23 18:16:15 INFO  SystemData:56 - Machine : 	null
+2016-04-23 18:16:15 INFO  SystemData:57 - Machine Name : 	null
+2016-04-23 18:16:15 INFO  SystemData:58 - Machine Vendor : 	null
+2016-04-23 18:16:15 INFO  SystemData:59 - Machine Vendor Name : 	null
+2016-04-23 18:21:29 INFO  SystemData:46 - Used Percentage 50.303825252345355	
+2016-04-23 18:21:29 INFO  SystemData:47 - combined 7.000000000000001	
+2016-04-23 18:21:29 INFO  SystemData:48 - used 0.86
+
+2016-04-23 18:21:29 INFO  SystemData:54 - System Architecture : 	null
+2016-04-23 18:21:29 INFO  SystemData:55 - System Description : 	null
+2016-04-23 18:21:29 INFO  SystemData:56 - Machine : 	null
+2016-04-23 18:21:29 INFO  SystemData:57 - Machine Name : 	null
+2016-04-23 18:21:29 INFO  SystemData:58 - Machine Vendor : 	null
+2016-04-23 18:21:29 INFO  SystemData:59 - Machine Vendor Name : 	null
+2016-04-23 18:47:52 INFO  SystemData:47 - Used Percentage 54.72570529143061	
+2016-04-23 18:47:52 INFO  SystemData:48 - combined 6.203101550775387	
+2016-04-23 18:47:52 INFO  SystemData:49 - used 0.86
+
+2016-04-23 18:47:52 INFO  SystemData:58 - CPU Info length : 4
+2016-04-23 18:47:52 INFO  SystemData:65 - System Architecture : 	null
+2016-04-23 18:47:52 INFO  SystemData:66 - System Description : 	null
+2016-04-23 18:47:52 INFO  SystemData:67 - Machine : 	null
+2016-04-23 18:47:52 INFO  SystemData:68 - Machine Name : 	null
+2016-04-23 18:47:52 INFO  SystemData:69 - Machine Vendor : 	null
+2016-04-23 18:47:52 INFO  SystemData:70 - Machine Vendor Name : 	null
+2016-04-23 18:54:37 INFO  SystemData:47 - Used Percentage 56.15501249091461	
+2016-04-23 18:54:37 INFO  SystemData:48 - combined 9.35	
+2016-04-23 18:54:37 INFO  SystemData:49 - used 0.86
+
+2016-04-23 18:54:37 INFO  SystemData:60 - CPU Info length : 4
+2016-04-23 18:54:37 INFO  SystemData:62 - CPU Cache size for 1 :  -1
+2016-04-23 18:54:37 INFO  SystemData:63 - CPU Info length for 1 :  16
+2016-04-23 18:54:37 INFO  SystemData:64 - CPU Info length for 1 :  2394
+2016-04-23 18:54:37 INFO  SystemData:62 - CPU Cache size for 2 :  -1
+2016-04-23 18:54:37 INFO  SystemData:63 - CPU Info length for 2 :  16
+2016-04-23 18:54:37 INFO  SystemData:64 - CPU Info length for 2 :  2394
+2016-04-23 18:54:37 INFO  SystemData:62 - CPU Cache size for 3 :  -1
+2016-04-23 18:54:37 INFO  SystemData:63 - CPU Info length for 3 :  16
+2016-04-23 18:54:37 INFO  SystemData:64 - CPU Info length for 3 :  2394
+2016-04-23 18:54:37 INFO  SystemData:62 - CPU Cache size for 4 :  -1
+2016-04-23 18:54:37 INFO  SystemData:63 - CPU Info length for 4 :  16
+2016-04-23 18:54:37 INFO  SystemData:64 - CPU Info length for 4 :  2394
+2016-04-23 19:01:12 INFO  CpuData:36 - inside getDataFromCpu
+2016-04-23 19:01:12 INFO  CpuData:42 - Total system cpu idle time : 135099935
+2016-04-23 19:01:12 INFO  CpuData:43 - Total system cpu time servicing interrupts : 932670
+2016-04-23 19:01:12 INFO  CpuData:44 - Total system cpu nice time : 0
+2016-04-23 19:01:12 INFO  CpuData:45 - Total system cpu time servicing softirqs : 0
+2016-04-23 19:01:12 INFO  CpuData:46 - Total system cpu involuntary wait time : 0
+2016-04-23 19:01:12 INFO  CpuData:47 - Total system cpu kernel time : 11520249
+2016-04-23 19:01:12 INFO  CpuData:48 - Total system cpu time : 454529394
+2016-04-23 19:01:12 INFO  CpuData:49 - Total system cpu user time : 35191405
+2016-04-23 19:01:12 INFO  CpuData:50 - Total system cpu io wait time : 0
+2016-04-23 19:01:12 INFO  CpuData:54 - CPU Info length : 4
+2016-04-23 19:01:12 INFO  CpuData:56 - CPU cache size : 4
+2016-04-23 19:01:12 INFO  CpuData:61 - **************************************
+
+2016-04-23 19:01:12 INFO  CpuData:68 - inside getDataFromCpuInfo
+2016-04-23 19:08:33 INFO  CpuData:36 - inside getDataFromCpu
+2016-04-23 19:08:33 INFO  CpuData:42 - Total system cpu idle time : 136654749
+2016-04-23 19:08:33 INFO  CpuData:43 - Total system cpu time servicing interrupts : 940623
+2016-04-23 19:08:33 INFO  CpuData:44 - Total system cpu nice time : 0
+2016-04-23 19:08:33 INFO  CpuData:45 - Total system cpu time servicing softirqs : 0
+2016-04-23 19:08:33 INFO  CpuData:46 - Total system cpu involuntary wait time : 0
+2016-04-23 19:08:33 INFO  CpuData:47 - Total system cpu kernel time : 11628218
+2016-04-23 19:08:33 INFO  CpuData:48 - Total system cpu time : 458933304
+2016-04-23 19:08:33 INFO  CpuData:49 - Total system cpu user time : 35290186
+2016-04-23 19:08:33 INFO  CpuData:50 - Total system cpu io wait time : 0
+2016-04-23 19:08:33 INFO  CpuData:62 - inside getDataFromCpuInfo
+2016-04-23 19:08:33 INFO  CpuData:67 - CPU cache size : -1
+2016-04-23 19:08:33 INFO  CpuData:68 - Number of CPU cores per CPU socket : 16
+2016-04-23 19:08:33 INFO  CpuData:69 - CPU speed : 2394
+2016-04-23 19:08:33 INFO  CpuData:70 - CPU model : Core(TM) i5-4210U CPU @ 1.70GHz
+2016-04-23 19:08:33 INFO  CpuData:71 - Total CPU cores (logical) : 4
+2016-04-23 19:08:33 INFO  CpuData:72 - Total CPU sockets (physical) : 4
+2016-04-23 19:08:33 INFO  CpuData:73 - CPU vendor id : Intel
+2016-04-23 19:19:19 INFO  CpuData:37 - inside getDataFromCpu
+2016-04-23 19:19:19 INFO  CpuData:43 - Total system cpu idle time : 138861904
+2016-04-23 19:19:19 INFO  CpuData:44 - Total system cpu time servicing interrupts : 952843
+2016-04-23 19:19:19 INFO  CpuData:45 - Total system cpu nice time : 0
+2016-04-23 19:19:19 INFO  CpuData:46 - Total system cpu time servicing softirqs : 0
+2016-04-23 19:19:19 INFO  CpuData:47 - Total system cpu involuntary wait time : 0
+2016-04-23 19:19:19 INFO  CpuData:48 - Total system cpu kernel time : 11819655
+2016-04-23 19:19:19 INFO  CpuData:49 - Total system cpu time : 465395641
+2016-04-23 19:19:19 INFO  CpuData:50 - Total system cpu user time : 35476529
+2016-04-23 19:19:19 INFO  CpuData:51 - Total system cpu io wait time : 0
+2016-04-23 19:19:19 INFO  CpuData:83 - 
+ inside getDataFromCpuPerc
+2016-04-23 19:19:19 INFO  CpuData:87 - Sum of User + Sys + Nice + Wait : 0.195
+2016-04-23 19:19:19 INFO  CpuData:88 - idle : 0.805
+2016-04-23 19:19:19 INFO  CpuData:89 - cpu time servicing interrupts : 0.0
+2016-04-23 19:19:20 INFO  CpuData:90 - cpu nice time : 0.0
+2016-04-23 19:19:20 INFO  CpuData:91 - system : 0.1015
+2016-04-23 19:19:20 INFO  CpuData:92 - user : 0.0935
+2016-04-23 19:19:20 INFO  CpuData:93 - wait : 0.0
+2016-04-23 19:19:20 INFO  CpuData:94 - stolen : 0.0
+2016-04-23 19:19:20 INFO  CpuData:99 - 
+**************************************
+
+2016-04-23 19:30:10 INFO  CpuData:37 - inside getDataFromCpu
+2016-04-23 19:30:10 INFO  CpuData:43 - Total system cpu idle time : 141016733
+2016-04-23 19:30:10 INFO  CpuData:44 - Total system cpu time servicing interrupts : 965310
+2016-04-23 19:30:10 INFO  CpuData:45 - Total system cpu nice time : 0
+2016-04-23 19:30:10 INFO  CpuData:46 - Total system cpu time servicing softirqs : 0
+2016-04-23 19:30:10 INFO  CpuData:47 - Total system cpu involuntary wait time : 0
+2016-04-23 19:30:10 INFO  CpuData:48 - Total system cpu kernel time : 12075905
+2016-04-23 19:30:10 INFO  CpuData:49 - Total system cpu time : 471909398
+2016-04-23 19:30:10 INFO  CpuData:50 - Total system cpu user time : 35670952
+2016-04-23 19:30:10 INFO  CpuData:51 - Total system cpu io wait time : 0
+2016-04-23 19:30:10 INFO  CpuData:55 - **************************************
+2016-04-23 19:30:10 INFO  CpuData:62 - inside getDataFromCpuInfo
+2016-04-23 19:30:10 INFO  CpuData:67 - CPU cache size : -1
+2016-04-23 19:30:10 INFO  CpuData:68 - Number of CPU cores per CPU socket : 16
+2016-04-23 19:30:10 INFO  CpuData:69 - CPU speed : 2394
+2016-04-23 19:30:10 INFO  CpuData:70 - CPU model : Core(TM) i5-4210U CPU @ 1.70GHz
+2016-04-23 19:30:10 INFO  CpuData:71 - Total CPU cores (logical) : 4
+2016-04-23 19:30:10 INFO  CpuData:72 - Total CPU sockets (physical) : 4
+2016-04-23 19:30:10 INFO  CpuData:73 - CPU vendor id : Intel
+2016-04-23 19:30:10 INFO  CpuData:78 - **************************************
+2016-04-23 19:30:10 INFO  CpuData:85 - Inside getDataFromCpuPerc (Output in Percentage)
+2016-04-23 19:30:11 INFO  CpuData:89 - Sum of User + Sys + Nice + Wait : 39.81990995497749
+2016-04-23 19:30:11 INFO  CpuData:90 - idle : 60.18009004502252
+2016-04-23 19:30:11 INFO  CpuData:91 - cpu time servicing interrupts : 0.0
+2016-04-23 19:30:11 INFO  CpuData:92 - cpu nice time : 0.0
+2016-04-23 19:30:11 INFO  CpuData:93 - system : 17.958979489744873
+2016-04-23 19:30:11 INFO  CpuData:94 - user : 21.860930465232617
+2016-04-23 19:30:11 INFO  CpuData:95 - wait : 0.0
+2016-04-23 19:30:11 INFO  CpuData:96 - stolen : 0.0
+2016-04-23 19:30:11 INFO  CpuData:100 - **************************************
+2016-04-23 19:49:43 INFO  SystemData:43 - combined 16.4	
+2016-04-23 19:49:43 INFO  SystemData:44 - used 0.86
+
+2016-04-23 19:49:43 INFO  SystemData:46 - **************************************
+2016-04-23 19:49:43 INFO  SystemData:55 - System Architecture : 	null
+2016-04-23 19:49:43 INFO  SystemData:56 - System Description : 	null
+2016-04-23 19:49:43 INFO  SystemData:57 - Machine : 	null
+2016-04-23 19:49:43 INFO  SystemData:58 - Machine Name : 	null
+2016-04-23 19:49:43 INFO  SystemData:59 - Machine Vendor : 	null
+2016-04-23 19:49:43 INFO  SystemData:60 - Machine Vendor Name : 	null
+2016-04-23 19:57:56 INFO  SystemData:55 - System Architecture : x64
+2016-04-23 19:57:56 INFO  SystemData:56 - Machine Endian : little
+2016-04-23 19:57:56 INFO  SystemData:57 - Machine Data Model : 64
+2016-04-23 19:57:56 INFO  SystemData:58 - System Description : Microsoft Windows 7
+2016-04-23 19:57:56 INFO  SystemData:59 - Machine : 
+2016-04-23 19:57:56 INFO  SystemData:60 - Machine Name : Win32
+2016-04-23 19:57:56 INFO  SystemData:61 - Machine Patch Level : 
+2016-04-23 19:57:56 INFO  SystemData:62 - Machine Vendor : Microsoft
+2016-04-23 19:57:56 INFO  SystemData:63 - Machine Vendor Code Name : Vienna
+2016-04-23 19:57:56 INFO  SystemData:64 - Machine Vendor Name : Windows 7
+2016-04-23 19:57:56 INFO  SystemData:65 - Machine Vendor Version : 7
+2016-04-23 19:57:56 INFO  SystemData:66 - Machine Version : 6.3
+2016-04-23 19:58:50 INFO  SystemData:55 - System Architecture : x64
+2016-04-23 19:58:50 INFO  SystemData:56 - Machine Endian : little
+2016-04-23 19:58:50 INFO  SystemData:57 - Machine Data Model : 64
+2016-04-23 19:58:50 INFO  SystemData:58 - System Description : Microsoft Windows 7
+2016-04-23 19:58:50 INFO  SystemData:59 - Machine Name : Win32
+2016-04-23 19:58:50 INFO  SystemData:60 - Machine Vendor : Microsoft
+2016-04-23 19:58:50 INFO  SystemData:61 - Machine Vendor Code Name : Vienna
+2016-04-23 19:58:50 INFO  SystemData:62 - Machine Vendor Name : Windows 7
+2016-04-23 19:58:50 INFO  SystemData:63 - Machine Vendor Version : 7
+2016-04-23 19:58:50 INFO  SystemData:64 - Machine Version : 6.3
+2016-04-23 19:59:25 INFO  CpuData:37 - inside getDataFromCpu
+2016-04-23 19:59:25 INFO  CpuData:42 - Total system cpu idle time : 146589764
+2016-04-23 19:59:25 INFO  CpuData:43 - Total system cpu time servicing interrupts : 1000827
+2016-04-23 19:59:25 INFO  CpuData:44 - Total system cpu nice time : 0
+2016-04-23 19:59:25 INFO  CpuData:45 - Total system cpu time servicing softirqs : 0
+2016-04-23 19:59:25 INFO  CpuData:46 - Total system cpu involuntary wait time : 0
+2016-04-23 19:59:25 INFO  CpuData:47 - Total system cpu kernel time : 12765343
+2016-04-23 19:59:25 INFO  CpuData:48 - Total system cpu time : 489458770
+2016-04-23 19:59:25 INFO  CpuData:49 - Total system cpu user time : 36428233
+2016-04-23 19:59:25 INFO  CpuData:50 - Total system cpu io wait time : 0
+2016-04-23 19:59:25 INFO  CpuData:55 - **************************************
+2016-04-23 19:59:25 INFO  CpuData:62 - inside getDataFromCpuInfo
+2016-04-23 19:59:25 INFO  SystemData:55 - System Architecture : x64
+2016-04-23 19:59:25 INFO  SystemData:56 - Machine Endian : little
+2016-04-23 19:59:25 INFO  SystemData:57 - Machine Data Model : 64
+2016-04-23 19:59:25 INFO  SystemData:58 - System Description : Microsoft Windows 7
+2016-04-23 19:59:25 INFO  SystemData:59 - Machine Name : Win32
+2016-04-23 19:59:25 INFO  SystemData:60 - Machine Vendor : Microsoft
+2016-04-23 19:59:25 INFO  SystemData:61 - Machine Vendor Code Name : Vienna
+2016-04-23 19:59:25 INFO  SystemData:62 - Machine Vendor Name : Windows 7
+2016-04-23 19:59:25 INFO  SystemData:63 - Machine Vendor Version : 7
+2016-04-23 19:59:25 INFO  SystemData:64 - Machine Version : 6.3
+2016-04-23 19:59:25 INFO  CpuData:67 - CPU cache size : -1
+2016-04-23 19:59:25 INFO  CpuData:68 - Number of CPU cores per CPU socket : 16
+2016-04-23 19:59:25 INFO  CpuData:69 - CPU speed : 2394
+2016-04-23 19:59:25 INFO  CpuData:70 - CPU model : Core(TM) i5-4210U CPU @ 1.70GHz
+2016-04-23 19:59:25 INFO  CpuData:71 - Total CPU cores (logical) : 4
+2016-04-23 19:59:25 INFO  CpuData:72 - Total CPU sockets (physical) : 4
+2016-04-23 19:59:25 INFO  CpuData:73 - CPU vendor id : Intel
+2016-04-23 19:59:25 INFO  CpuData:78 - **************************************
+2016-04-23 19:59:25 INFO  CpuData:85 - Inside getDataFromCpuPerc (Output in Percentage)
+2016-04-23 19:59:25 INFO  MemoryData:44 - Actual total free system memory : 3544 MB
+2016-04-23 19:59:25 INFO  MemoryData:48 - Actual total used system memory : 4571 MB
+2016-04-23 19:59:25 INFO  MemoryData:52 - Total free system memory : 3343 MB
+2016-04-23 19:59:25 INFO  MemoryData:56 - System Random Access Memory : 8120 MB
+2016-04-23 19:59:25 INFO  MemoryData:60 - Total system memory : 8115 MB
+2016-04-23 19:59:25 INFO  MemoryData:64 - Total used system memory : 4771 MB
+2016-04-23 19:59:25 INFO  MemoryData:68 - Used Percentage : 56.32661214627126 %
+2016-04-23 19:59:25 INFO  MemoryData:72 - Free Percentage : 43.67338785372874 %
+2016-04-23 19:59:26 INFO  CpuData:89 - Sum of User + Sys + Nice + Wait : 24.01985111662531
+2016-04-23 19:59:26 INFO  CpuData:90 - idle : 75.23573200992556
+2016-04-23 19:59:26 INFO  CpuData:91 - cpu time servicing interrupts : 0.7444168734491315
+2016-04-23 19:59:26 INFO  CpuData:92 - cpu nice time : 0.0
+2016-04-23 19:59:26 INFO  CpuData:93 - system : 13.200992555831265
+2016-04-23 19:59:26 INFO  CpuData:94 - user : 10.818858560794045
+2016-04-23 19:59:26 INFO  CpuData:95 - wait : 0.0
+2016-04-23 19:59:26 INFO  CpuData:96 - stolen : 0.0
+2016-04-23 19:59:26 INFO  CpuData:100 - **************************************
