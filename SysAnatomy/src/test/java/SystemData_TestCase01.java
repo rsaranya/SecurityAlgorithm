@@ -44,12 +44,12 @@ public class SystemData_TestCase01 {
        System.out.println("Test Case for System Data are being executed ");
        SysInfo lsysInfoInstance = new SysInfo();
        
-       assert(lsysInfoInstance.getArch()!= null );
-       assert(lsysInfoInstance.getDescription()!= null );
-       assert(lsysInfoInstance.getMachine()!= null );
-       assert(lsysInfoInstance.getName()!= null );
-       assert(lsysInfoInstance.getVendor()!= null );
-       assert(lsysInfoInstance.getVendorName()!= null );
+       assertTrue(lsysInfoInstance.getArch()!= null );
+       assertTrue(lsysInfoInstance.getDescription()!= null );
+       assertTrue(lsysInfoInstance.getMachine()!= null );
+       assertTrue(lsysInfoInstance.getName()!= null );
+       assertTrue(lsysInfoInstance.getVendor()!= null );
+       assertTrue(lsysInfoInstance.getVendorName()!= null );
        
      
 
