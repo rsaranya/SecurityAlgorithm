@@ -23,7 +23,6 @@ public class CpuData implements Runnable {
 
 	/**
 	 * 
-	 * @param psigar
 	 */
 	public CpuData() {
 		new Thread(this).start();
@@ -33,7 +32,7 @@ public class CpuData implements Runnable {
 	 * 
 	 */
 	private static void getDataFromCpu() {
-		LOGGER.info("inside getDataFromCpu");
+		LOGGER.info("Inside getDataFromCpu");
 
 		try {
 			Cpu lcpuInstance = sigar.getCpu();
@@ -58,18 +57,22 @@ public class CpuData implements Runnable {
 	 * 
 	 */
 	private static void getDataFromCpuInfo() {
-		LOGGER.info("inside getDataFromCpuInfo");
+		LOGGER.info("Inside getDataFromCpuInfo");
 
 		try {
 			CpuInfo[] lcpuInfoInstance = sigar.getCpuInfoList();
-			if (lcpuInfoInstance.length != 0) {
-				LOGGER.info("CPU cache size : " + lcpuInfoInstance[0].getCacheSize());
-				LOGGER.info("Number of CPU cores per CPU socket : " + lcpuInfoInstance[0].getCoresPerSocket());
-				LOGGER.info("CPU speed : " + lcpuInfoInstance[0].getMhz());
-				LOGGER.info("CPU model : " + lcpuInfoInstance[0].getModel());
-				LOGGER.info("Total CPU cores (logical) : " + lcpuInfoInstance[0].getTotalCores());
-				LOGGER.info("Total CPU sockets (physical) : " + lcpuInfoInstance[0].getTotalSockets());
-				LOGGER.info("CPU vendor id : " + lcpuInfoInstance[0].getVendor());
+			int count = 0;
+			int lintArrLength = lcpuInfoInstance.length;
+			if (lcpuInfoInstance != null && lintArrLength > 0) {
+				while (count < lintArrLength) {
+					LOGGER.info("CPU cache size : " + lcpuInfoInstance[count].getCacheSize());
+					LOGGER.info("Number of CPU cores per CPU socket : " + lcpuInfoInstance[count].getCoresPerSocket());
+					LOGGER.info("CPU speed : " + lcpuInfoInstance[count].getMhz());
+					LOGGER.info("CPU model : " + lcpuInfoInstance[count].getModel());
+					LOGGER.info("Total CPU cores (logical) : " + lcpuInfoInstance[count].getTotalCores());
+					LOGGER.info("Total CPU sockets (physical) : " + lcpuInfoInstance[count].getTotalSockets());
+					LOGGER.info("CPU vendor id : " + lcpuInfoInstance[count].getVendor());
+				}
 			}
 		} catch (Exception sigarEx) {
 			LOGGER.error("Exception encountered : " + sigarEx.getMessage());

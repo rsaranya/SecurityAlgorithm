@@ -1,7 +1,6 @@
 package WindowsService;
 
 import org.apache.log4j.Logger;
-import org.hyperic.sigar.FileInfo;
 import org.hyperic.sigar.FileSystem;
 import org.hyperic.sigar.FileSystemUsage;
 import org.hyperic.sigar.Sigar;
@@ -31,17 +30,7 @@ public class FileSystemData implements Runnable {
 				while (count < lintarrLength) {
 					String lstrDirectoryName = lobjlstFileSystem[count].getDirName();
 
-					FileInfo lobjFileInfo = sigar.getFileInfo(lstrDirectoryName);
-					lobjFileInfo.enableDirStat(true);
-
-					LOGGER.info("Device Name : " + lobjlstFileSystem[count].getDevName());
-					LOGGER.info("Directory Name : " + lstrDirectoryName);
-					LOGGER.info("Flags : " + lobjlstFileSystem[count].getFlags());
-					LOGGER.info("Options : " + lobjlstFileSystem[count].getOptions());
-					LOGGER.info("System Type name : " + lobjlstFileSystem[count].getSysTypeName());
-					LOGGER.info("Type : " + lobjlstFileSystem[count].getType());
-					LOGGER.info("Type Name : " + lobjlstFileSystem[count].getTypeName());
-				
+					getFileSystemInfo(lobjlstFileSystem[count]);
 					getFileSystemUsage(lstrDirectoryName);
 					
 					count++;
@@ -52,6 +41,20 @@ public class FileSystemData implements Runnable {
 			LOGGER.error("Exception encountered : " + se.getMessage());
 		}
 
+	}
+
+	/**
+	 * 
+	 * @param pobjFileSystem
+	 */
+	private static void getFileSystemInfo(FileSystem pobjFileSystem) {
+		LOGGER.info("Device Name : " + pobjFileSystem.getDevName());
+		LOGGER.info("Directory Name : " + pobjFileSystem.getDirName());
+		LOGGER.info("Flags : " + pobjFileSystem.getFlags());
+		LOGGER.info("Options : " + pobjFileSystem.getOptions());
+		LOGGER.info("System Type name : " + pobjFileSystem.getSysTypeName());
+		LOGGER.info("Type : " + pobjFileSystem.getType());
+		LOGGER.info("Type Name : " + pobjFileSystem.getTypeName());
 	}
 
 	/**
