@@ -13,10 +13,10 @@ public class StartProgram {
 
 			// Spawn Thread to run the function calls asynchronously
 			
-			new CpuData();
-			new MemoryData();  
-			new SystemData();
-			//new ConnectServer();
+			//new CpuData();
+			//new MemoryData();  
+			//new SystemData();
+			new FileSystemData();
 
 		} catch (Exception ex) {
 			LOGGER.error("Eception occured : " + ex.getMessage());

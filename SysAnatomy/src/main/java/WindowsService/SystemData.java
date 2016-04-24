@@ -6,12 +6,7 @@
 package WindowsService;
 
 import org.apache.log4j.Logger;
-import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.SigarException;
-import org.hyperic.sigar.CpuPerc;
-import org.hyperic.sigar.FileSystemUsage;
 import org.hyperic.sigar.OperatingSystem;
-import org.hyperic.sigar.SysInfo;
 import org.json.simple.JSONObject;
 
 import Util.GlobalObjects;
@@ -23,28 +18,10 @@ import Util.GlobalObjects;
 public class SystemData implements Runnable {
 
 	private static final Logger LOGGER = Logger.getLogger(SystemData.class.getName());
-	private static Sigar sigar = new Sigar();
 	private JSONObject lobjJsonSystemData = null;
 
 	public SystemData() {
-		Thread lthreadSystemData = new Thread(this);
-		lthreadSystemData.start();
-	}
-
-	private static void getSystemStatistics() {
-		CpuPerc lobjCpuPerc = null;
-		FileSystemUsage lobjFileSystemUsage = null;
-		try {
-			lobjCpuPerc = sigar.getCpuPerc();
-			lobjFileSystemUsage = sigar.getFileSystemUsage("C:");
-		} catch (SigarException se) {
-			LOGGER.error(se);
-		}
-
-		LOGGER.info("combined " + (lobjCpuPerc.getCombined() * 100) + "\t");
-		LOGGER.info("used " + lobjFileSystemUsage.getUsePercent() + "\n");
-
-		LOGGER.info("**************************************");
+		new Thread(this).start();
 	}
 
 	public static void getSystemDetails() {
@@ -66,15 +43,16 @@ public class SystemData implements Runnable {
 		} catch (Exception sigarEx) {
 			LOGGER.error("Exception occured : " + sigarEx.getMessage());
 		}
-
+		LOGGER.info("**************************************");
 	}
 
+	/**
+	 * 
+	 */
 	public void run() {
-		//getSystemStatistics();
 		getSystemDetails();
 		synchronized (GlobalObjects.larrlstJson) {
 			GlobalObjects.larrlstJson.add(lobjJsonSystemData);
 		}
-
 	}
 }

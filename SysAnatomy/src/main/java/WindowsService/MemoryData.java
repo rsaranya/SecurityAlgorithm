@@ -25,8 +25,7 @@ public class MemoryData implements Runnable {
 	// private boolean isAllDataAdded = false;
 
 	public MemoryData() {
-		Thread lthreadMemData = new Thread(this);
-		lthreadMemData.start();
+		new Thread(this).start();
 	}
 
 	@SuppressWarnings("unchecked")
@@ -73,8 +72,9 @@ public class MemoryData implements Runnable {
 			}
 
 		} catch (SigarException lsigarEx) {
-			LOGGER.error(lsigarEx);
+			LOGGER.error("Exception encountered : " + lsigarEx.getMessage());
 		}
+		LOGGER.info("**************************************");
 	}
 
 	/**

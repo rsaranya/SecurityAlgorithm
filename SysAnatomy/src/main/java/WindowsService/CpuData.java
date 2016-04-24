@@ -26,8 +26,7 @@ public class CpuData implements Runnable {
 	 * @param psigar
 	 */
 	public CpuData() {
-		Thread lthreadCpuData = new Thread(this);
-		lthreadCpuData.start();
+		new Thread(this).start();
 	}
 
 	/**

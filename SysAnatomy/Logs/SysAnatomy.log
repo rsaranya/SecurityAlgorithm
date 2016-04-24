@@ -39128,3 +39128,1108 @@
 2016-04-23 19:59:26 INFO  CpuData:95 - wait : 0.0
 2016-04-23 19:59:26 INFO  CpuData:96 - stolen : 0.0
 2016-04-23 19:59:26 INFO  CpuData:100 - **************************************
+2016-04-23 20:30:32 INFO  SystemData:22 - Device Name : C:\
+2016-04-23 20:30:32 INFO  SystemData:23 - Directory Name : C:\
+2016-04-23 20:30:32 INFO  SystemData:24 - Flags : 0
+2016-04-23 20:30:32 INFO  SystemData:25 - Options : rw
+2016-04-23 20:30:32 INFO  SystemData:26 - System Type name : NTFS
+2016-04-23 20:30:32 INFO  SystemData:27 - Type : 2
+2016-04-23 20:30:32 INFO  SystemData:28 - Type Name : local
+2016-04-23 20:30:32 INFO  SystemData:33 - **************************************
+2016-04-23 20:32:47 INFO  SystemData:24 - Device Name : C:\
+2016-04-23 20:32:47 INFO  SystemData:25 - Directory Name : C:\
+2016-04-23 20:32:47 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:32:47 INFO  SystemData:27 - Options : rw
+2016-04-23 20:32:47 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:32:47 INFO  SystemData:29 - Type : 2
+2016-04-23 20:32:47 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:32:47 INFO  SystemData:24 - Device Name : C:\
+2016-04-23 20:32:47 INFO  SystemData:25 - Directory Name : C:\
+2016-04-23 20:32:47 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:32:47 INFO  SystemData:27 - Options : rw
+2016-04-23 20:32:47 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:32:47 INFO  SystemData:29 - Type : 2
+2016-04-23 20:32:47 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:32:47 INFO  SystemData:24 - Device Name : C:\
+2016-04-23 20:32:47 INFO  SystemData:25 - Directory Name : C:\
+2016-04-23 20:32:47 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:32:47 INFO  SystemData:27 - Options : rw
+2016-04-23 20:32:47 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:32:47 INFO  SystemData:29 - Type : 2
+2016-04-23 20:32:47 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:32:47 INFO  SystemData:37 - **************************************
+2016-04-23 20:33:23 INFO  SystemData:24 - Device Name : C:\
+2016-04-23 20:33:23 INFO  SystemData:25 - Directory Name : C:\
+2016-04-23 20:33:23 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:33:23 INFO  SystemData:27 - Options : rw
+2016-04-23 20:33:23 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:33:23 INFO  SystemData:29 - Type : 2
+2016-04-23 20:33:23 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:33:23 INFO  SystemData:24 - Device Name : D:\
+2016-04-23 20:33:23 INFO  SystemData:25 - Directory Name : D:\
+2016-04-23 20:33:23 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:33:23 INFO  SystemData:27 - Options : rw
+2016-04-23 20:33:23 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:33:23 INFO  SystemData:29 - Type : 2
+2016-04-23 20:33:23 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:33:23 INFO  SystemData:24 - Device Name : E:\
+2016-04-23 20:33:23 INFO  SystemData:25 - Directory Name : E:\
+2016-04-23 20:33:23 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:33:23 INFO  SystemData:27 - Options : rw
+2016-04-23 20:33:23 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:33:23 INFO  SystemData:29 - Type : 2
+2016-04-23 20:33:23 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:33:23 INFO  SystemData:37 - **************************************
+2016-04-23 20:37:31 INFO  CpuData:36 - inside getDataFromCpu
+2016-04-23 20:37:31 INFO  CpuData:41 - Total system cpu idle time : 154528653
+2016-04-23 20:37:31 INFO  CpuData:42 - Total system cpu time servicing interrupts : 1029327
+2016-04-23 20:37:31 INFO  CpuData:43 - Total system cpu nice time : 0
+2016-04-23 20:37:31 INFO  CpuData:44 - Total system cpu time servicing softirqs : 0
+2016-04-23 20:37:31 INFO  CpuData:45 - Total system cpu involuntary wait time : 0
+2016-04-23 20:37:31 INFO  CpuData:46 - Total system cpu kernel time : 13369717
+2016-04-23 20:37:31 INFO  CpuData:47 - Total system cpu time : 512315018
+2016-04-23 20:37:31 INFO  CpuData:48 - Total system cpu user time : 37027468
+2016-04-23 20:37:31 INFO  CpuData:49 - Total system cpu io wait time : 0
+2016-04-23 20:37:31 INFO  CpuData:54 - **************************************
+2016-04-23 20:37:31 INFO  CpuData:61 - inside getDataFromCpuInfo
+2016-04-23 20:37:31 INFO  CpuData:66 - CPU cache size : -1
+2016-04-23 20:37:31 INFO  CpuData:67 - Number of CPU cores per CPU socket : 16
+2016-04-23 20:37:31 INFO  CpuData:68 - CPU speed : 2394
+2016-04-23 20:37:31 INFO  SystemData:32 - System Architecture : x64
+2016-04-23 20:37:31 INFO  SystemData:33 - Machine Endian : little
+2016-04-23 20:37:31 INFO  SystemData:34 - Machine Data Model : 64
+2016-04-23 20:37:31 INFO  SystemData:35 - System Description : Microsoft Windows 7
+2016-04-23 20:37:31 INFO  SystemData:36 - Machine Name : Win32
+2016-04-23 20:37:31 INFO  SystemData:37 - Machine Vendor : Microsoft
+2016-04-23 20:37:31 INFO  SystemData:38 - Machine Vendor Code Name : Vienna
+2016-04-23 20:37:31 INFO  SystemData:39 - Machine Vendor Name : Windows 7
+2016-04-23 20:37:31 INFO  SystemData:40 - Machine Vendor Version : 7
+2016-04-23 20:37:31 INFO  SystemData:41 - Machine Version : 6.3
+2016-04-23 20:37:31 INFO  SystemData:46 - **************************************
+2016-04-23 20:37:31 INFO  CpuData:69 - CPU model : Core(TM) i5-4210U CPU @ 1.70GHz
+2016-04-23 20:37:31 INFO  CpuData:70 - Total CPU cores (logical) : 4
+2016-04-23 20:37:31 INFO  CpuData:71 - Total CPU sockets (physical) : 4
+2016-04-23 20:37:31 INFO  CpuData:72 - CPU vendor id : Intel
+2016-04-23 20:37:31 INFO  CpuData:77 - **************************************
+2016-04-23 20:37:31 INFO  CpuData:84 - Inside getDataFromCpuPerc (Output in Percentage)
+2016-04-23 20:37:31 INFO  SystemData:24 - Device Name : C:\
+2016-04-23 20:37:31 INFO  SystemData:25 - Directory Name : C:\
+2016-04-23 20:37:31 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:37:31 INFO  SystemData:27 - Options : rw
+2016-04-23 20:37:31 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:37:31 INFO  SystemData:29 - Type : 2
+2016-04-23 20:37:31 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:37:31 INFO  SystemData:24 - Device Name : D:\
+2016-04-23 20:37:31 INFO  SystemData:25 - Directory Name : D:\
+2016-04-23 20:37:31 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:37:31 INFO  SystemData:27 - Options : rw
+2016-04-23 20:37:31 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:37:31 INFO  SystemData:29 - Type : 2
+2016-04-23 20:37:31 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:37:31 INFO  SystemData:24 - Device Name : E:\
+2016-04-23 20:37:31 INFO  SystemData:25 - Directory Name : E:\
+2016-04-23 20:37:31 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:37:31 INFO  SystemData:27 - Options : rw
+2016-04-23 20:37:31 INFO  MemoryData:43 - Actual total free system memory : 3431 MB
+2016-04-23 20:37:31 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:37:31 INFO  MemoryData:47 - Actual total used system memory : 4684 MB
+2016-04-23 20:37:31 INFO  MemoryData:51 - Total free system memory : 3226 MB
+2016-04-23 20:37:31 INFO  SystemData:29 - Type : 2
+2016-04-23 20:37:31 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:37:31 INFO  SystemData:24 - Device Name : G:\
+2016-04-23 20:37:31 INFO  SystemData:25 - Directory Name : G:\
+2016-04-23 20:37:31 INFO  MemoryData:55 - System Random Access Memory : 8120 MB
+2016-04-23 20:37:31 INFO  MemoryData:59 - Total system memory : 8115 MB
+2016-04-23 20:37:31 INFO  MemoryData:63 - Total used system memory : 4889 MB
+2016-04-23 20:37:31 INFO  SystemData:26 - Flags : 0
+2016-04-23 20:37:31 INFO  SystemData:27 - Options : rw
+2016-04-23 20:37:31 INFO  SystemData:28 - System Type name : NTFS
+2016-04-23 20:37:31 INFO  SystemData:29 - Type : 2
+2016-04-23 20:37:31 INFO  SystemData:30 - Type Name : local
+2016-04-23 20:37:31 INFO  SystemData:37 - **************************************
+2016-04-23 20:37:31 INFO  MemoryData:67 - Used Percentage : 57.719288956491184 %
+2016-04-23 20:37:31 INFO  MemoryData:71 - Free Percentage : 42.280711043508816 %
+2016-04-23 20:37:31 INFO  MemoryData:77 - **************************************
+2016-04-23 20:37:32 INFO  CpuData:88 - Sum of User + Sys + Nice + Wait : 22.599999999999998
+2016-04-23 20:37:32 INFO  CpuData:89 - idle : 77.4
+2016-04-23 20:37:32 INFO  CpuData:90 - cpu time servicing interrupts : 0.0
+2016-04-23 20:37:32 INFO  CpuData:91 - cpu nice time : 0.0
+2016-04-23 20:37:32 INFO  CpuData:92 - system : 7.8
+2016-04-23 20:37:32 INFO  CpuData:93 - user : 14.799999999999999
+2016-04-23 20:37:32 INFO  CpuData:94 - wait : 0.0
+2016-04-23 20:37:32 INFO  CpuData:95 - stolen : 0.0
+2016-04-23 20:37:32 INFO  CpuData:99 - **************************************
+2016-04-23 20:55:59 INFO  CpuData:36 - inside getDataFromCpu
+2016-04-23 20:55:59 INFO  SystemData:26 - Device Name : C:\
+2016-04-23 20:55:59 INFO  MemoryData:43 - Actual total free system memory : 3401 MB
+2016-04-23 20:55:59 INFO  SystemData:32 - System Architecture : x64
+2016-04-23 20:55:59 INFO  MemoryData:47 - Actual total used system memory : 4713 MB
+2016-04-23 20:55:59 INFO  CpuData:41 - Total system cpu idle time : 158638624
+2016-04-23 20:55:59 INFO  SystemData:27 - Directory Name : C:\
+2016-04-23 20:55:59 INFO  CpuData:42 - Total system cpu time servicing interrupts : 1036123
+2016-04-23 20:55:59 INFO  MemoryData:51 - Total free system memory : 3197 MB
+2016-04-23 20:55:59 INFO  SystemData:33 - Machine Endian : little
+2016-04-23 20:55:59 INFO  MemoryData:55 - System Random Access Memory : 8120 MB
+2016-04-23 20:55:59 INFO  CpuData:43 - Total system cpu nice time : 0
+2016-04-23 20:55:59 INFO  CpuData:44 - Total system cpu time servicing softirqs : 0
+2016-04-23 20:55:59 INFO  CpuData:45 - Total system cpu involuntary wait time : 0
+2016-04-23 20:55:59 INFO  SystemData:28 - Flags : 0
+2016-04-23 20:55:59 INFO  SystemData:29 - Options : rw
+2016-04-23 20:55:59 INFO  CpuData:46 - Total system cpu kernel time : 13516325
+2016-04-23 20:55:59 INFO  MemoryData:59 - Total system memory : 8115 MB
+2016-04-23 20:55:59 INFO  MemoryData:63 - Total used system memory : 4917 MB
+2016-04-23 20:55:59 INFO  SystemData:34 - Machine Data Model : 64
+2016-04-23 20:55:59 INFO  SystemData:35 - System Description : Microsoft Windows 7
+2016-04-23 20:55:59 INFO  SystemData:36 - Machine Name : Win32
+2016-04-23 20:55:59 INFO  SystemData:37 - Machine Vendor : Microsoft
+2016-04-23 20:55:59 INFO  SystemData:38 - Machine Vendor Code Name : Vienna
+2016-04-23 20:55:59 INFO  SystemData:39 - Machine Vendor Name : Windows 7
+2016-04-23 20:55:59 INFO  SystemData:40 - Machine Vendor Version : 7
+2016-04-23 20:55:59 INFO  SystemData:41 - Machine Version : 6.3
+2016-04-23 20:55:59 INFO  SystemData:46 - **************************************
+2016-04-23 20:55:59 INFO  CpuData:47 - Total system cpu time : 523398922
+2016-04-23 20:55:59 INFO  CpuData:48 - Total system cpu user time : 37204451
+2016-04-23 20:55:59 INFO  CpuData:49 - Total system cpu io wait time : 0
+2016-04-23 20:55:59 INFO  CpuData:54 - **************************************
+2016-04-23 20:55:59 INFO  CpuData:61 - inside getDataFromCpuInfo
+2016-04-23 20:55:59 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 20:55:59 INFO  SystemData:31 - Type : 2
+2016-04-23 20:55:59 INFO  SystemData:32 - Type Name : local
+2016-04-23 20:55:59 INFO  MemoryData:67 - Used Percentage : 58.080298049106865 %
+2016-04-23 20:55:59 INFO  MemoryData:71 - Free Percentage : 41.919701950893135 %
+2016-04-23 20:55:59 INFO  CpuData:66 - CPU cache size : -1
+2016-04-23 20:55:59 INFO  MemoryData:77 - **************************************
+2016-04-23 20:55:59 INFO  CpuData:67 - Number of CPU cores per CPU socket : 16
+2016-04-23 20:55:59 INFO  CpuData:68 - CPU speed : 2394
+2016-04-23 20:55:59 INFO  CpuData:69 - CPU model : Core(TM) i5-4210U CPU @ 1.70GHz
+2016-04-23 20:55:59 INFO  CpuData:70 - Total CPU cores (logical) : 4
+2016-04-23 20:55:59 INFO  CpuData:71 - Total CPU sockets (physical) : 4
+2016-04-23 20:55:59 INFO  CpuData:72 - CPU vendor id : Intel
+2016-04-23 20:55:59 INFO  CpuData:77 - **************************************
+2016-04-23 20:55:59 INFO  CpuData:84 - Inside getDataFromCpuPerc (Output in Percentage)
+2016-04-23 20:55:59 INFO  SystemData:37 - File Info : 
+2016-04-23 20:55:59 INFO  SystemData:38 - File Info : 
+2016-04-23 20:55:59 INFO  SystemData:26 - Device Name : D:\
+2016-04-23 20:55:59 INFO  SystemData:27 - Directory Name : D:\
+2016-04-23 20:55:59 INFO  SystemData:28 - Flags : 0
+2016-04-23 20:55:59 INFO  SystemData:29 - Options : rw
+2016-04-23 20:55:59 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 20:55:59 INFO  SystemData:31 - Type : 2
+2016-04-23 20:55:59 INFO  SystemData:32 - Type Name : local
+2016-04-23 20:55:59 INFO  SystemData:37 - File Info : 
+2016-04-23 20:55:59 INFO  SystemData:38 - File Info : 
+2016-04-23 20:55:59 INFO  SystemData:26 - Device Name : E:\
+2016-04-23 20:55:59 INFO  SystemData:27 - Directory Name : E:\
+2016-04-23 20:55:59 INFO  SystemData:28 - Flags : 0
+2016-04-23 20:55:59 INFO  SystemData:29 - Options : rw
+2016-04-23 20:55:59 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 20:55:59 INFO  SystemData:31 - Type : 2
+2016-04-23 20:55:59 INFO  SystemData:32 - Type Name : local
+2016-04-23 20:55:59 INFO  SystemData:37 - File Info : 
+2016-04-23 20:55:59 INFO  SystemData:38 - File Info : 
+2016-04-23 20:55:59 INFO  SystemData:49 - **************************************
+2016-04-23 20:56:00 INFO  CpuData:88 - Sum of User + Sys + Nice + Wait : 50.07496251874063
+2016-04-23 20:56:00 INFO  CpuData:89 - idle : 49.92503748125937
+2016-04-23 20:56:00 INFO  CpuData:90 - cpu time servicing interrupts : 0.0
+2016-04-23 20:56:00 INFO  CpuData:91 - cpu nice time : 0.0
+2016-04-23 20:56:00 INFO  CpuData:92 - system : 32.8335832083958
+2016-04-23 20:56:00 INFO  CpuData:93 - user : 17.24137931034483
+2016-04-23 20:56:00 INFO  CpuData:94 - wait : 0.0
+2016-04-23 20:56:00 INFO  CpuData:95 - stolen : 0.0
+2016-04-23 20:56:00 INFO  CpuData:99 - **************************************
+2016-04-23 20:56:25 INFO  CpuData:36 - inside getDataFromCpu
+2016-04-23 20:56:25 INFO  SystemData:32 - System Architecture : x64
+2016-04-23 20:56:25 INFO  SystemData:33 - Machine Endian : little
+2016-04-23 20:56:25 INFO  CpuData:41 - Total system cpu idle time : 158724936
+2016-04-23 20:56:25 INFO  CpuData:42 - Total system cpu time servicing interrupts : 1036311
+2016-04-23 20:56:25 INFO  SystemData:34 - Machine Data Model : 64
+2016-04-23 20:56:25 INFO  SystemData:35 - System Description : Microsoft Windows 7
+2016-04-23 20:56:25 INFO  CpuData:43 - Total system cpu nice time : 0
+2016-04-23 20:56:25 INFO  SystemData:36 - Machine Name : Win32
+2016-04-23 20:56:25 INFO  CpuData:44 - Total system cpu time servicing softirqs : 0
+2016-04-23 20:56:25 INFO  SystemData:37 - Machine Vendor : Microsoft
+2016-04-23 20:56:25 INFO  CpuData:45 - Total system cpu involuntary wait time : 0
+2016-04-23 20:56:25 INFO  CpuData:46 - Total system cpu kernel time : 13523295
+2016-04-23 20:56:25 INFO  CpuData:47 - Total system cpu time : 523653299
+2016-04-23 20:56:25 INFO  SystemData:38 - Machine Vendor Code Name : Vienna
+2016-04-23 20:56:25 INFO  CpuData:48 - Total system cpu user time : 37212920
+2016-04-23 20:56:25 INFO  SystemData:39 - Machine Vendor Name : Windows 7
+2016-04-23 20:56:25 INFO  CpuData:49 - Total system cpu io wait time : 0
+2016-04-23 20:56:25 INFO  CpuData:54 - **************************************
+2016-04-23 20:56:25 INFO  CpuData:61 - inside getDataFromCpuInfo
+2016-04-23 20:56:25 INFO  SystemData:40 - Machine Vendor Version : 7
+2016-04-23 20:56:25 INFO  SystemData:41 - Machine Version : 6.3
+2016-04-23 20:56:25 INFO  SystemData:46 - **************************************
+2016-04-23 20:56:25 INFO  CpuData:66 - CPU cache size : -1
+2016-04-23 20:56:25 INFO  MemoryData:43 - Actual total free system memory : 3398 MB
+2016-04-23 20:56:25 INFO  CpuData:67 - Number of CPU cores per CPU socket : 16
+2016-04-23 20:56:25 INFO  CpuData:68 - CPU speed : 2394
+2016-04-23 20:56:25 INFO  CpuData:69 - CPU model : Core(TM) i5-4210U CPU @ 1.70GHz
+2016-04-23 20:56:25 INFO  CpuData:70 - Total CPU cores (logical) : 4
+2016-04-23 20:56:25 INFO  CpuData:71 - Total CPU sockets (physical) : 4
+2016-04-23 20:56:25 INFO  SystemData:26 - Device Name : C:\
+2016-04-23 20:56:25 INFO  SystemData:27 - Directory Name : C:\
+2016-04-23 20:56:25 INFO  CpuData:72 - CPU vendor id : Intel
+2016-04-23 20:56:25 INFO  CpuData:77 - **************************************
+2016-04-23 20:56:25 INFO  CpuData:84 - Inside getDataFromCpuPerc (Output in Percentage)
+2016-04-23 20:56:25 INFO  MemoryData:47 - Actual total used system memory : 4717 MB
+2016-04-23 20:56:25 INFO  MemoryData:51 - Total free system memory : 3195 MB
+2016-04-23 20:56:25 INFO  MemoryData:55 - System Random Access Memory : 8120 MB
+2016-04-23 20:56:25 INFO  MemoryData:59 - Total system memory : 8115 MB
+2016-04-23 20:56:25 INFO  SystemData:28 - Flags : 0
+2016-04-23 20:56:25 INFO  MemoryData:63 - Total used system memory : 4919 MB
+2016-04-23 20:56:25 INFO  SystemData:29 - Options : rw
+2016-04-23 20:56:25 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 20:56:25 INFO  SystemData:31 - Type : 2
+2016-04-23 20:56:25 INFO  SystemData:32 - Type Name : local
+2016-04-23 20:56:25 INFO  MemoryData:67 - Used Percentage : 58.125255714773935 %
+2016-04-23 20:56:25 INFO  MemoryData:71 - Free Percentage : 41.874744285226065 %
+2016-04-23 20:56:25 INFO  MemoryData:77 - **************************************
+2016-04-23 20:56:25 INFO  SystemData:37 - File Info : 
+2016-04-23 20:56:25 INFO  SystemData:38 - File Info : 
+2016-04-23 20:56:25 INFO  SystemData:26 - Device Name : D:\
+2016-04-23 20:56:25 INFO  SystemData:27 - Directory Name : D:\
+2016-04-23 20:56:25 INFO  SystemData:28 - Flags : 0
+2016-04-23 20:56:25 INFO  SystemData:29 - Options : rw
+2016-04-23 20:56:25 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 20:56:25 INFO  SystemData:31 - Type : 2
+2016-04-23 20:56:25 INFO  SystemData:32 - Type Name : local
+2016-04-23 20:56:25 INFO  SystemData:37 - File Info : 
+2016-04-23 20:56:25 INFO  SystemData:38 - File Info : 
+2016-04-23 20:56:25 INFO  SystemData:26 - Device Name : E:\
+2016-04-23 20:56:25 INFO  SystemData:27 - Directory Name : E:\
+2016-04-23 20:56:25 INFO  SystemData:28 - Flags : 0
+2016-04-23 20:56:25 INFO  SystemData:29 - Options : rw
+2016-04-23 20:56:25 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 20:56:25 INFO  SystemData:31 - Type : 2
+2016-04-23 20:56:25 INFO  SystemData:32 - Type Name : local
+2016-04-23 20:56:25 INFO  SystemData:37 - File Info : 
+2016-04-23 20:56:25 INFO  SystemData:38 - File Info : 
+2016-04-23 20:56:25 INFO  SystemData:49 - **************************************
+2016-04-23 20:56:25 INFO  CpuData:88 - Sum of User + Sys + Nice + Wait : 17.167167167167168
+2016-04-23 20:56:25 INFO  CpuData:89 - idle : 82.83283283283284
+2016-04-23 20:56:25 INFO  CpuData:90 - cpu time servicing interrupts : 0.0
+2016-04-23 20:56:25 INFO  CpuData:91 - cpu nice time : 0.0
+2016-04-23 20:56:25 INFO  CpuData:92 - system : 7.007007007007007
+2016-04-23 20:56:25 INFO  CpuData:93 - user : 10.16016016016016
+2016-04-23 20:56:25 INFO  CpuData:94 - wait : 0.0
+2016-04-23 20:56:25 INFO  CpuData:95 - stolen : 0.0
+2016-04-23 20:56:25 INFO  CpuData:99 - **************************************
+2016-04-23 21:03:42 INFO  SystemData:26 - Device Name : C:\
+2016-04-23 21:03:42 INFO  SystemData:27 - Directory Name : C:\
+2016-04-23 21:03:42 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:03:42 INFO  SystemData:29 - Options : rw
+2016-04-23 21:03:42 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:03:42 INFO  SystemData:31 - Type : 2
+2016-04-23 21:03:42 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:03:42 INFO  SystemData:37 - File Info : 
+2016-04-23 21:04:36 INFO  SystemData:26 - Device Name : C:\
+2016-04-23 21:04:36 INFO  SystemData:27 - Directory Name : C:\
+2016-04-23 21:04:36 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:04:36 INFO  SystemData:29 - Options : rw
+2016-04-23 21:04:36 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:04:36 INFO  SystemData:31 - Type : 2
+2016-04-23 21:04:36 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:04:47 INFO  SystemData:26 - Device Name : C:\
+2016-04-23 21:04:47 INFO  SystemData:27 - Directory Name : C:\
+2016-04-23 21:04:47 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:04:47 INFO  SystemData:29 - Options : rw
+2016-04-23 21:04:47 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:04:47 INFO  SystemData:31 - Type : 2
+2016-04-23 21:04:47 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:04:47 INFO  SystemData:26 - Device Name : D:\
+2016-04-23 21:04:47 INFO  SystemData:27 - Directory Name : D:\
+2016-04-23 21:04:47 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:04:47 INFO  SystemData:29 - Options : rw
+2016-04-23 21:04:47 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:04:47 INFO  SystemData:31 - Type : 2
+2016-04-23 21:04:47 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:04:48 INFO  SystemData:26 - Device Name : E:\
+2016-04-23 21:04:48 INFO  SystemData:27 - Directory Name : E:\
+2016-04-23 21:04:48 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:04:48 INFO  SystemData:29 - Options : rw
+2016-04-23 21:04:48 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:04:48 INFO  SystemData:31 - Type : 2
+2016-04-23 21:04:48 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:04:48 INFO  SystemData:49 - **************************************
+2016-04-23 21:07:41 INFO  SystemData:26 - Device Name : C:\
+2016-04-23 21:07:41 INFO  SystemData:27 - Directory Name : C:\
+2016-04-23 21:07:41 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:07:41 INFO  SystemData:29 - Options : rw
+2016-04-23 21:07:41 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:07:41 INFO  SystemData:31 - Type : 2
+2016-04-23 21:07:41 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:07:41 INFO  SystemData:26 - Device Name : D:\
+2016-04-23 21:07:41 INFO  SystemData:27 - Directory Name : D:\
+2016-04-23 21:07:41 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:07:41 INFO  SystemData:29 - Options : rw
+2016-04-23 21:07:41 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:07:41 INFO  SystemData:31 - Type : 2
+2016-04-23 21:07:41 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:07:41 INFO  SystemData:26 - Device Name : E:\
+2016-04-23 21:07:41 INFO  SystemData:27 - Directory Name : E:\
+2016-04-23 21:07:41 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:07:41 INFO  SystemData:29 - Options : rw
+2016-04-23 21:07:41 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:07:41 INFO  SystemData:31 - Type : 2
+2016-04-23 21:07:41 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:07:41 INFO  SystemData:49 - **************************************
+2016-04-23 21:08:22 INFO  SystemData:26 - Device Name : C:\
+2016-04-23 21:08:22 INFO  SystemData:27 - Directory Name : C:\
+2016-04-23 21:08:22 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:08:22 INFO  SystemData:29 - Options : rw
+2016-04-23 21:08:22 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:08:22 INFO  SystemData:31 - Type : 2
+2016-04-23 21:08:22 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:08:22 INFO  SystemData:26 - Device Name : D:\
+2016-04-23 21:08:22 INFO  SystemData:27 - Directory Name : D:\
+2016-04-23 21:08:22 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:08:22 INFO  SystemData:29 - Options : rw
+2016-04-23 21:08:22 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:08:22 INFO  SystemData:31 - Type : 2
+2016-04-23 21:08:22 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:08:22 INFO  SystemData:26 - Device Name : E:\
+2016-04-23 21:08:22 INFO  SystemData:27 - Directory Name : E:\
+2016-04-23 21:08:22 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:08:22 INFO  SystemData:29 - Options : rw
+2016-04-23 21:08:22 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:08:22 INFO  SystemData:31 - Type : 2
+2016-04-23 21:08:22 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:20:26 INFO  SystemData:26 - Device Name : C:\
+2016-04-23 21:20:26 INFO  SystemData:27 - Directory Name : C:\
+2016-04-23 21:20:26 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:20:26 INFO  SystemData:29 - Options : rw
+2016-04-23 21:20:26 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:20:26 INFO  SystemData:31 - Type : 2
+2016-04-23 21:20:26 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:20:26 INFO  SystemData:37 - A Time : 1461212987173
+2016-04-23 21:20:26 INFO  SystemData:38 - C Time : 1377178262911
+2016-04-23 21:20:26 INFO  SystemData:39 - C Time : 1214561842
+2016-04-23 21:20:26 INFO  SystemData:26 - Device Name : D:\
+2016-04-23 21:20:26 INFO  SystemData:27 - Directory Name : D:\
+2016-04-23 21:20:26 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:20:26 INFO  SystemData:29 - Options : rw
+2016-04-23 21:20:26 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:20:26 INFO  SystemData:31 - Type : 2
+2016-04-23 21:20:26 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:20:26 INFO  SystemData:37 - A Time : 1461443985643
+2016-04-23 21:20:26 INFO  SystemData:38 - C Time : 1424791419381
+2016-04-23 21:20:26 INFO  SystemData:39 - C Time : 2766033454
+2016-04-23 21:20:26 INFO  SystemData:26 - Device Name : E:\
+2016-04-23 21:20:26 INFO  SystemData:27 - Directory Name : E:\
+2016-04-23 21:20:26 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:20:26 INFO  SystemData:29 - Options : rw
+2016-04-23 21:20:26 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:20:26 INFO  SystemData:31 - Type : 2
+2016-04-23 21:20:26 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:20:26 INFO  SystemData:37 - A Time : 1461216312637
+2016-04-23 21:20:26 INFO  SystemData:38 - C Time : 1424791445834
+2016-04-23 21:20:26 INFO  SystemData:39 - C Time : 3673055379
+2016-04-23 21:20:26 INFO  SystemData:49 - **************************************
+2016-04-23 21:42:57 INFO  SystemData:26 - Device Name : C:\
+2016-04-23 21:42:57 INFO  SystemData:27 - Directory Name : C:\
+2016-04-23 21:42:57 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:42:57 INFO  SystemData:29 - Options : rw
+2016-04-23 21:42:57 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:42:57 INFO  SystemData:31 - Type : 2
+2016-04-23 21:42:57 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:42:57 INFO  SystemData:37 - Permissions : 0
+2016-04-23 21:42:57 INFO  SystemData:38 - Size : 8192
+2016-04-23 21:42:57 INFO  SystemData:39 - C Time : 1214561842
+2016-04-23 21:42:57 INFO  SystemData:26 - Device Name : D:\
+2016-04-23 21:42:57 INFO  SystemData:27 - Directory Name : D:\
+2016-04-23 21:42:57 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:42:57 INFO  SystemData:29 - Options : rw
+2016-04-23 21:42:57 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:42:57 INFO  SystemData:31 - Type : 2
+2016-04-23 21:42:57 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:42:57 INFO  SystemData:37 - Permissions : 1904
+2016-04-23 21:42:57 INFO  SystemData:38 - Size : 8192
+2016-04-23 21:42:57 INFO  SystemData:39 - C Time : 2766033454
+2016-04-23 21:42:58 INFO  SystemData:26 - Device Name : E:\
+2016-04-23 21:42:58 INFO  SystemData:27 - Directory Name : E:\
+2016-04-23 21:42:58 INFO  SystemData:28 - Flags : 0
+2016-04-23 21:42:58 INFO  SystemData:29 - Options : rw
+2016-04-23 21:42:58 INFO  SystemData:30 - System Type name : NTFS
+2016-04-23 21:42:58 INFO  SystemData:31 - Type : 2
+2016-04-23 21:42:58 INFO  SystemData:32 - Type Name : local
+2016-04-23 21:42:58 INFO  SystemData:37 - Permissions : 1904
+2016-04-23 21:42:58 INFO  SystemData:38 - Size : 12288
+2016-04-23 21:42:58 INFO  SystemData:39 - C Time : 3673055379
+2016-04-23 21:42:58 INFO  SystemData:49 - **************************************
+2016-04-23 21:49:53 INFO  SystemData:27 - Device Name : C:\
+2016-04-23 21:49:53 INFO  SystemData:28 - Directory Name : C:\
+2016-04-23 21:49:53 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:49:53 INFO  SystemData:30 - Options : rw
+2016-04-23 21:49:53 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:49:53 INFO  SystemData:32 - Type : 2
+2016-04-23 21:49:53 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:49:53 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:49:53 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:49:53 INFO  SystemData:39 - Disk Usage : 4391666266
+2016-04-23 21:49:53 INFO  SystemData:40 - Files : 4
+2016-04-23 21:49:53 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:49:53 INFO  SystemData:42 - Sub Directories : 21
+2016-04-23 21:49:53 INFO  SystemData:43 - Sym Links : 1
+2016-04-23 21:49:53 INFO  SystemData:44 - Total : 26
+2016-04-23 21:49:53 INFO  SystemData:27 - Device Name : D:\
+2016-04-23 21:49:53 INFO  SystemData:28 - Directory Name : D:\
+2016-04-23 21:49:53 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:49:53 INFO  SystemData:30 - Options : rw
+2016-04-23 21:49:53 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:49:53 INFO  SystemData:32 - Type : 2
+2016-04-23 21:49:53 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:49:53 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:49:53 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:49:53 INFO  SystemData:39 - Disk Usage : 106735479
+2016-04-23 21:49:53 INFO  SystemData:40 - Files : 26
+2016-04-23 21:49:53 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:49:53 INFO  SystemData:42 - Sub Directories : 18
+2016-04-23 21:49:53 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:49:53 INFO  SystemData:44 - Total : 44
+2016-04-23 21:49:53 INFO  SystemData:27 - Device Name : E:\
+2016-04-23 21:49:53 INFO  SystemData:28 - Directory Name : E:\
+2016-04-23 21:49:53 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:49:53 INFO  SystemData:30 - Options : rw
+2016-04-23 21:49:53 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:49:53 INFO  SystemData:32 - Type : 2
+2016-04-23 21:49:53 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:49:53 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:49:53 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:49:53 INFO  SystemData:39 - Disk Usage : 1240984614
+2016-04-23 21:49:53 INFO  SystemData:40 - Files : 12
+2016-04-23 21:49:53 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:49:53 INFO  SystemData:42 - Sub Directories : 33
+2016-04-23 21:49:53 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:49:53 INFO  SystemData:44 - Total : 45
+2016-04-23 21:49:53 INFO  SystemData:52 - **************************************
+2016-04-23 21:50:16 INFO  SystemData:27 - Device Name : C:\
+2016-04-23 21:50:16 INFO  SystemData:28 - Directory Name : C:\
+2016-04-23 21:50:16 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:50:16 INFO  SystemData:30 - Options : rw
+2016-04-23 21:50:16 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:50:16 INFO  SystemData:32 - Type : 2
+2016-04-23 21:50:16 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:50:16 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:50:16 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:50:16 INFO  SystemData:39 - Disk Usage : 4391666266
+2016-04-23 21:50:16 INFO  SystemData:40 - Files : 4
+2016-04-23 21:50:16 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:50:16 INFO  SystemData:42 - Sub Directories : 21
+2016-04-23 21:50:16 INFO  SystemData:43 - Sym Links : 1
+2016-04-23 21:50:16 INFO  SystemData:44 - Total : 26
+2016-04-23 21:50:16 INFO  SystemData:47 - **************************************
+2016-04-23 21:50:16 INFO  SystemData:27 - Device Name : D:\
+2016-04-23 21:50:16 INFO  SystemData:28 - Directory Name : D:\
+2016-04-23 21:50:16 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:50:16 INFO  SystemData:30 - Options : rw
+2016-04-23 21:50:16 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:50:16 INFO  SystemData:32 - Type : 2
+2016-04-23 21:50:16 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:50:16 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:50:16 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:50:16 INFO  SystemData:39 - Disk Usage : 106735479
+2016-04-23 21:50:16 INFO  SystemData:40 - Files : 26
+2016-04-23 21:50:16 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:50:16 INFO  SystemData:42 - Sub Directories : 18
+2016-04-23 21:50:16 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:50:16 INFO  SystemData:44 - Total : 44
+2016-04-23 21:50:16 INFO  SystemData:47 - **************************************
+2016-04-23 21:50:16 INFO  SystemData:27 - Device Name : E:\
+2016-04-23 21:50:16 INFO  SystemData:28 - Directory Name : E:\
+2016-04-23 21:50:16 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:50:16 INFO  SystemData:30 - Options : rw
+2016-04-23 21:50:16 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:50:16 INFO  SystemData:32 - Type : 2
+2016-04-23 21:50:16 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:50:16 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:50:16 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:50:16 INFO  SystemData:39 - Disk Usage : 1240984614
+2016-04-23 21:50:16 INFO  SystemData:40 - Files : 12
+2016-04-23 21:50:16 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:50:16 INFO  SystemData:42 - Sub Directories : 33
+2016-04-23 21:50:16 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:50:16 INFO  SystemData:44 - Total : 45
+2016-04-23 21:50:16 INFO  SystemData:47 - **************************************
+2016-04-23 21:51:02 INFO  SystemData:27 - Device Name : C:\
+2016-04-23 21:51:02 INFO  SystemData:28 - Directory Name : C:\
+2016-04-23 21:51:02 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:51:02 INFO  SystemData:30 - Options : rw
+2016-04-23 21:51:02 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:51:02 INFO  SystemData:32 - Type : 2
+2016-04-23 21:51:02 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:51:02 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:51:02 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:51:02 INFO  SystemData:39 - Disk Usage : 4288736
+2016-04-23 21:51:02 INFO  SystemData:40 - Files : 4
+2016-04-23 21:51:02 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:51:02 INFO  SystemData:42 - Sub Directories : 21
+2016-04-23 21:51:02 INFO  SystemData:43 - Sym Links : 1
+2016-04-23 21:51:02 INFO  SystemData:44 - Total : 26
+2016-04-23 21:51:02 INFO  SystemData:47 - **************************************
+2016-04-23 21:51:02 INFO  SystemData:27 - Device Name : D:\
+2016-04-23 21:51:02 INFO  SystemData:28 - Directory Name : D:\
+2016-04-23 21:51:02 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:51:02 INFO  SystemData:30 - Options : rw
+2016-04-23 21:51:02 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:51:02 INFO  SystemData:32 - Type : 2
+2016-04-23 21:51:02 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:51:02 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:51:02 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:51:02 INFO  SystemData:39 - Disk Usage : 104233
+2016-04-23 21:51:02 INFO  SystemData:40 - Files : 26
+2016-04-23 21:51:02 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:51:02 INFO  SystemData:42 - Sub Directories : 18
+2016-04-23 21:51:02 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:51:02 INFO  SystemData:44 - Total : 44
+2016-04-23 21:51:02 INFO  SystemData:47 - **************************************
+2016-04-23 21:51:02 INFO  SystemData:27 - Device Name : E:\
+2016-04-23 21:51:02 INFO  SystemData:28 - Directory Name : E:\
+2016-04-23 21:51:02 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:51:02 INFO  SystemData:30 - Options : rw
+2016-04-23 21:51:02 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:51:02 INFO  SystemData:32 - Type : 2
+2016-04-23 21:51:02 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:51:02 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:51:02 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:51:02 INFO  SystemData:39 - Disk Usage : 1211899
+2016-04-23 21:51:02 INFO  SystemData:40 - Files : 12
+2016-04-23 21:51:02 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:51:02 INFO  SystemData:42 - Sub Directories : 33
+2016-04-23 21:51:02 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:51:02 INFO  SystemData:44 - Total : 45
+2016-04-23 21:51:02 INFO  SystemData:47 - **************************************
+2016-04-23 21:51:33 INFO  SystemData:27 - Device Name : C:\
+2016-04-23 21:51:33 INFO  SystemData:28 - Directory Name : C:\
+2016-04-23 21:51:33 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:51:33 INFO  SystemData:30 - Options : rw
+2016-04-23 21:51:33 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:51:33 INFO  SystemData:32 - Type : 2
+2016-04-23 21:51:33 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:51:33 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:51:33 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:51:33 INFO  SystemData:39 - Disk Usage : 4188MB
+2016-04-23 21:51:33 INFO  SystemData:40 - Files : 4
+2016-04-23 21:51:33 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:51:33 INFO  SystemData:42 - Sub Directories : 21
+2016-04-23 21:51:33 INFO  SystemData:43 - Sym Links : 1
+2016-04-23 21:51:33 INFO  SystemData:44 - Total : 26
+2016-04-23 21:51:33 INFO  SystemData:47 - **************************************
+2016-04-23 21:51:33 INFO  SystemData:27 - Device Name : D:\
+2016-04-23 21:51:33 INFO  SystemData:28 - Directory Name : D:\
+2016-04-23 21:51:33 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:51:33 INFO  SystemData:30 - Options : rw
+2016-04-23 21:51:33 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:51:33 INFO  SystemData:32 - Type : 2
+2016-04-23 21:51:33 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:51:33 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:51:33 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:51:33 INFO  SystemData:39 - Disk Usage : 101MB
+2016-04-23 21:51:33 INFO  SystemData:40 - Files : 26
+2016-04-23 21:51:33 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:51:33 INFO  SystemData:42 - Sub Directories : 18
+2016-04-23 21:51:33 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:51:33 INFO  SystemData:44 - Total : 44
+2016-04-23 21:51:33 INFO  SystemData:47 - **************************************
+2016-04-23 21:51:33 INFO  SystemData:27 - Device Name : E:\
+2016-04-23 21:51:33 INFO  SystemData:28 - Directory Name : E:\
+2016-04-23 21:51:33 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:51:33 INFO  SystemData:30 - Options : rw
+2016-04-23 21:51:33 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:51:33 INFO  SystemData:32 - Type : 2
+2016-04-23 21:51:33 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:51:33 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:51:33 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:51:33 INFO  SystemData:39 - Disk Usage : 1183MB
+2016-04-23 21:51:33 INFO  SystemData:40 - Files : 12
+2016-04-23 21:51:33 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:51:33 INFO  SystemData:42 - Sub Directories : 33
+2016-04-23 21:51:33 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:51:33 INFO  SystemData:44 - Total : 45
+2016-04-23 21:51:33 INFO  SystemData:47 - **************************************
+2016-04-23 21:53:47 INFO  SystemData:27 - Device Name : C:\
+2016-04-23 21:53:47 INFO  SystemData:28 - Directory Name : C:\
+2016-04-23 21:53:47 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:53:47 INFO  SystemData:30 - Options : rw
+2016-04-23 21:53:47 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:53:47 INFO  SystemData:32 - Type : 2
+2016-04-23 21:53:47 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:53:47 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:53:47 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:53:47 INFO  SystemData:39 - Disk Usage : 4391666266
+2016-04-23 21:53:47 INFO  SystemData:40 - Files : 4
+2016-04-23 21:53:47 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:53:47 INFO  SystemData:42 - Sub Directories : 21
+2016-04-23 21:53:47 INFO  SystemData:43 - Sym Links : 1
+2016-04-23 21:53:47 INFO  SystemData:44 - Total : 26
+2016-04-23 21:53:47 INFO  SystemData:47 - **************************************
+2016-04-23 21:53:47 INFO  SystemData:27 - Device Name : D:\
+2016-04-23 21:53:47 INFO  SystemData:28 - Directory Name : D:\
+2016-04-23 21:53:47 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:53:47 INFO  SystemData:30 - Options : rw
+2016-04-23 21:53:47 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:53:47 INFO  SystemData:32 - Type : 2
+2016-04-23 21:53:47 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:53:47 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:53:47 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:53:47 INFO  SystemData:39 - Disk Usage : 106735479
+2016-04-23 21:53:47 INFO  SystemData:40 - Files : 26
+2016-04-23 21:53:47 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:53:47 INFO  SystemData:42 - Sub Directories : 18
+2016-04-23 21:53:47 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:53:47 INFO  SystemData:44 - Total : 44
+2016-04-23 21:53:47 INFO  SystemData:47 - **************************************
+2016-04-23 21:53:47 INFO  SystemData:27 - Device Name : E:\
+2016-04-23 21:53:47 INFO  SystemData:28 - Directory Name : E:\
+2016-04-23 21:53:47 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:53:47 INFO  SystemData:30 - Options : rw
+2016-04-23 21:53:47 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:53:47 INFO  SystemData:32 - Type : 2
+2016-04-23 21:53:47 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:53:47 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:53:47 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:53:47 INFO  SystemData:39 - Disk Usage : 1240984614
+2016-04-23 21:53:47 INFO  SystemData:40 - Files : 12
+2016-04-23 21:53:47 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:53:47 INFO  SystemData:42 - Sub Directories : 33
+2016-04-23 21:53:47 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:53:47 INFO  SystemData:44 - Total : 45
+2016-04-23 21:53:47 INFO  SystemData:47 - **************************************
+2016-04-23 21:55:35 INFO  SystemData:27 - Device Name : C:\
+2016-04-23 21:55:35 INFO  SystemData:28 - Directory Name : C:\
+2016-04-23 21:55:35 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:55:35 INFO  SystemData:30 - Options : rw
+2016-04-23 21:55:35 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:55:35 INFO  SystemData:32 - Type : 2
+2016-04-23 21:55:35 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:55:35 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:55:35 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:55:35 INFO  SystemData:39 - Disk Usage : 4391666266
+2016-04-23 21:55:35 INFO  SystemData:40 - Files : 4
+2016-04-23 21:55:35 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:55:35 INFO  SystemData:42 - Sub Directories : 21
+2016-04-23 21:55:35 INFO  SystemData:43 - Sym Links : 1
+2016-04-23 21:55:35 INFO  SystemData:44 - Total : 26
+2016-04-23 21:55:35 INFO  SystemData:47 - **************************************
+2016-04-23 21:55:35 INFO  SystemData:27 - Device Name : D:\
+2016-04-23 21:55:35 INFO  SystemData:28 - Directory Name : D:\
+2016-04-23 21:55:35 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:55:35 INFO  SystemData:30 - Options : rw
+2016-04-23 21:55:35 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:55:35 INFO  SystemData:32 - Type : 2
+2016-04-23 21:55:35 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:55:35 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:55:35 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:55:35 INFO  SystemData:39 - Disk Usage : 106735479
+2016-04-23 21:55:35 INFO  SystemData:40 - Files : 26
+2016-04-23 21:55:35 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:55:35 INFO  SystemData:42 - Sub Directories : 18
+2016-04-23 21:55:35 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:55:35 INFO  SystemData:44 - Total : 44
+2016-04-23 21:55:35 INFO  SystemData:47 - **************************************
+2016-04-23 21:55:35 INFO  SystemData:27 - Device Name : E:\
+2016-04-23 21:55:35 INFO  SystemData:28 - Directory Name : E:\
+2016-04-23 21:55:35 INFO  SystemData:29 - Flags : 0
+2016-04-23 21:55:35 INFO  SystemData:30 - Options : rw
+2016-04-23 21:55:35 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 21:55:35 INFO  SystemData:32 - Type : 2
+2016-04-23 21:55:35 INFO  SystemData:33 - Type Name : local
+2016-04-23 21:55:35 INFO  SystemData:37 - Blk Devs : 0
+2016-04-23 21:55:35 INFO  SystemData:38 - Chr Devs : 0
+2016-04-23 21:55:35 INFO  SystemData:39 - Disk Usage : 1240984614
+2016-04-23 21:55:35 INFO  SystemData:40 - Files : 12
+2016-04-23 21:55:35 INFO  SystemData:41 - Sockets : 0
+2016-04-23 21:55:35 INFO  SystemData:42 - Sub Directories : 33
+2016-04-23 21:55:35 INFO  SystemData:43 - Sym Links : 0
+2016-04-23 21:55:35 INFO  SystemData:44 - Total : 45
+2016-04-23 21:55:35 INFO  SystemData:47 - **************************************
+2016-04-23 22:03:54 INFO  SystemData:28 - Device Name : C:\
+2016-04-23 22:03:54 INFO  SystemData:29 - Directory Name : C:\
+2016-04-23 22:03:54 INFO  SystemData:30 - Flags : 0
+2016-04-23 22:03:54 INFO  SystemData:31 - Options : rw
+2016-04-23 22:03:54 INFO  SystemData:32 - System Type name : NTFS
+2016-04-23 22:03:54 INFO  SystemData:33 - Type : 2
+2016-04-23 22:03:54 INFO  SystemData:34 - Type Name : local
+2016-04-23 22:03:54 INFO  SystemData:38 - ***********  Dir Stat ***********
+2016-04-23 22:03:54 INFO  SystemData:39 - Disk Usage : 4391666266
+2016-04-23 22:03:54 INFO  SystemData:40 - Files : 4
+2016-04-23 22:03:54 INFO  SystemData:41 - Sockets : 0
+2016-04-23 22:03:54 INFO  SystemData:42 - Sub Directories : 21
+2016-04-23 22:03:54 INFO  SystemData:43 - Sym Links : 1
+2016-04-23 22:03:54 INFO  SystemData:44 - Total : 26
+2016-04-23 22:05:56 INFO  SystemData:27 - Device Name : C:\
+2016-04-23 22:05:56 INFO  SystemData:28 - Directory Name : C:\
+2016-04-23 22:05:56 INFO  SystemData:29 - Flags : 0
+2016-04-23 22:05:56 INFO  SystemData:30 - Options : rw
+2016-04-23 22:05:56 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 22:05:56 INFO  SystemData:32 - Type : 2
+2016-04-23 22:05:56 INFO  SystemData:33 - Type Name : local
+2016-04-23 22:05:56 INFO  SystemData:37 - ***********  Dir Stat ***********
+2016-04-23 22:05:56 INFO  SystemData:38 - Disk Usage : 4391666266
+2016-04-23 22:05:56 INFO  SystemData:39 - Files : 4
+2016-04-23 22:05:56 INFO  SystemData:40 - Sockets : 0
+2016-04-23 22:05:56 INFO  SystemData:41 - Sub Directories : 21
+2016-04-23 22:05:56 INFO  SystemData:42 - Sym Links : 1
+2016-04-23 22:05:56 INFO  SystemData:43 - Total : 26
+2016-04-23 22:06:43 INFO  SystemData:27 - Device Name : C:\
+2016-04-23 22:06:43 INFO  SystemData:28 - Directory Name : C:\
+2016-04-23 22:06:43 INFO  SystemData:29 - Flags : 0
+2016-04-23 22:06:43 INFO  SystemData:30 - Options : rw
+2016-04-23 22:06:43 INFO  SystemData:31 - System Type name : NTFS
+2016-04-23 22:06:43 INFO  SystemData:32 - Type : 2
+2016-04-23 22:06:43 INFO  SystemData:33 - Type Name : local
+2016-04-23 22:06:43 INFO  SystemData:37 - ***********  Dir Stat ***********
+2016-04-23 22:06:43 INFO  SystemData:38 - Disk Usage : 4391666266
+2016-04-23 22:06:43 INFO  SystemData:39 - Files : 4
+2016-04-23 22:06:43 INFO  SystemData:40 - Sockets : 0
+2016-04-23 22:06:43 INFO  SystemData:41 - Sub Directories : 21
+2016-04-23 22:06:43 INFO  SystemData:42 - Sym Links : 1
+2016-04-23 22:07:20 INFO  SystemData:43 - Total : 26
+2016-04-23 22:16:17 INFO  SystemData:33 - Device Name : C:\
+2016-04-23 22:16:17 INFO  SystemData:34 - Directory Name : C:\
+2016-04-23 22:16:17 INFO  SystemData:35 - Flags : 0
+2016-04-23 22:16:17 INFO  SystemData:36 - Options : rw
+2016-04-23 22:16:17 INFO  SystemData:37 - System Type name : NTFS
+2016-04-23 22:16:17 INFO  SystemData:38 - Type : 2
+2016-04-23 22:16:17 INFO  SystemData:39 - Type Name : local
+2016-04-23 22:16:17 INFO  SystemData:43 - ***********  Dir Stat ***********
+2016-04-23 22:16:17 INFO  SystemData:44 - Disk Usage : 4391666266
+2016-04-23 22:16:17 INFO  SystemData:45 - Files : 4
+2016-04-23 22:16:17 INFO  SystemData:46 - Sockets : 0
+2016-04-23 22:16:17 INFO  SystemData:47 - Sub Directories : 21
+2016-04-23 22:16:17 INFO  SystemData:48 - Sym Links : 1
+2016-04-23 22:16:17 INFO  SystemData:49 - Total : 26
+2016-04-23 22:16:17 INFO  SystemData:54 - ***********  Dir Usage ***********
+2016-04-23 22:16:17 INFO  SystemData:55 - Queue : 0.0
+2016-04-23 22:16:17 INFO  SystemData:56 - Read Bytes : 874349568
+2016-04-23 22:16:17 INFO  SystemData:57 - Reads : 345131
+2016-04-23 22:16:17 INFO  SystemData:58 - Service Time : -1.0
+2016-04-23 22:16:17 INFO  SystemData:59 - Write Bytes : 1032661504
+2016-04-23 22:16:17 INFO  SystemData:60 - Writes : 418938
+2016-04-23 22:16:17 INFO  SystemData:64 - **************************************
+2016-04-23 22:16:17 INFO  SystemData:33 - Device Name : D:\
+2016-04-23 22:16:17 INFO  SystemData:34 - Directory Name : D:\
+2016-04-23 22:16:17 INFO  SystemData:35 - Flags : 0
+2016-04-23 22:16:17 INFO  SystemData:36 - Options : rw
+2016-04-23 22:16:17 INFO  SystemData:37 - System Type name : NTFS
+2016-04-23 22:16:17 INFO  SystemData:38 - Type : 2
+2016-04-23 22:16:17 INFO  SystemData:39 - Type Name : local
+2016-04-23 22:16:17 INFO  SystemData:43 - ***********  Dir Stat ***********
+2016-04-23 22:16:17 INFO  SystemData:44 - Disk Usage : 106735479
+2016-04-23 22:16:17 INFO  SystemData:45 - Files : 26
+2016-04-23 22:16:17 INFO  SystemData:46 - Sockets : 0
+2016-04-23 22:16:17 INFO  SystemData:47 - Sub Directories : 18
+2016-04-23 22:16:17 INFO  SystemData:48 - Sym Links : 0
+2016-04-23 22:16:17 INFO  SystemData:49 - Total : 44
+2016-04-23 22:16:17 INFO  SystemData:54 - ***********  Dir Usage ***********
+2016-04-23 22:16:17 INFO  SystemData:55 - Queue : 0.0
+2016-04-23 22:16:17 INFO  SystemData:56 - Read Bytes : 59288064
+2016-04-23 22:16:17 INFO  SystemData:57 - Reads : 399
+2016-04-23 22:16:17 INFO  SystemData:58 - Service Time : -1.0
+2016-04-23 22:16:17 INFO  SystemData:59 - Write Bytes : 3104768
+2016-04-23 22:16:17 INFO  SystemData:60 - Writes : 497
+2016-04-23 22:16:17 INFO  SystemData:64 - **************************************
+2016-04-23 22:16:17 INFO  SystemData:33 - Device Name : E:\
+2016-04-23 22:16:17 INFO  SystemData:34 - Directory Name : E:\
+2016-04-23 22:16:17 INFO  SystemData:35 - Flags : 0
+2016-04-23 22:16:17 INFO  SystemData:36 - Options : rw
+2016-04-23 22:16:17 INFO  SystemData:37 - System Type name : NTFS
+2016-04-23 22:16:17 INFO  SystemData:38 - Type : 2
+2016-04-23 22:16:17 INFO  SystemData:39 - Type Name : local
+2016-04-23 22:16:17 INFO  SystemData:43 - ***********  Dir Stat ***********
+2016-04-23 22:16:17 INFO  SystemData:44 - Disk Usage : 1240984614
+2016-04-23 22:16:17 INFO  SystemData:45 - Files : 12
+2016-04-23 22:16:17 INFO  SystemData:46 - Sockets : 0
+2016-04-23 22:16:17 INFO  SystemData:47 - Sub Directories : 33
+2016-04-23 22:16:17 INFO  SystemData:48 - Sym Links : 0
+2016-04-23 22:16:17 INFO  SystemData:49 - Total : 45
+2016-04-23 22:16:17 INFO  SystemData:54 - ***********  Dir Usage ***********
+2016-04-23 22:16:17 INFO  SystemData:55 - Queue : 0.0
+2016-04-23 22:16:17 INFO  SystemData:56 - Read Bytes : 603979264
+2016-04-23 22:16:17 INFO  SystemData:57 - Reads : 23016
+2016-04-23 22:16:17 INFO  SystemData:58 - Service Time : -1.0
+2016-04-23 22:16:17 INFO  SystemData:59 - Write Bytes : 51961856
+2016-04-23 22:16:17 INFO  SystemData:60 - Writes : 7253
+2016-04-23 22:16:17 INFO  SystemData:64 - **************************************
+2016-04-23 22:17:24 INFO  SystemData:33 - Device Name : C:\
+2016-04-23 22:17:24 INFO  SystemData:34 - Directory Name : C:\
+2016-04-23 22:17:24 INFO  SystemData:35 - Flags : 0
+2016-04-23 22:17:24 INFO  SystemData:36 - Options : rw
+2016-04-23 22:17:24 INFO  SystemData:37 - System Type name : NTFS
+2016-04-23 22:17:24 INFO  SystemData:38 - Type : 2
+2016-04-23 22:17:24 INFO  SystemData:39 - Type Name : local
+2016-04-23 22:17:24 INFO  SystemData:43 - 	  Dir Stat 
+2016-04-23 22:17:24 INFO  SystemData:44 - Disk Usage : 4391666266
+2016-04-23 22:17:24 INFO  SystemData:45 - Files : 4
+2016-04-23 22:17:24 INFO  SystemData:46 - Sockets : 0
+2016-04-23 22:17:24 INFO  SystemData:47 - Sub Directories : 21
+2016-04-23 22:17:24 INFO  SystemData:48 - Sym Links : 1
+2016-04-23 22:17:24 INFO  SystemData:49 - Total : 26
+2016-04-23 22:17:24 INFO  SystemData:54 - 	  Dir Usage 
+2016-04-23 22:17:24 INFO  SystemData:55 - Queue : 0.0
+2016-04-23 22:17:24 INFO  SystemData:56 - Read Bytes : 875224576
+2016-04-23 22:17:24 INFO  SystemData:57 - Reads : 345154
+2016-04-23 22:17:24 INFO  SystemData:58 - Service Time : -1.0
+2016-04-23 22:17:24 INFO  SystemData:59 - Write Bytes : 1035404288
+2016-04-23 22:17:24 INFO  SystemData:60 - Writes : 419172
+2016-04-23 22:17:24 INFO  SystemData:64 - **************************************
+2016-04-23 22:17:24 INFO  SystemData:33 - Device Name : D:\
+2016-04-23 22:17:24 INFO  SystemData:34 - Directory Name : D:\
+2016-04-23 22:17:24 INFO  SystemData:35 - Flags : 0
+2016-04-23 22:17:24 INFO  SystemData:36 - Options : rw
+2016-04-23 22:17:24 INFO  SystemData:37 - System Type name : NTFS
+2016-04-23 22:17:24 INFO  SystemData:38 - Type : 2
+2016-04-23 22:17:24 INFO  SystemData:39 - Type Name : local
+2016-04-23 22:17:24 INFO  SystemData:43 - 	  Dir Stat 
+2016-04-23 22:17:24 INFO  SystemData:44 - Disk Usage : 106735479
+2016-04-23 22:17:24 INFO  SystemData:45 - Files : 26
+2016-04-23 22:17:24 INFO  SystemData:46 - Sockets : 0
+2016-04-23 22:17:24 INFO  SystemData:47 - Sub Directories : 18
+2016-04-23 22:17:24 INFO  SystemData:48 - Sym Links : 0
+2016-04-23 22:17:24 INFO  SystemData:49 - Total : 44
+2016-04-23 22:17:24 INFO  SystemData:54 - 	  Dir Usage 
+2016-04-23 22:17:24 INFO  SystemData:55 - Queue : 0.0
+2016-04-23 22:17:24 INFO  SystemData:56 - Read Bytes : 59288064
+2016-04-23 22:17:24 INFO  SystemData:57 - Reads : 399
+2016-04-23 22:17:24 INFO  SystemData:58 - Service Time : -1.0
+2016-04-23 22:17:24 INFO  SystemData:59 - Write Bytes : 3104768
+2016-04-23 22:17:24 INFO  SystemData:60 - Writes : 497
+2016-04-23 22:17:24 INFO  SystemData:64 - **************************************
+2016-04-23 22:17:24 INFO  SystemData:33 - Device Name : E:\
+2016-04-23 22:17:24 INFO  SystemData:34 - Directory Name : E:\
+2016-04-23 22:17:24 INFO  SystemData:35 - Flags : 0
+2016-04-23 22:17:24 INFO  SystemData:36 - Options : rw
+2016-04-23 22:17:24 INFO  SystemData:37 - System Type name : NTFS
+2016-04-23 22:17:24 INFO  SystemData:38 - Type : 2
+2016-04-23 22:17:24 INFO  SystemData:39 - Type Name : local
+2016-04-23 22:17:24 INFO  SystemData:43 - 	  Dir Stat 
+2016-04-23 22:17:24 INFO  SystemData:44 - Disk Usage : 1240984614
+2016-04-23 22:17:24 INFO  SystemData:45 - Files : 12
+2016-04-23 22:17:24 INFO  SystemData:46 - Sockets : 0
+2016-04-23 22:17:24 INFO  SystemData:47 - Sub Directories : 33
+2016-04-23 22:17:24 INFO  SystemData:48 - Sym Links : 0
+2016-04-23 22:17:24 INFO  SystemData:49 - Total : 45
+2016-04-23 22:17:24 INFO  SystemData:54 - 	  Dir Usage 
+2016-04-23 22:17:24 INFO  SystemData:55 - Queue : 0.0
+2016-04-23 22:17:24 INFO  SystemData:56 - Read Bytes : 603979264
+2016-04-23 22:17:24 INFO  SystemData:57 - Reads : 23016
+2016-04-23 22:17:24 INFO  SystemData:58 - Service Time : -1.0
+2016-04-23 22:17:24 INFO  SystemData:59 - Write Bytes : 52178944
+2016-04-23 22:17:24 INFO  SystemData:60 - Writes : 7291
+2016-04-23 22:17:24 INFO  SystemData:64 - **************************************
+2016-04-23 22:25:09 INFO  SystemData:34 - Device Name : C:\
+2016-04-23 22:25:09 INFO  SystemData:35 - Directory Name : C:\
+2016-04-23 22:25:09 INFO  SystemData:36 - Flags : 0
+2016-04-23 22:25:09 INFO  SystemData:37 - Options : rw
+2016-04-23 22:25:09 INFO  SystemData:38 - System Type name : NTFS
+2016-04-23 22:25:09 INFO  SystemData:39 - Type : 2
+2016-04-23 22:25:09 INFO  SystemData:40 - Type Name : local
+2016-04-23 22:25:09 INFO  SystemData:44 - 	  Dir Stat 
+2016-04-23 22:25:09 INFO  SystemData:45 - Disk Usage : 4391666266
+2016-04-23 22:25:09 INFO  SystemData:46 - Files : 4
+2016-04-23 22:25:09 INFO  SystemData:47 - Sockets : 0
+2016-04-23 22:25:09 INFO  SystemData:48 - Sub Directories : 21
+2016-04-23 22:25:09 INFO  SystemData:49 - Sym Links : 1
+2016-04-23 22:25:09 INFO  SystemData:50 - Total : 26
+2016-04-23 22:25:09 INFO  SystemData:66 - 	  File System Usage 
+2016-04-23 22:25:09 INFO  SystemData:67 - Available : 20194504
+2016-04-23 22:25:09 INFO  SystemData:68 - Disk Queue : 0.0
+2016-04-23 22:25:09 INFO  SystemData:69 - Files : -1
+2016-04-23 22:25:09 INFO  SystemData:70 - Free Files : -1
+2016-04-23 22:25:09 INFO  SystemData:71 - Free : 20194504
+2016-04-23 22:25:09 INFO  SystemData:72 - Total : 136847356
+2016-04-23 22:25:09 INFO  SystemData:73 - Used : 116652852
+2016-04-23 22:25:09 INFO  SystemData:74 - Use Percentage : 0.86
+2016-04-23 22:25:09 INFO  SystemData:77 - **************************************
+2016-04-23 22:25:09 INFO  SystemData:34 - Device Name : D:\
+2016-04-23 22:25:09 INFO  SystemData:35 - Directory Name : D:\
+2016-04-23 22:25:09 INFO  SystemData:36 - Flags : 0
+2016-04-23 22:25:09 INFO  SystemData:37 - Options : rw
+2016-04-23 22:25:09 INFO  SystemData:38 - System Type name : NTFS
+2016-04-23 22:25:09 INFO  SystemData:39 - Type : 2
+2016-04-23 22:25:09 INFO  SystemData:40 - Type Name : local
+2016-04-23 22:25:10 INFO  SystemData:44 - 	  Dir Stat 
+2016-04-23 22:25:10 INFO  SystemData:45 - Disk Usage : 106735479
+2016-04-23 22:25:10 INFO  SystemData:46 - Files : 26
+2016-04-23 22:25:10 INFO  SystemData:47 - Sockets : 0
+2016-04-23 22:25:10 INFO  SystemData:48 - Sub Directories : 18
+2016-04-23 22:25:10 INFO  SystemData:49 - Sym Links : 0
+2016-04-23 22:25:10 INFO  SystemData:50 - Total : 44
+2016-04-23 22:25:10 INFO  SystemData:66 - 	  File System Usage 
+2016-04-23 22:25:10 INFO  SystemData:67 - Available : 372575188
+2016-04-23 22:25:10 INFO  SystemData:68 - Disk Queue : 0.0
+2016-04-23 22:25:10 INFO  SystemData:69 - Files : -1
+2016-04-23 22:25:10 INFO  SystemData:70 - Free Files : -1
+2016-04-23 22:25:10 INFO  SystemData:71 - Free : 372575188
+2016-04-23 22:25:10 INFO  SystemData:72 - Total : 403113980
+2016-04-23 22:25:10 INFO  SystemData:73 - Used : 30538792
+2016-04-23 22:25:10 INFO  SystemData:74 - Use Percentage : 0.08
+2016-04-23 22:25:10 INFO  SystemData:77 - **************************************
+2016-04-23 22:25:10 INFO  SystemData:34 - Device Name : E:\
+2016-04-23 22:25:10 INFO  SystemData:35 - Directory Name : E:\
+2016-04-23 22:25:10 INFO  SystemData:36 - Flags : 0
+2016-04-23 22:25:10 INFO  SystemData:37 - Options : rw
+2016-04-23 22:25:10 INFO  SystemData:38 - System Type name : NTFS
+2016-04-23 22:25:10 INFO  SystemData:39 - Type : 2
+2016-04-23 22:25:10 INFO  SystemData:40 - Type Name : local
+2016-04-23 22:25:10 INFO  SystemData:44 - 	  Dir Stat 
+2016-04-23 22:25:10 INFO  SystemData:45 - Disk Usage : 1240984614
+2016-04-23 22:25:10 INFO  SystemData:46 - Files : 12
+2016-04-23 22:25:10 INFO  SystemData:47 - Sockets : 0
+2016-04-23 22:25:10 INFO  SystemData:48 - Sub Directories : 33
+2016-04-23 22:25:10 INFO  SystemData:49 - Sym Links : 0
+2016-04-23 22:25:10 INFO  SystemData:50 - Total : 45
+2016-04-23 22:25:10 INFO  SystemData:66 - 	  File System Usage 
+2016-04-23 22:25:10 INFO  SystemData:67 - Available : 292146788
+2016-04-23 22:25:10 INFO  SystemData:68 - Disk Queue : 0.0
+2016-04-23 22:25:10 INFO  SystemData:69 - Files : -1
+2016-04-23 22:25:10 INFO  SystemData:70 - Free Files : -1
+2016-04-23 22:25:10 INFO  SystemData:71 - Free : 292146788
+2016-04-23 22:25:10 INFO  SystemData:72 - Total : 317030396
+2016-04-23 22:25:10 INFO  SystemData:73 - Used : 24883608
+2016-04-23 22:25:10 INFO  SystemData:74 - Use Percentage : 0.08
+2016-04-23 22:25:10 INFO  SystemData:77 - **************************************
+2016-04-23 22:27:00 INFO  SystemData:34 - Device Name : C:\
+2016-04-23 22:27:00 INFO  SystemData:35 - Directory Name : C:\
+2016-04-23 22:27:00 INFO  SystemData:36 - Flags : 0
+2016-04-23 22:27:00 INFO  SystemData:37 - Options : rw
+2016-04-23 22:27:00 INFO  SystemData:38 - System Type name : NTFS
+2016-04-23 22:27:00 INFO  SystemData:39 - Type : 2
+2016-04-23 22:27:00 INFO  SystemData:40 - Type Name : local
+2016-04-23 22:27:00 INFO  SystemData:44 - 	  Dir Stat 
+2016-04-23 22:27:00 INFO  SystemData:45 - Disk Usage : 4391666266
+2016-04-23 22:27:00 INFO  SystemData:46 - Files : 4
+2016-04-23 22:27:00 INFO  SystemData:47 - Sockets : 0
+2016-04-23 22:27:00 INFO  SystemData:48 - Sub Directories : 21
+2016-04-23 22:27:00 INFO  SystemData:49 - Sym Links : 1
+2016-04-23 22:27:00 INFO  SystemData:50 - Total : 26
+2016-04-23 22:27:00 INFO  SystemData:66 - 	  File System Usage 
+2016-04-23 22:27:00 INFO  SystemData:67 - Available : 19
+2016-04-23 22:27:00 INFO  SystemData:68 - Disk Queue : 0.0
+2016-04-23 22:27:00 INFO  SystemData:69 - Files : -1
+2016-04-23 22:27:00 INFO  SystemData:70 - Free Files : -1
+2016-04-23 22:27:00 INFO  SystemData:71 - Free : 19
+2016-04-23 22:27:00 INFO  SystemData:72 - Total : 130
+2016-04-23 22:27:00 INFO  SystemData:73 - Used : 111
+2016-04-23 22:27:00 INFO  SystemData:74 - Use Percentage : 86.0
+2016-04-23 22:27:00 INFO  SystemData:77 - **************************************
+2016-04-23 22:27:00 INFO  SystemData:34 - Device Name : D:\
+2016-04-23 22:27:00 INFO  SystemData:35 - Directory Name : D:\
+2016-04-23 22:27:00 INFO  SystemData:36 - Flags : 0
+2016-04-23 22:27:00 INFO  SystemData:37 - Options : rw
+2016-04-23 22:27:00 INFO  SystemData:38 - System Type name : NTFS
+2016-04-23 22:27:00 INFO  SystemData:39 - Type : 2
+2016-04-23 22:27:00 INFO  SystemData:40 - Type Name : local
+2016-04-23 22:27:00 INFO  SystemData:44 - 	  Dir Stat 
+2016-04-23 22:27:00 INFO  SystemData:45 - Disk Usage : 106735479
+2016-04-23 22:27:00 INFO  SystemData:46 - Files : 26
+2016-04-23 22:27:00 INFO  SystemData:47 - Sockets : 0
+2016-04-23 22:27:00 INFO  SystemData:48 - Sub Directories : 18
+2016-04-23 22:27:00 INFO  SystemData:49 - Sym Links : 0
+2016-04-23 22:27:00 INFO  SystemData:50 - Total : 44
+2016-04-23 22:27:00 INFO  SystemData:66 - 	  File System Usage 
+2016-04-23 22:27:00 INFO  SystemData:67 - Available : 355
+2016-04-23 22:27:00 INFO  SystemData:68 - Disk Queue : 0.0
+2016-04-23 22:27:00 INFO  SystemData:69 - Files : -1
+2016-04-23 22:27:00 INFO  SystemData:70 - Free Files : -1
+2016-04-23 22:27:00 INFO  SystemData:71 - Free : 355
+2016-04-23 22:27:00 INFO  SystemData:72 - Total : 384
+2016-04-23 22:27:00 INFO  SystemData:73 - Used : 29
+2016-04-23 22:27:00 INFO  SystemData:74 - Use Percentage : 8.0
+2016-04-23 22:27:00 INFO  SystemData:77 - **************************************
+2016-04-23 22:27:00 INFO  SystemData:34 - Device Name : E:\
+2016-04-23 22:27:00 INFO  SystemData:35 - Directory Name : E:\
+2016-04-23 22:27:00 INFO  SystemData:36 - Flags : 0
+2016-04-23 22:27:00 INFO  SystemData:37 - Options : rw
+2016-04-23 22:27:00 INFO  SystemData:38 - System Type name : NTFS
+2016-04-23 22:27:00 INFO  SystemData:39 - Type : 2
+2016-04-23 22:27:00 INFO  SystemData:40 - Type Name : local
+2016-04-23 22:27:00 INFO  SystemData:44 - 	  Dir Stat 
+2016-04-23 22:27:00 INFO  SystemData:45 - Disk Usage : 1240984614
+2016-04-23 22:27:00 INFO  SystemData:46 - Files : 12
+2016-04-23 22:27:00 INFO  SystemData:47 - Sockets : 0
+2016-04-23 22:27:00 INFO  SystemData:48 - Sub Directories : 33
+2016-04-23 22:27:00 INFO  SystemData:49 - Sym Links : 0
+2016-04-23 22:27:00 INFO  SystemData:50 - Total : 45
+2016-04-23 22:27:00 INFO  SystemData:66 - 	  File System Usage 
+2016-04-23 22:27:00 INFO  SystemData:67 - Available : 278
+2016-04-23 22:27:00 INFO  SystemData:68 - Disk Queue : 0.0
+2016-04-23 22:27:00 INFO  SystemData:69 - Files : -1
+2016-04-23 22:27:00 INFO  SystemData:70 - Free Files : -1
+2016-04-23 22:27:00 INFO  SystemData:71 - Free : 278
+2016-04-23 22:27:00 INFO  SystemData:72 - Total : 302
+2016-04-23 22:27:00 INFO  SystemData:73 - Used : 23
+2016-04-23 22:27:00 INFO  SystemData:74 - Use Percentage : 8.0
+2016-04-23 22:27:00 INFO  SystemData:77 - **************************************
+2016-04-23 22:27:50 INFO  SystemData:34 - Device Name : C:\
+2016-04-23 22:27:50 INFO  SystemData:35 - Directory Name : C:\
+2016-04-23 22:27:50 INFO  SystemData:36 - Flags : 0
+2016-04-23 22:27:50 INFO  SystemData:37 - Options : rw
+2016-04-23 22:27:50 INFO  SystemData:38 - System Type name : NTFS
+2016-04-23 22:27:50 INFO  SystemData:39 - Type : 2
+2016-04-23 22:27:50 INFO  SystemData:40 - Type Name : local
+2016-04-23 22:27:50 INFO  SystemData:44 - 	  Dir Stat 
+2016-04-23 22:27:50 INFO  SystemData:45 - Disk Usage : 4391666266
+2016-04-23 22:27:50 INFO  SystemData:46 - Files : 4
+2016-04-23 22:27:50 INFO  SystemData:47 - Sockets : 0
+2016-04-23 22:27:50 INFO  SystemData:48 - Sub Directories : 21
+2016-04-23 22:27:50 INFO  SystemData:49 - Sym Links : 1
+2016-04-23 22:27:50 INFO  SystemData:50 - Total : 26
+2016-04-23 22:27:50 INFO  SystemData:66 - 	  File System Usage 
+2016-04-23 22:27:50 INFO  SystemData:67 - Available : 19.258983612060547
+2016-04-23 22:27:50 INFO  SystemData:68 - Disk Queue : 0.0
+2016-04-23 22:27:50 INFO  SystemData:69 - Files : -1
+2016-04-23 22:27:50 INFO  SystemData:70 - Free Files : -1
+2016-04-23 22:27:50 INFO  SystemData:71 - Free : 19.258983612060547
+2016-04-23 22:27:50 INFO  SystemData:72 - Total : 130.50780868530273
+2016-04-23 22:27:50 INFO  SystemData:73 - Used : 111.24882507324219
+2016-04-23 22:27:50 INFO  SystemData:74 - Use Percentage : 86.0
+2016-04-23 22:27:50 INFO  SystemData:77 - **************************************
+2016-04-23 22:27:50 INFO  SystemData:34 - Device Name : D:\
+2016-04-23 22:27:50 INFO  SystemData:35 - Directory Name : D:\
+2016-04-23 22:27:50 INFO  SystemData:36 - Flags : 0
+2016-04-23 22:27:50 INFO  SystemData:37 - Options : rw
+2016-04-23 22:27:50 INFO  SystemData:38 - System Type name : NTFS
+2016-04-23 22:27:50 INFO  SystemData:39 - Type : 2
+2016-04-23 22:27:50 INFO  SystemData:40 - Type Name : local
+2016-04-23 22:27:50 INFO  SystemData:44 - 	  Dir Stat 
+2016-04-23 22:27:50 INFO  SystemData:45 - Disk Usage : 106735479
+2016-04-23 22:27:50 INFO  SystemData:46 - Files : 26
+2016-04-23 22:27:50 INFO  SystemData:47 - Sockets : 0
+2016-04-23 22:27:50 INFO  SystemData:48 - Sub Directories : 18
+2016-04-23 22:27:50 INFO  SystemData:49 - Sym Links : 0
+2016-04-23 22:27:50 INFO  SystemData:50 - Total : 44
+2016-04-23 22:27:50 INFO  SystemData:66 - 	  File System Usage 
+2016-04-23 22:27:50 INFO  SystemData:67 - Available : 355.3153877258301
+2016-04-23 22:27:50 INFO  SystemData:68 - Disk Queue : 0.0
+2016-04-23 22:27:50 INFO  SystemData:69 - Files : -1
+2016-04-23 22:27:50 INFO  SystemData:70 - Free Files : -1
+2016-04-23 22:27:50 INFO  SystemData:71 - Free : 355.3153877258301
+2016-04-23 22:27:50 INFO  SystemData:72 - Total : 384.43944931030273
+2016-04-23 22:27:50 INFO  SystemData:73 - Used : 29.124061584472656
+2016-04-23 22:27:50 INFO  SystemData:74 - Use Percentage : 8.0
+2016-04-23 22:27:50 INFO  SystemData:77 - **************************************
+2016-04-23 22:27:50 INFO  SystemData:34 - Device Name : E:\
+2016-04-23 22:27:50 INFO  SystemData:35 - Directory Name : E:\
+2016-04-23 22:27:50 INFO  SystemData:36 - Flags : 0
+2016-04-23 22:27:50 INFO  SystemData:37 - Options : rw
+2016-04-23 22:27:50 INFO  SystemData:38 - System Type name : NTFS
+2016-04-23 22:27:50 INFO  SystemData:39 - Type : 2
+2016-04-23 22:27:50 INFO  SystemData:40 - Type Name : local
+2016-04-23 22:27:50 INFO  SystemData:44 - 	  Dir Stat 
+2016-04-23 22:27:50 INFO  SystemData:45 - Disk Usage : 1240984614
+2016-04-23 22:27:50 INFO  SystemData:46 - Files : 12
+2016-04-23 22:27:50 INFO  SystemData:47 - Sockets : 0
+2016-04-23 22:27:50 INFO  SystemData:48 - Sub Directories : 33
+2016-04-23 22:27:50 INFO  SystemData:49 - Sym Links : 0
+2016-04-23 22:27:50 INFO  SystemData:50 - Total : 45
+2016-04-23 22:27:50 INFO  SystemData:66 - 	  File System Usage 
+2016-04-23 22:27:50 INFO  SystemData:67 - Available : 278.61287689208984
+2016-04-23 22:27:50 INFO  SystemData:68 - Disk Queue : 0.0
+2016-04-23 22:27:50 INFO  SystemData:69 - Files : -1
+2016-04-23 22:27:50 INFO  SystemData:70 - Free Files : -1
+2016-04-23 22:27:50 INFO  SystemData:71 - Free : 278.61287689208984
+2016-04-23 22:27:50 INFO  SystemData:72 - Total : 302.34374618530273
+2016-04-23 22:27:50 INFO  SystemData:73 - Used : 23.73086929321289
+2016-04-23 22:27:50 INFO  SystemData:74 - Use Percentage : 8.0
+2016-04-23 22:27:50 INFO  SystemData:77 - **************************************
