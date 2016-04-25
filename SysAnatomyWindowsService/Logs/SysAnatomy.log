@@ -1,0 +1,57 @@
+2016-04-25 14:35:17 DEBUG Sigar:60 - no sigar-amd64-winnt.dll in java.library.path
+org.hyperic.sigar.SigarException: no sigar-amd64-winnt.dll in java.library.path
+	at org.hyperic.sigar.Sigar.loadLibrary(Sigar.java:172)
+	at org.hyperic.sigar.Sigar.<clinit>(Sigar.java:100)
+	at WindowsService.FileSystemData.<clinit>(FileSystemData.java:10)
+	at WindowsService.StartProgram.main(StartProgram.java:19)
+2016-04-25 15:03:19 INFO  SystemData:51 - Device Name : C:\
+2016-04-25 15:03:19 INFO  SystemData:52 - Directory Name : C:\
+2016-04-25 15:03:19 INFO  SystemData:53 - Flags : 0
+2016-04-25 15:03:19 INFO  SystemData:54 - Options : rw
+2016-04-25 15:03:19 INFO  SystemData:55 - System Type name : NTFS
+2016-04-25 15:03:19 INFO  SystemData:56 - Type : 2
+2016-04-25 15:03:19 INFO  SystemData:57 - Type Name : local
+2016-04-25 15:03:19 INFO  SystemData:70 - 	  File System Usage 
+2016-04-25 15:03:19 INFO  SystemData:71 - Available : 18.47927474975586
+2016-04-25 15:03:19 INFO  SystemData:72 - Disk Queue : 0.0
+2016-04-25 15:03:19 INFO  SystemData:73 - Files : -1
+2016-04-25 15:03:19 INFO  SystemData:74 - Free Files : -1
+2016-04-25 15:03:19 INFO  SystemData:75 - Free : 18.47927474975586
+2016-04-25 15:03:19 INFO  SystemData:76 - Total : 130.50780868530273
+2016-04-25 15:03:19 INFO  SystemData:77 - Used : 112.02853393554688
+2016-04-25 15:03:19 INFO  SystemData:78 - Use Percentage : 86.0
+2016-04-25 15:03:19 INFO  SystemData:37 - **************************************
+2016-04-25 15:03:19 INFO  SystemData:51 - Device Name : D:\
+2016-04-25 15:03:19 INFO  SystemData:52 - Directory Name : D:\
+2016-04-25 15:03:19 INFO  SystemData:53 - Flags : 0
+2016-04-25 15:03:19 INFO  SystemData:54 - Options : rw
+2016-04-25 15:03:19 INFO  SystemData:55 - System Type name : NTFS
+2016-04-25 15:03:19 INFO  SystemData:56 - Type : 2
+2016-04-25 15:03:19 INFO  SystemData:57 - Type Name : local
+2016-04-25 15:03:19 INFO  SystemData:70 - 	  File System Usage 
+2016-04-25 15:03:19 INFO  SystemData:71 - Available : 355.31535720825195
+2016-04-25 15:03:19 INFO  SystemData:72 - Disk Queue : 0.0
+2016-04-25 15:03:19 INFO  SystemData:73 - Files : -1
+2016-04-25 15:03:19 INFO  SystemData:74 - Free Files : -1
+2016-04-25 15:03:19 INFO  SystemData:75 - Free : 355.31535720825195
+2016-04-25 15:03:19 INFO  SystemData:76 - Total : 384.43944931030273
+2016-04-25 15:03:19 INFO  SystemData:77 - Used : 29.12409210205078
+2016-04-25 15:03:19 INFO  SystemData:78 - Use Percentage : 8.0
+2016-04-25 15:03:19 INFO  SystemData:37 - **************************************
+2016-04-25 15:03:19 INFO  SystemData:51 - Device Name : E:\
+2016-04-25 15:03:19 INFO  SystemData:52 - Directory Name : E:\
+2016-04-25 15:03:19 INFO  SystemData:53 - Flags : 0
+2016-04-25 15:03:19 INFO  SystemData:54 - Options : rw
+2016-04-25 15:03:19 INFO  SystemData:55 - System Type name : NTFS
+2016-04-25 15:03:19 INFO  SystemData:56 - Type : 2
+2016-04-25 15:03:19 INFO  SystemData:57 - Type Name : local
+2016-04-25 15:03:19 INFO  SystemData:70 - 	  File System Usage 
+2016-04-25 15:03:19 INFO  SystemData:71 - Available : 278.6201057434082
+2016-04-25 15:03:19 INFO  SystemData:72 - Disk Queue : 0.0
+2016-04-25 15:03:19 INFO  SystemData:73 - Files : -1
+2016-04-25 15:03:19 INFO  SystemData:74 - Free Files : -1
+2016-04-25 15:03:19 INFO  SystemData:75 - Free : 278.6201057434082
+2016-04-25 15:03:19 INFO  SystemData:76 - Total : 302.34374618530273
+2016-04-25 15:03:19 INFO  SystemData:77 - Used : 23.72364044189453
+2016-04-25 15:03:19 INFO  SystemData:78 - Use Percentage : 8.0
+2016-04-25 15:03:19 INFO  SystemData:37 - **************************************
