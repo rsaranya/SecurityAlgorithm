@@ -33,22 +33,30 @@ public class CpuData implements Runnable {
 	 */
 	private static void getDataFromCpu() {
 		LOGGER.info("Inside getDataFromCpu");
+		Cpu[] lobjCpuList = null;
 
 		try {
-			Cpu lcpuInstance = sigar.getCpu();
-			if (lcpuInstance != null) {
-				LOGGER.info("Total system cpu idle time : " + lcpuInstance.getIdle());
-				LOGGER.info("Total system cpu time servicing interrupts : " + lcpuInstance.getIrq());
-				LOGGER.info("Total system cpu nice time : " + lcpuInstance.getNice());
-				LOGGER.info("Total system cpu time servicing softirqs : " + lcpuInstance.getSoftIrq());
-				LOGGER.info("Total system cpu involuntary wait time : " + lcpuInstance.getStolen());
-				LOGGER.info("Total system cpu kernel time : " + lcpuInstance.getSys());
-				LOGGER.info("Total system cpu time : " + lcpuInstance.getTotal());
-				LOGGER.info("Total system cpu user time : " + lcpuInstance.getUser());
-				LOGGER.info("Total system cpu io wait time : " + lcpuInstance.getWait());
+			lobjCpuList = sigar.getCpuList();
+			int count = 0;
+			int lintArrLength = lobjCpuList.length;
+			if (lobjCpuList != null && lintArrLength > 0) {
+				while (count < lintArrLength) {
+					LOGGER.info("Total system cpu idle time : " + lobjCpuList[count].getIdle());
+					LOGGER.info("Total system cpu time servicing interrupts : " + lobjCpuList[count].getIrq());
+					LOGGER.info("Total system cpu nice time : " + lobjCpuList[count].getNice());
+					LOGGER.info("Total system cpu time servicing softirqs : " + lobjCpuList[count].getSoftIrq());
+					LOGGER.info("Total system cpu involuntary wait time : " + lobjCpuList[count].getStolen());
+					LOGGER.info("Total system cpu kernel time : " + lobjCpuList[count].getSys());
+					LOGGER.info("Total system cpu time : " + lobjCpuList[count].getTotal());
+					LOGGER.info("Total system cpu user time : " + lobjCpuList[count].getUser());
+					LOGGER.info("Total system cpu io wait time : " + lobjCpuList[count].getWait());
+					count++;
+				}
 			}
 		} catch (SigarException sigarEx) {
-			LOGGER.error("Exception encountered : " + sigarEx.getMessage());
+			LOGGER.error("Exception in getDataFromCpu : " + sigarEx.getMessage());
+		} finally {
+			lobjCpuList = null;
 		}
 		LOGGER.info("**************************************");
 	}
@@ -75,7 +83,7 @@ public class CpuData implements Runnable {
 				}
 			}
 		} catch (Exception sigarEx) {
-			LOGGER.error("Exception encountered : " + sigarEx.getMessage());
+			LOGGER.error("Exception in getDataFromCpuInfo : " + sigarEx.getMessage());
 		}
 		LOGGER.info("**************************************");
 	}
@@ -86,18 +94,26 @@ public class CpuData implements Runnable {
 	private static void getDataFromCpuPerc() {
 		LOGGER.info("Inside getDataFromCpuPerc (Output in Percentage)");
 
+		CpuPerc[] lArrCpuPerc = null;
 		try {
-			CpuPerc lcpuInfoInstance = sigar.getCpuPerc();
-			LOGGER.info("Sum of User + Sys + Nice + Wait : " + lcpuInfoInstance.getCombined() * 100);
-			LOGGER.info("idle : " + lcpuInfoInstance.getIdle() * 100);
-			LOGGER.info("cpu time servicing interrupts : " + lcpuInfoInstance.getIrq() * 100);
-			LOGGER.info("cpu nice time : " + lcpuInfoInstance.getNice() * 100);
-			LOGGER.info("system : " + lcpuInfoInstance.getSys() * 100);
-			LOGGER.info("user : " + lcpuInfoInstance.getUser() * 100);
-			LOGGER.info("wait : " + lcpuInfoInstance.getWait() * 100);
-			LOGGER.info("stolen : " + lcpuInfoInstance.getStolen() * 100);
+			lArrCpuPerc = sigar.getCpuPercList();
+			int count = 0;
+			int lintArrLength = lArrCpuPerc.length;
+			if (lArrCpuPerc != null && lintArrLength > 0) {
+				while (count < lintArrLength) {
+					LOGGER.info("Sum of User + Sys + Nice + Wait : " + lArrCpuPerc[count].getCombined() * 100);
+					LOGGER.info("idle : " + lArrCpuPerc[count].getIdle() * 100);
+					LOGGER.info("cpu time servicing interrupts : " + lArrCpuPerc[count].getIrq() * 100);
+					LOGGER.info("cpu nice time : " + lArrCpuPerc[count].getNice() * 100);
+					LOGGER.info("system : " + lArrCpuPerc[count].getSys() * 100);
+					LOGGER.info("user : " + lArrCpuPerc[count].getUser() * 100);
+					LOGGER.info("wait : " + lArrCpuPerc[count].getWait() * 100);
+					LOGGER.info("stolen : " + lArrCpuPerc[count].getStolen() * 100);
+					count++;
+				}
+			}
 		} catch (Exception sigarEx) {
-			LOGGER.error("Exception encountered : " + sigarEx.getMessage());
+			LOGGER.error("Exception in getDataFromCpuPerc : " + sigarEx.getMessage());
 		}
 		LOGGER.info("**************************************");
 	}

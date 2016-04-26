@@ -1,14 +1,28 @@
 package WindowsService;
 
 import org.apache.log4j.Logger;
+import org.hyperic.sigar.DirStat;
+import org.hyperic.sigar.FileInfo;
 import org.hyperic.sigar.FileSystem;
 import org.hyperic.sigar.FileSystemUsage;
+import org.hyperic.sigar.FileWatcher;
+import org.hyperic.sigar.FileWatcherThread;
+import org.hyperic.sigar.ProcFileMirror;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
+import org.json.simple.JSONObject;
+
+import java.io.File;
+import java.io.FileFilter;
+import java.io.IOException;
+import java.util.Date;
+
+import Util.GlobalObjects;
 
 public class FileSystemData implements Runnable {
 	private static Sigar sigar = new Sigar();
-	private static final Logger LOGGER = Logger.getLogger(SystemData.class.getName());
+	private final Logger LOGGER = Logger.getLogger(FileSystemData.class.getName());
+	private JSONObject lobjJsonFileSystemData = new JSONObject();
 
 	/**
 	 * 
@@ -20,10 +34,11 @@ public class FileSystemData implements Runnable {
 	/**
 	 * 
 	 */
-	private static void getSystemStatistics() {
+	private void getSystemStatistics() {
 		FileSystem[] lobjlstFileSystem = null;
 		try {
 			lobjlstFileSystem = sigar.getFileSystemList();
+
 			int count = 0;
 			int lintarrLength = lobjlstFileSystem.length;
 			if (lobjlstFileSystem != null && lintarrLength > 0) {
@@ -38,7 +53,9 @@ public class FileSystemData implements Runnable {
 				}
 			}
 		} catch (SigarException se) {
-			LOGGER.error("Exception encountered : " + se.getMessage());
+			LOGGER.error("Exception in getSystemStatistics : " + se.getMessage());
+		} finally {
+			lobjlstFileSystem = null;
 		}
 
 	}
@@ -47,42 +64,111 @@ public class FileSystemData implements Runnable {
 	 * 
 	 * @param pobjFileSystem
 	 */
-	private static void getFileSystemInfo(FileSystem pobjFileSystem) {
-		LOGGER.info("Device Name : " + pobjFileSystem.getDevName());
-		LOGGER.info("Directory Name : " + pobjFileSystem.getDirName());
-		LOGGER.info("Flags : " + pobjFileSystem.getFlags());
-		LOGGER.info("Options : " + pobjFileSystem.getOptions());
-		LOGGER.info("System Type name : " + pobjFileSystem.getSysTypeName());
-		LOGGER.info("Type : " + pobjFileSystem.getType());
-		LOGGER.info("Type Name : " + pobjFileSystem.getTypeName());
+	@SuppressWarnings("unchecked")
+	private void getFileSystemInfo(FileSystem pobjFileSystem) {
+		try {
+			String lstrRetrievedValues = "";
+			String lstrDirectoryName = pobjFileSystem.getDirName();
+
+			DirStat lobjDirStat = sigar.getDirStat(lstrDirectoryName);
+			LOGGER.info("Disk usage : " + lobjDirStat.getDiskUsage());
+
+			lstrRetrievedValues = pobjFileSystem.getDevName();
+			lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_DeviceName", lstrRetrievedValues);
+			LOGGER.info("Device Name : " + lstrRetrievedValues);
+
+			lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_DirectoryName", lstrRetrievedValues);
+			LOGGER.info("Directory Name : " + lstrDirectoryName);
+
+			lstrRetrievedValues = "" + pobjFileSystem.getFlags();
+			lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_Flags", lstrRetrievedValues);
+			LOGGER.info("Flags : " + lstrRetrievedValues);
+
+			lstrRetrievedValues = pobjFileSystem.getOptions();
+			lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_Options", lstrRetrievedValues);
+			LOGGER.info("Options : " + lstrRetrievedValues);
+
+			lstrRetrievedValues = pobjFileSystem.getSysTypeName();
+			lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_SystemTypeName", lstrRetrievedValues);
+			LOGGER.info("System Type name : " + lstrRetrievedValues);
+
+			lstrRetrievedValues = "" + pobjFileSystem.getType();
+			lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_Type", lstrRetrievedValues);
+			LOGGER.info("Type : " + lstrRetrievedValues);
+
+			lstrRetrievedValues = pobjFileSystem.getTypeName();
+			lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_TypeName", lstrRetrievedValues);
+			LOGGER.info("Type Name : " + lstrRetrievedValues);
+		} catch (Exception ex) {
+			LOGGER.error("Exception in getFileSystemInfo : " + ex.getMessage());
+		}
 	}
 
 	/**
 	 * 
 	 * @param lstrDirectoryName
 	 */
-	private static void getFileSystemUsage(String lstrDirectoryName) {
-		FileSystemUsage lobjFileSysUsage;
+	@SuppressWarnings("unchecked")
+	private void getFileSystemUsage(String lstrDirectoryName) {
+		LOGGER.info("Inside getFileSystemUsage ");
+
+		FileSystemUsage lobjFileSysUsage = new FileSystemUsage();
 		try {
-			lobjFileSysUsage = sigar.getFileSystemUsage(lstrDirectoryName);
+			lobjFileSysUsage.gather(sigar, lstrDirectoryName);
 
 			if (lobjFileSysUsage != null) {
-				LOGGER.info("\t  File System Usage ");
-				LOGGER.info("Available : " + lobjFileSysUsage.getAvail() / 1024.0 / 1024.0);
-				LOGGER.info("Disk Queue : " + lobjFileSysUsage.getDiskQueue());
-				LOGGER.info("Files : " + lobjFileSysUsage.getFiles());
+				String lstrRetrievedValues = "";
+
+				lstrRetrievedValues = "" + lobjFileSysUsage.getAvail() / 1024.0 / 1024.0;
+				lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_AvailableSpace", lstrRetrievedValues);
+				LOGGER.info("Available : " + lstrRetrievedValues + " GB");
+
+				lstrRetrievedValues = "" + lobjFileSysUsage.getDiskQueue();
+				lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_DiskQueue", lstrRetrievedValues);
+				LOGGER.info("Disk Queue : " + lstrRetrievedValues);
+
+				lstrRetrievedValues = "" + lobjFileSysUsage.getFiles();
+				lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_NumberOfFiles", lstrRetrievedValues);
+				LOGGER.info("Files : " + lstrRetrievedValues);
+
+				lstrRetrievedValues = "" + lobjFileSysUsage.getFreeFiles();
+				lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_FreeFiles", lstrRetrievedValues);
 				LOGGER.info("Free Files : " + lobjFileSysUsage.getFreeFiles());
-				LOGGER.info("Free : " + lobjFileSysUsage.getFree() / 1024.0 / 1024.0);
-				LOGGER.info("Total : " + lobjFileSysUsage.getTotal() / 1024.0 / 1024.0);
-				LOGGER.info("Used : " + lobjFileSysUsage.getUsed() / 1024.0 / 1024.0);
-				LOGGER.info("Use Percentage : " + lobjFileSysUsage.getUsePercent() * 100);
+
+				lstrRetrievedValues = "" + lobjFileSysUsage.getFree() / 1024.0 / 1024.0;
+				lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_FreeSpace", lstrRetrievedValues);
+				LOGGER.info("Free : " + lstrRetrievedValues + " GB");
+
+				lstrRetrievedValues = "" + lobjFileSysUsage.getTotal() / 1024.0 / 1024.0;
+				lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_TotalSpace", lstrRetrievedValues);
+				LOGGER.info("Total : " + lstrRetrievedValues + " GB");
+
+				lstrRetrievedValues = "" + lobjFileSysUsage.getUsed() / 1024.0 / 1024.0;
+				lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_UsedSpace", lstrRetrievedValues);
+				LOGGER.info("Used : " + lstrRetrievedValues + " GB");
+
+				lstrRetrievedValues = "" + lobjFileSysUsage.getUsePercent() * 100;
+				lobjJsonFileSystemData.put("FileSystem_" + lstrDirectoryName + "_UsedSpacePercent",
+						lstrRetrievedValues);
+				LOGGER.info("Use Percentage : " + lstrRetrievedValues + " %");
 			}
 		} catch (SigarException e) {
-			LOGGER.error("Exception encountered : " + e.getMessage());
+			LOGGER.error("Exception in getFileSystemUsage : " + e.getMessage());
+		} finally {
+			lobjFileSysUsage = null;
 		}
 	}
 
+	/**
+	 * 
+	 */
 	public void run() {
 		getSystemStatistics();
+		synchronized (GlobalObjects.larrlstJson) {
+			if (lobjJsonFileSystemData != null) {
+				GlobalObjects.larrlstJson.add(lobjJsonFileSystemData);
+			}
+		}
 	}
+
 }

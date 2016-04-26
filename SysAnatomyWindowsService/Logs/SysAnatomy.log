@@ -55,3 +55,252 @@ org.hyperic.sigar.SigarException: no sigar-amd64-winnt.dll in java.library.path
 2016-04-25 15:03:19 INFO  SystemData:77 - Used : 23.72364044189453
 2016-04-25 15:03:19 INFO  SystemData:78 - Use Percentage : 8.0
 2016-04-25 15:03:19 INFO  SystemData:37 - **************************************
+2016-04-25 17:24:17 INFO  MemoryData:43 - Actual total free system memory : 4194 MB
+2016-04-25 17:24:17 INFO  MemoryData:47 - Actual total used system memory : 3920 MB
+2016-04-25 17:24:17 INFO  MemoryData:51 - Total free system memory : 4052 MB
+2016-04-25 17:24:17 INFO  MemoryData:55 - System Random Access Memory : 8120 MB
+2016-04-25 17:24:17 INFO  MemoryData:59 - Total system memory : 8115 MB
+2016-04-25 17:24:17 INFO  MemoryData:63 - Total used system memory : 4062 MB
+2016-04-25 17:24:17 INFO  MemoryData:67 - Used Percentage : 48.315579708400925 %
+2016-04-25 17:24:17 INFO  MemoryData:71 - Free Percentage : 51.684420291599075 %
+2016-04-25 17:24:17 INFO  MemoryData:80 - **************************************
+2016-04-25 17:24:46 INFO  MemoryData:43 - Actual total free system memory : 4187 MB
+2016-04-25 17:24:46 INFO  MemoryData:47 - Actual total used system memory : 3927 MB
+2016-04-25 17:24:46 INFO  MemoryData:51 - Total free system memory : 4043 MB
+2016-04-25 17:24:46 INFO  MemoryData:55 - System Random Access Memory : 8120 MB
+2016-04-25 17:24:46 INFO  MemoryData:59 - Total system memory : 8115 MB
+2016-04-25 17:24:46 INFO  MemoryData:63 - Total used system memory : 4072 MB
+2016-04-25 17:24:46 INFO  MemoryData:67 - Used Percentage : 48.39865993424821 %
+2016-04-25 17:24:46 INFO  MemoryData:71 - Free Percentage : 51.60134006575179 %
+2016-04-25 17:24:46 INFO  MemoryData:80 - **************************************
+2016-04-25 17:25:27 INFO  MemoryData:43 - Actual total free system memory : 4194 MB
+2016-04-25 17:25:27 INFO  MemoryData:47 - Actual total used system memory : 3920 MB
+2016-04-25 17:25:27 INFO  MemoryData:51 - Total free system memory : 4052 MB
+2016-04-25 17:25:27 INFO  MemoryData:55 - System Random Access Memory : 8120 MB
+2016-04-25 17:25:27 INFO  MemoryData:59 - Total system memory : 8115 MB
+2016-04-25 17:25:27 INFO  MemoryData:63 - Total used system memory : 4063 MB
+2016-04-25 17:25:27 INFO  MemoryData:67 - Used Percentage : 48.31278790475136 %
+2016-04-25 17:25:27 INFO  MemoryData:71 - Free Percentage : 51.68721209524864 %
+2016-04-25 17:25:27 INFO  MemoryData:80 - **************************************
+2016-04-25 17:26:23 INFO  MemoryData:43 - Actual total free system memory : 4189 MB
+2016-04-25 17:26:23 INFO  MemoryData:47 - Actual total used system memory : 3925 MB
+2016-04-25 17:26:23 INFO  MemoryData:51 - Total free system memory : 4046 MB
+2016-04-25 17:26:23 INFO  MemoryData:55 - System Random Access Memory : 8120 MB
+2016-04-25 17:26:23 INFO  MemoryData:59 - Total system memory : 8115 MB
+2016-04-25 17:26:23 INFO  MemoryData:63 - Total used system memory : 4068 MB
+2016-04-25 17:26:23 INFO  MemoryData:67 - Used Percentage : 48.37175272321192 %
+2016-04-25 17:26:23 INFO  MemoryData:71 - Free Percentage : 51.62824727678808 %
+2016-04-25 17:26:23 INFO  MemoryData:80 - **************************************
+2016-04-25 17:28:19 INFO  FileSystemData:62 - Device Name : C:\
+2016-04-25 17:28:19 INFO  FileSystemData:66 - Directory Name : C:\
+2016-04-25 17:28:19 INFO  FileSystemData:70 - Flags : 0
+2016-04-25 17:28:19 INFO  FileSystemData:74 - Options : rw
+2016-04-25 17:28:19 INFO  FileSystemData:78 - System Type name : NTFS
+2016-04-25 17:28:19 INFO  FileSystemData:82 - Type : 2
+2016-04-25 17:28:19 INFO  FileSystemData:86 - Type Name : local
+2016-04-25 17:28:19 INFO  FileSystemData:102 - 	  File System Usage 
+2016-04-25 17:28:19 INFO  FileSystemData:103 - Available : 18.255596160888672
+2016-04-25 17:28:19 INFO  FileSystemData:104 - Disk Queue : 0.0
+2016-04-25 17:28:19 INFO  FileSystemData:105 - Files : -1
+2016-04-25 17:28:19 INFO  FileSystemData:106 - Free Files : -1
+2016-04-25 17:28:19 INFO  FileSystemData:107 - Free : 18.255596160888672
+2016-04-25 17:28:19 INFO  FileSystemData:108 - Total : 130.50780868530273
+2016-04-25 17:28:19 INFO  FileSystemData:109 - Used : 112.25221252441406
+2016-04-25 17:28:19 INFO  FileSystemData:110 - Use Percentage : 87.0
+2016-04-25 17:28:19 INFO  FileSystemData:40 - **************************************
+2016-04-25 17:28:19 INFO  FileSystemData:62 - Device Name : D:\
+2016-04-25 17:28:19 INFO  FileSystemData:66 - Directory Name : D:\
+2016-04-25 17:28:19 INFO  FileSystemData:70 - Flags : 0
+2016-04-25 17:28:19 INFO  FileSystemData:74 - Options : rw
+2016-04-25 17:28:19 INFO  FileSystemData:78 - System Type name : NTFS
+2016-04-25 17:28:19 INFO  FileSystemData:82 - Type : 2
+2016-04-25 17:28:19 INFO  FileSystemData:86 - Type Name : local
+2016-04-25 17:28:19 INFO  FileSystemData:102 - 	  File System Usage 
+2016-04-25 17:28:19 INFO  FileSystemData:103 - Available : 355.31538009643555
+2016-04-25 17:28:19 INFO  FileSystemData:104 - Disk Queue : 0.0
+2016-04-25 17:28:19 INFO  FileSystemData:105 - Files : -1
+2016-04-25 17:28:19 INFO  FileSystemData:106 - Free Files : -1
+2016-04-25 17:28:19 INFO  FileSystemData:107 - Free : 355.31538009643555
+2016-04-25 17:28:19 INFO  FileSystemData:108 - Total : 384.43944931030273
+2016-04-25 17:28:19 INFO  FileSystemData:109 - Used : 29.124069213867188
+2016-04-25 17:28:19 INFO  FileSystemData:110 - Use Percentage : 8.0
+2016-04-25 17:28:19 INFO  FileSystemData:40 - **************************************
+2016-04-25 17:28:19 INFO  FileSystemData:62 - Device Name : E:\
+2016-04-25 17:28:19 INFO  FileSystemData:66 - Directory Name : E:\
+2016-04-25 17:28:19 INFO  FileSystemData:70 - Flags : 0
+2016-04-25 17:28:19 INFO  FileSystemData:74 - Options : rw
+2016-04-25 17:28:19 INFO  FileSystemData:78 - System Type name : NTFS
+2016-04-25 17:28:19 INFO  FileSystemData:82 - Type : 2
+2016-04-25 17:28:19 INFO  FileSystemData:86 - Type Name : local
+2016-04-25 17:28:19 INFO  FileSystemData:102 - 	  File System Usage 
+2016-04-25 17:28:19 INFO  FileSystemData:103 - Available : 278.6187400817871
+2016-04-25 17:28:19 INFO  FileSystemData:104 - Disk Queue : 0.0
+2016-04-25 17:28:19 INFO  FileSystemData:105 - Files : -1
+2016-04-25 17:28:19 INFO  FileSystemData:106 - Free Files : -1
+2016-04-25 17:28:19 INFO  FileSystemData:107 - Free : 278.6187400817871
+2016-04-25 17:28:19 INFO  FileSystemData:108 - Total : 302.34374618530273
+2016-04-25 17:28:19 INFO  FileSystemData:109 - Used : 23.725006103515625
+2016-04-25 17:28:19 INFO  FileSystemData:110 - Use Percentage : 8.0
+2016-04-25 17:28:19 INFO  FileSystemData:40 - **************************************
+2016-04-25 17:38:28 INFO  FileSystemData:64 - O/P using MAPnull
+2016-04-25 17:38:28 INFO  FileSystemData:67 - Device Name : C:\
+2016-04-25 17:38:28 INFO  FileSystemData:71 - Directory Name : C:\
+2016-04-25 17:38:28 INFO  FileSystemData:75 - Flags : 0
+2016-04-25 17:38:28 INFO  FileSystemData:79 - Options : rw
+2016-04-25 17:38:28 INFO  FileSystemData:83 - System Type name : NTFS
+2016-04-25 17:38:28 INFO  FileSystemData:87 - Type : 2
+2016-04-25 17:38:28 INFO  FileSystemData:91 - Type Name : local
+2016-04-25 17:38:28 INFO  FileSystemData:102 - Inside getFileSystemUsage 
+2016-04-25 17:38:28 INFO  FileSystemData:109 - Available : 18.256759643554688
+2016-04-25 17:38:28 INFO  FileSystemData:110 - Disk Queue : 0.0
+2016-04-25 17:38:28 INFO  FileSystemData:111 - Files : -1
+2016-04-25 17:38:28 INFO  FileSystemData:112 - Free Files : -1
+2016-04-25 17:38:28 INFO  FileSystemData:113 - Free : 18.256759643554688
+2016-04-25 17:38:28 INFO  FileSystemData:114 - Total : 130.50780868530273
+2016-04-25 17:38:28 INFO  FileSystemData:115 - Used : 112.25104904174805
+2016-04-25 17:38:28 INFO  FileSystemData:116 - Use Percentage : 87.0
+2016-04-25 17:38:28 INFO  FileSystemData:44 - **************************************
+2016-04-25 17:38:28 INFO  FileSystemData:64 - O/P using MAPnull
+2016-04-25 17:38:28 INFO  FileSystemData:67 - Device Name : D:\
+2016-04-25 17:38:28 INFO  FileSystemData:71 - Directory Name : D:\
+2016-04-25 17:38:28 INFO  FileSystemData:75 - Flags : 0
+2016-04-25 17:38:28 INFO  FileSystemData:79 - Options : rw
+2016-04-25 17:38:28 INFO  FileSystemData:83 - System Type name : NTFS
+2016-04-25 17:38:28 INFO  FileSystemData:87 - Type : 2
+2016-04-25 17:38:28 INFO  FileSystemData:91 - Type Name : local
+2016-04-25 17:38:28 INFO  FileSystemData:102 - Inside getFileSystemUsage 
+2016-04-25 17:38:28 INFO  FileSystemData:109 - Available : 355.31538009643555
+2016-04-25 17:38:28 INFO  FileSystemData:110 - Disk Queue : 0.0
+2016-04-25 17:38:28 INFO  FileSystemData:111 - Files : -1
+2016-04-25 17:38:28 INFO  FileSystemData:112 - Free Files : -1
+2016-04-25 17:38:28 INFO  FileSystemData:113 - Free : 355.31538009643555
+2016-04-25 17:38:28 INFO  FileSystemData:114 - Total : 384.43944931030273
+2016-04-25 17:38:28 INFO  FileSystemData:115 - Used : 29.124069213867188
+2016-04-25 17:38:28 INFO  FileSystemData:116 - Use Percentage : 8.0
+2016-04-25 17:38:28 INFO  FileSystemData:44 - **************************************
+2016-04-25 17:38:28 INFO  FileSystemData:64 - O/P using MAPnull
+2016-04-25 17:38:28 INFO  FileSystemData:67 - Device Name : E:\
+2016-04-25 17:38:28 INFO  FileSystemData:71 - Directory Name : E:\
+2016-04-25 17:38:28 INFO  FileSystemData:75 - Flags : 0
+2016-04-25 17:38:28 INFO  FileSystemData:79 - Options : rw
+2016-04-25 17:38:28 INFO  FileSystemData:83 - System Type name : NTFS
+2016-04-25 17:38:28 INFO  FileSystemData:87 - Type : 2
+2016-04-25 17:38:28 INFO  FileSystemData:91 - Type Name : local
+2016-04-25 17:38:28 INFO  FileSystemData:102 - Inside getFileSystemUsage 
+2016-04-25 17:38:28 INFO  FileSystemData:109 - Available : 278.6187324523926
+2016-04-25 17:38:28 INFO  FileSystemData:110 - Disk Queue : 0.0
+2016-04-25 17:38:28 INFO  FileSystemData:111 - Files : -1
+2016-04-25 17:38:28 INFO  FileSystemData:112 - Free Files : -1
+2016-04-25 17:38:28 INFO  FileSystemData:113 - Free : 278.6187324523926
+2016-04-25 17:38:28 INFO  FileSystemData:114 - Total : 302.34374618530273
+2016-04-25 17:38:28 INFO  FileSystemData:115 - Used : 23.725013732910156
+2016-04-25 17:38:28 INFO  FileSystemData:116 - Use Percentage : 8.0
+2016-04-25 17:38:28 INFO  FileSystemData:44 - **************************************
+2016-04-25 17:42:55 INFO  FileSystemData:66 - Device Name : C:\
+2016-04-25 17:42:55 INFO  FileSystemData:70 - Directory Name : C:\
+2016-04-25 17:42:55 INFO  FileSystemData:74 - Flags : 0
+2016-04-25 17:42:55 INFO  FileSystemData:78 - Options : rw
+2016-04-25 17:42:55 INFO  FileSystemData:82 - System Type name : NTFS
+2016-04-25 17:42:55 INFO  FileSystemData:86 - Type : 2
+2016-04-25 17:42:55 INFO  FileSystemData:90 - Type Name : local
+2016-04-25 17:42:55 INFO  FileSystemData:101 - Inside getFileSystemUsage 
+2016-04-25 17:42:55 INFO  FileSystemData:108 - Available : 18.25509262084961
+2016-04-25 17:42:55 INFO  FileSystemData:109 - Disk Queue : 0.0
+2016-04-25 17:42:55 INFO  FileSystemData:110 - Files : -1
+2016-04-25 17:42:55 INFO  FileSystemData:111 - Free Files : -1
+2016-04-25 17:42:55 INFO  FileSystemData:112 - Free : 18.25509262084961
+2016-04-25 17:42:55 INFO  FileSystemData:113 - Total : 130.50780868530273
+2016-04-25 17:42:55 INFO  FileSystemData:114 - Used : 112.25271606445312
+2016-04-25 17:42:55 INFO  FileSystemData:115 - Use Percentage : 87.0
+2016-04-25 17:42:55 INFO  FileSystemData:44 - **************************************
+2016-04-25 17:42:55 INFO  FileSystemData:66 - Device Name : D:\
+2016-04-25 17:42:55 INFO  FileSystemData:70 - Directory Name : D:\
+2016-04-25 17:42:55 INFO  FileSystemData:74 - Flags : 0
+2016-04-25 17:42:55 INFO  FileSystemData:78 - Options : rw
+2016-04-25 17:42:55 INFO  FileSystemData:82 - System Type name : NTFS
+2016-04-25 17:42:55 INFO  FileSystemData:86 - Type : 2
+2016-04-25 17:42:55 INFO  FileSystemData:90 - Type Name : local
+2016-04-25 17:42:55 INFO  FileSystemData:101 - Inside getFileSystemUsage 
+2016-04-25 17:42:55 INFO  FileSystemData:108 - Available : 355.31538009643555
+2016-04-25 17:42:55 INFO  FileSystemData:109 - Disk Queue : 0.0
+2016-04-25 17:42:55 INFO  FileSystemData:110 - Files : -1
+2016-04-25 17:42:55 INFO  FileSystemData:111 - Free Files : -1
+2016-04-25 17:42:55 INFO  FileSystemData:112 - Free : 355.31538009643555
+2016-04-25 17:42:55 INFO  FileSystemData:113 - Total : 384.43944931030273
+2016-04-25 17:42:55 INFO  FileSystemData:114 - Used : 29.124069213867188
+2016-04-25 17:42:55 INFO  FileSystemData:115 - Use Percentage : 8.0
+2016-04-25 17:42:55 INFO  FileSystemData:44 - **************************************
+2016-04-25 17:42:55 INFO  FileSystemData:66 - Device Name : E:\
+2016-04-25 17:42:55 INFO  FileSystemData:70 - Directory Name : E:\
+2016-04-25 17:42:55 INFO  FileSystemData:74 - Flags : 0
+2016-04-25 17:42:55 INFO  FileSystemData:78 - Options : rw
+2016-04-25 17:42:55 INFO  FileSystemData:82 - System Type name : NTFS
+2016-04-25 17:42:55 INFO  FileSystemData:86 - Type : 2
+2016-04-25 17:42:55 INFO  FileSystemData:90 - Type Name : local
+2016-04-25 17:42:55 INFO  FileSystemData:101 - Inside getFileSystemUsage 
+2016-04-25 17:42:55 INFO  FileSystemData:108 - Available : 278.6187286376953
+2016-04-25 17:42:55 INFO  FileSystemData:109 - Disk Queue : 0.0
+2016-04-25 17:42:55 INFO  FileSystemData:110 - Files : -1
+2016-04-25 17:42:55 INFO  FileSystemData:111 - Free Files : -1
+2016-04-25 17:42:55 INFO  FileSystemData:112 - Free : 278.6187286376953
+2016-04-25 17:42:55 INFO  FileSystemData:113 - Total : 302.34374618530273
+2016-04-25 17:42:55 INFO  FileSystemData:114 - Used : 23.725017547607422
+2016-04-25 17:42:55 INFO  FileSystemData:115 - Use Percentage : 8.0
+2016-04-25 17:42:55 INFO  FileSystemData:44 - **************************************
+2016-04-25 19:35:36 INFO  FileSystemData:65 - Disk usage : 4391666266
+2016-04-25 19:35:36 INFO  FileSystemData:69 - Device Name : C:\
+2016-04-25 19:35:36 INFO  FileSystemData:72 - Directory Name : C:\
+2016-04-25 19:35:36 INFO  FileSystemData:76 - Flags : 0
+2016-04-25 19:35:36 INFO  FileSystemData:80 - Options : rw
+2016-04-25 19:35:36 INFO  FileSystemData:84 - System Type name : NTFS
+2016-04-25 19:35:36 INFO  FileSystemData:88 - Type : 2
+2016-04-25 19:35:36 INFO  FileSystemData:92 - Type Name : local
+2016-04-25 19:35:36 INFO  FileSystemData:104 - Inside getFileSystemUsage 
+2016-04-25 19:35:37 INFO  FileSystemData:115 - Available : 18.241966247558594 GB
+2016-04-25 19:35:37 INFO  FileSystemData:119 - Disk Queue : 0.0
+2016-04-25 19:35:37 INFO  FileSystemData:123 - Files : -1
+2016-04-25 19:35:37 INFO  FileSystemData:127 - Free Files : -1
+2016-04-25 19:35:37 INFO  FileSystemData:131 - Free : 18.241966247558594 GB
+2016-04-25 19:35:37 INFO  FileSystemData:135 - Total : 130.50780868530273 GB
+2016-04-25 19:35:37 INFO  FileSystemData:139 - Used : 112.26584243774414 GB
+2016-04-25 19:35:37 INFO  FileSystemData:143 - Use Percentage : 87.0 %
+2016-04-25 19:35:37 INFO  FileSystemData:43 - **************************************
+2016-04-25 19:35:37 INFO  FileSystemData:65 - Disk usage : 104163973
+2016-04-25 19:35:37 INFO  FileSystemData:69 - Device Name : D:\
+2016-04-25 19:35:37 INFO  FileSystemData:72 - Directory Name : D:\
+2016-04-25 19:35:37 INFO  FileSystemData:76 - Flags : 0
+2016-04-25 19:35:37 INFO  FileSystemData:80 - Options : rw
+2016-04-25 19:35:37 INFO  FileSystemData:84 - System Type name : NTFS
+2016-04-25 19:35:37 INFO  FileSystemData:88 - Type : 2
+2016-04-25 19:35:37 INFO  FileSystemData:92 - Type Name : local
+2016-04-25 19:35:37 INFO  FileSystemData:104 - Inside getFileSystemUsage 
+2016-04-25 19:35:37 INFO  FileSystemData:115 - Available : 355.31538009643555 GB
+2016-04-25 19:35:37 INFO  FileSystemData:119 - Disk Queue : 0.0
+2016-04-25 19:35:37 INFO  FileSystemData:123 - Files : -1
+2016-04-25 19:35:37 INFO  FileSystemData:127 - Free Files : -1
+2016-04-25 19:35:37 INFO  FileSystemData:131 - Free : 355.31538009643555 GB
+2016-04-25 19:35:37 INFO  FileSystemData:135 - Total : 384.43944931030273 GB
+2016-04-25 19:35:37 INFO  FileSystemData:139 - Used : 29.124069213867188 GB
+2016-04-25 19:35:37 INFO  FileSystemData:143 - Use Percentage : 8.0 %
+2016-04-25 19:35:37 INFO  FileSystemData:43 - **************************************
+2016-04-25 19:35:37 INFO  FileSystemData:65 - Disk usage : 1240984614
+2016-04-25 19:35:37 INFO  FileSystemData:69 - Device Name : E:\
+2016-04-25 19:35:37 INFO  FileSystemData:72 - Directory Name : E:\
+2016-04-25 19:35:37 INFO  FileSystemData:76 - Flags : 0
+2016-04-25 19:35:37 INFO  FileSystemData:80 - Options : rw
+2016-04-25 19:35:37 INFO  FileSystemData:84 - System Type name : NTFS
+2016-04-25 19:35:37 INFO  FileSystemData:88 - Type : 2
+2016-04-25 19:35:37 INFO  FileSystemData:92 - Type Name : local
+2016-04-25 19:35:37 INFO  FileSystemData:104 - Inside getFileSystemUsage 
+2016-04-25 19:35:37 INFO  FileSystemData:115 - Available : 278.6187210083008 GB
+2016-04-25 19:35:37 INFO  FileSystemData:119 - Disk Queue : 0.0
+2016-04-25 19:35:37 INFO  FileSystemData:123 - Files : -1
+2016-04-25 19:35:37 INFO  FileSystemData:127 - Free Files : -1
+2016-04-25 19:35:37 INFO  FileSystemData:131 - Free : 278.6187210083008 GB
+2016-04-25 19:35:37 INFO  FileSystemData:135 - Total : 302.34374618530273 GB
+2016-04-25 19:35:37 INFO  FileSystemData:139 - Used : 23.725025177001953 GB
+2016-04-25 19:35:37 INFO  FileSystemData:143 - Use Percentage : 8.0 %
+2016-04-25 19:35:37 INFO  FileSystemData:43 - **************************************
+2016-04-25 21:05:18 INFO  FileSystemData:54 - **************************************
+2016-04-25 21:05:18 INFO  FileSystemData:54 - **************************************
+2016-04-25 21:05:18 INFO  FileSystemData:54 - **************************************

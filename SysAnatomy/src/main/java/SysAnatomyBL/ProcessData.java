@@ -5,11 +5,11 @@
  */
 package SysAnatomyBL;
 
-
 /**
  *
  * @author Saranya
  */
-public class CpuData {
+public class ProcessData {
+
 
 }

@@ -1,35 +1,34 @@
 package Util;
 
 import org.json.simple.JSONObject;
-import org.apache.logging.log4j.core.Logger;
+
+import WindowsService.MemoryData;
+
+import org.apache.log4j.Logger;
 
 public class ConnectServer implements Runnable  {
-	private static int gintCompletedCount = 0;
-
+	private static final Logger LOGGER = Logger.getLogger(MemoryData.class.getName());
+	
 	public ConnectServer()
 	{
-	/*	synchronized (this) {
-			while (GlobalObjects.gobjConnectToServer.getCompletedCount() != 3) {
-				GlobalObjects.gobjConnectToServer.sendJsonToServer(lobjJsonMemData);
-			}
-		}*/
+		new Thread(this).start();
 	}
-	
-	public int getCompletedCount()
-	{
-		return gintCompletedCount;
-	}
-	
-	
 
-	public void sendJsonToServer(JSONObject lobjJsonMemData) {
+	public void sendJsonToServer(JSONObject pobjJsonToSend) {
 		// TODO Auto-generated method stub
-		
+		try{
+		//Code to send serialized Json to the server
+		pobjJsonToSend.toJSONString();
+		}catch(Exception ex)
+		{
+			LOGGER.error("Exception in sendJsonToServer : "+ ex.getMessage());
+		}
 	}
 
 	public void run() {
-		// TODO Auto-generated method stub
-		
+		synchronized (GlobalObjects.larrlstJson) {
+			while(!GlobalObjects.larrlstJson.isEmpty())
+				sendJsonToServer(GlobalObjects.larrlstJson.remove(0));
+		}
 	}
-
 }

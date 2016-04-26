@@ -7,6 +7,4 @@ public class GlobalObjects {
 	public static ConnectServer gobjConnectToServer = new ConnectServer();
 	
 	public static ArrayList<JSONObject> larrlstJson = new ArrayList<JSONObject>(10);
-	
-	
 }
