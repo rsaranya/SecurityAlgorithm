@@ -2,13 +2,12 @@ package WindowsService;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
-import org.hyperic.sigar.Sigar;
-import org.hyperic.sigar.Uptime;
+//import org.hyperic.sigar.Sigar;
 
 public class StartProgram {
 
 	private static final Logger LOGGER = Logger.getLogger(StartProgram.class.getName());
-	private static Sigar sigar = new Sigar();
+	//private static Sigar sigar = new Sigar();
 
 	
 	public static void main(String[] args) {
@@ -19,11 +18,9 @@ public class StartProgram {
 			//new CpuData();
 			//new MemoryData();  
 			//new SystemData();
-			new FileSystemData();
-			//Uptime lobjUptime = sigar.getUptime();
-			//lobjUptime.getUptime();
+			//new FileSystemData();
+			new NetworkData();
 			
-			//sigar.getDirStat(name)
 		} catch (Exception ex) {
 			LOGGER.error("Eception occured : " + ex.getMessage());
 		}

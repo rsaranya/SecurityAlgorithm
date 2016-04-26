@@ -34,9 +34,13 @@ public class CpuData implements Runnable {
 	private static void getDataFromCpu() {
 		LOGGER.info("Inside getDataFromCpu");
 		Cpu[] lobjCpuList = null;
-
+		
 		try {
 			lobjCpuList = sigar.getCpuList();
+			double ldblUptime = sigar.getUptime().getUptime();
+		
+			LOGGER.info("System Up time : " + ldblUptime);
+			
 			int count = 0;
 			int lintArrLength = lobjCpuList.length;
 			if (lobjCpuList != null && lintArrLength > 0) {

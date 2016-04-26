@@ -2,20 +2,11 @@ package WindowsService;
 
 import org.apache.log4j.Logger;
 import org.hyperic.sigar.DirStat;
-import org.hyperic.sigar.FileInfo;
 import org.hyperic.sigar.FileSystem;
 import org.hyperic.sigar.FileSystemUsage;
-import org.hyperic.sigar.FileWatcher;
-import org.hyperic.sigar.FileWatcherThread;
-import org.hyperic.sigar.ProcFileMirror;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
 import org.json.simple.JSONObject;
-
-import java.io.File;
-import java.io.FileFilter;
-import java.io.IOException;
-import java.util.Date;
 
 import Util.GlobalObjects;
 
@@ -102,6 +93,7 @@ public class FileSystemData implements Runnable {
 		} catch (Exception ex) {
 			LOGGER.error("Exception in getFileSystemInfo : " + ex.getMessage());
 		}
+		LOGGER.info("**************************************");
 	}
 
 	/**
@@ -157,6 +149,7 @@ public class FileSystemData implements Runnable {
 		} finally {
 			lobjFileSysUsage = null;
 		}
+		LOGGER.info("**************************************");
 	}
 
 	/**
