@@ -1,0 +1,2 @@
+
+RunWindowsService.exe //IS//RunWindowsService --Description="Windows Service For SysAnatomy" --Install=%CD%\RunWindowsService.exe --Jvm=auto --Classpath=%CD%\RunWindowsService.jar;%CD%\lib\sigar.jar;%CD%\lib\log4j-core-2.5.jar;%CD%\lib\log4j-api-2.5.jar;%CD%\lib\json-simple-1.1.jar --StartMode=jvm --StartClass=WindowsService.RunWindowsService --StartMethod=start --StopMode=jvm --StopClass=WindowsService.RunWindowsService --StopMethod=stop --LogPath=%CD%/Logs --StdOutput=auto --StdError=auto --Startup=auto

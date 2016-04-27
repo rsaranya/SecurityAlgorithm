@@ -1,6 +1,7 @@
 package WindowsService;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hyperic.sigar.DirStat;
 import org.hyperic.sigar.FileSystem;
 import org.hyperic.sigar.FileSystemUsage;
@@ -12,7 +13,7 @@ import Util.GlobalObjects;
 
 public class FileSystemData implements Runnable {
 	private static Sigar sigar = new Sigar();
-	private final Logger LOGGER = Logger.getLogger(FileSystemData.class.getName());
+	private final Logger LOGGER = LogManager.getLogger();
 	private JSONObject lobjJsonFileSystemData = new JSONObject();
 
 	/**

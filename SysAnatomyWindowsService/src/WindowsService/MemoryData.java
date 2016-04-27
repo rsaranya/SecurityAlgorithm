@@ -6,7 +6,8 @@
 
 package WindowsService;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hyperic.sigar.Mem;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
@@ -20,9 +21,9 @@ import Util.GlobalObjects;
  */
 public class MemoryData implements Runnable {
 
-	private static final Logger LOGGER = Logger.getLogger(MemoryData.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger();
 	private static Sigar lobjSigar = new Sigar();
-	private JSONObject lobjJsonMemData = null;
+	private JSONObject lobjJsonMemData = new JSONObject();;
 
 	public MemoryData() {
 		new Thread(this).start();

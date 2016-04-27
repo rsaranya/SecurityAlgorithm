@@ -5,7 +5,8 @@
  */
 package WindowsService;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
 import org.hyperic.sigar.Cpu;
@@ -18,7 +19,7 @@ import org.hyperic.sigar.CpuPerc;
  */
 public class CpuData implements Runnable {
 
-	private static final Logger LOGGER = Logger.getLogger(CpuData.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger();
 	private static Sigar sigar = new Sigar();
 
 	/**

@@ -5,7 +5,8 @@
  */
 package WindowsService;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.hyperic.sigar.OperatingSystem;
 import org.json.simple.JSONObject;
 
@@ -17,7 +18,7 @@ import Util.GlobalObjects;
  */
 public class SystemData implements Runnable {
 
-	private static final Logger LOGGER = Logger.getLogger(SystemData.class.getName());
+	private static final Logger LOGGER = LogManager.getLogger();
 	private JSONObject lobjJsonSystemData = null;
 
 	public SystemData() {
