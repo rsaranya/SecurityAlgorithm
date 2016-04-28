@@ -19,12 +19,12 @@ public class RunWindowsService {
 
 	private static void SpawnThreads() {
 		// Spawn Thread to run the function calls asynchronously
-		/*new CpuData();
+		//new CpuData();
 		new MemoryData();
-		new SystemData();
-		new FileSystemData();
-		new NetworkData();*/
-		new ProcessData();
+		//new SystemData();
+		//new FileSystemData();
+		//new NetworkData();
+		//new ProcessData();
 	}
 
 	public static void start(String[] args) {

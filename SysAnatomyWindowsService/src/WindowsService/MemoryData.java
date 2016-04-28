@@ -23,7 +23,8 @@ public class MemoryData implements Runnable {
 
 	private static final Logger LOGGER = LogManager.getLogger();
 	private static Sigar lobjSigar = new Sigar();
-	private JSONObject lobjJsonMemData = new JSONObject();;
+	private JSONObject lobjJsonMemData = null;
+	private boolean IsJsonObjectSent = false;
 
 	public MemoryData() {
 		new Thread(this).start();
@@ -76,7 +77,6 @@ public class MemoryData implements Runnable {
 			LOGGER.error("Exception encountered : " + lsigarEx.getMessage());
 		} finally {
 			lobjMemClass = null;
-			lobjJsonMemData = null;
 		}
 		LOGGER.info("**************************************");
 	}
@@ -88,8 +88,11 @@ public class MemoryData implements Runnable {
 		getDataFromMemClass();
 
 		synchronized (GlobalObjects.larrlstJson) {
-			if (lobjJsonMemData != null) {
-				GlobalObjects.larrlstJson.add(lobjJsonMemData);
+			while (!IsJsonObjectSent) {
+				if (lobjJsonMemData != null) {
+					GlobalObjects.larrlstJson.add(lobjJsonMemData);
+					IsJsonObjectSent = true;
+				}
 			}
 		}
 	}
