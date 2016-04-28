@@ -25,7 +25,11 @@ public class ProcessData implements Runnable {
 		new Thread(this).start();
 	}
 
-	
+	/**
+	 * Called when thread starts.
+	 * Calls the function to fetch Process related data
+	 * And adds the JSON object into a global array
+	 */
 	@Override
 	public void run() {
 		getProcessData();
@@ -65,8 +69,10 @@ public class ProcessData implements Runnable {
 	}
 
 	/**
+	 * Fetches Process related data and inserts into a JSON object
+	 * Uses SIGAR's ProcCredName class to fetch details.
 	 * 
-	 * @param pid
+	 * @param pid : Contains the Process Id for which details are to be fetched.
 	 */
 	private void getDataFromProcCred(long pid) {
 		ProcCredName cred = new ProcCredName();
@@ -81,8 +87,10 @@ public class ProcessData implements Runnable {
 	}
 
 	/**
+	 * Fetches Process related data and inserts into a JSON object
+	 * Uses SIGAR's ProcMem class to fetch details.
 	 * 
-	 * @param pid
+	 * @param pid : Contains the Process Id for which details are to be fetched.
 	 */
 	private void getDataFromProcMem(long pid) {
 		ProcMem memory = null;
@@ -111,8 +119,10 @@ public class ProcessData implements Runnable {
 	}
 
 	/**
+	 * Fetches Process related data and inserts into a JSON object
+	 * Uses SIGAR's ProcState class to fetch details.
 	 * 
-	 * @param pid
+	 * @param pid : Contains the Process Id for which details are to be fetched.
 	 */
 	private void getDataFromProcState(long pid) {
 		ProcState state = null;
