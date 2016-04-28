@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package WindowsService;
 
 import org.apache.logging.log4j.LogManager;
@@ -21,10 +17,17 @@ public class SystemData implements Runnable {
 	private static final Logger LOGGER = LogManager.getLogger();
 	private JSONObject lobjJsonSystemData = null;
 
+	/**
+	 * Constructor of the class
+	 * Spawns a thread which fetches data from the user system.
+	 */
 	public SystemData() {
 		new Thread(this).start();
 	}
 
+	/**
+	 * 
+	 */
 	public static void getSystemDetails() {
 		OperatingSystem lobjOperatingSystem = OperatingSystem.getInstance();
 
@@ -41,14 +44,16 @@ public class SystemData implements Runnable {
 				LOGGER.info("Machine Vendor Version : " + lobjOperatingSystem.getVendorVersion());
 				LOGGER.info("Machine Version : " + lobjOperatingSystem.getVersion());
 			}
-		} catch (Exception sigarEx) {
-			LOGGER.error("Exception occured : " + sigarEx.getMessage());
+		} catch (Exception ex) {
+			LOGGER.error("Exception occured : " + ex.getMessage());
 		}
 		LOGGER.info("**************************************");
 	}
 
 	/**
-	 * 
+	 * Called when thread starts
+	 * Calls the functions to fetch System related data
+	 * And adds the JSON object into a global array
 	 */
 	public void run() {
 		getSystemDetails();

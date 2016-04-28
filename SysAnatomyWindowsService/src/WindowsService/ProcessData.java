@@ -18,15 +18,14 @@ public class ProcessData implements Runnable {
 	private JSONObject lobjJsonProcessData = new JSONObject();
 
 	/**
-	 * 
+	 * Constructor of the class Spawns a thread which fetches data from the user
+	 * system.
 	 */
 	public ProcessData() {
 		new Thread(this).start();
 	}
 
-	/**
-	 * 
-	 */
+	
 	@Override
 	public void run() {
 		getProcessData();
@@ -39,13 +38,13 @@ public class ProcessData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Calls functions to fetch process related data.
+	 * Fetched the list of Process Id's from the Sigar class instance.
 	 */
 	private void getProcessData() {
 		try {
 			long[] llngProcList = sigar.getProcList();
 
-			ProcExe exe = new ProcExe();
 			long pid = 0;
 			for (int count = 0; count < llngProcList.length; count++) {
 				pid = llngProcList[count];
@@ -54,6 +53,7 @@ public class ProcessData implements Runnable {
 				getDataFromProcState(pid);
 				getDataFromProcCred(pid);
 
+				ProcExe exe = new ProcExe();
 				exe = new ProcExe();
 				exe.gather(sigar, pid);
 				LOGGER.info(exe.getName());
@@ -87,7 +87,7 @@ public class ProcessData implements Runnable {
 	private void getDataFromProcMem(long pid) {
 		ProcMem memory = null;
 		try {
-			String lstrRetrievedValues = "";
+			// String lstrRetrievedValues = "";
 			memory = new ProcMem();
 			memory.gather(sigar, pid);
 
@@ -117,7 +117,7 @@ public class ProcessData implements Runnable {
 	private void getDataFromProcState(long pid) {
 		ProcState state = null;
 		try {
-			String lstrRetrievedValues = "";
+			// String lstrRetrievedValues = "";
 			state = new ProcState();
 			state.gather(sigar, pid);
 

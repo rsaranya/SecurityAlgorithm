@@ -21,7 +21,8 @@ public class NetworkData implements Runnable {
 	private JSONObject lobjJsonFileSystemData = new JSONObject();
 
 	/**
-	 * 
+	 * Constructor of the class
+	 * Spawns a thread which fetches data from the user system.
 	 */
 	public NetworkData() {
 		new Thread(this).start();

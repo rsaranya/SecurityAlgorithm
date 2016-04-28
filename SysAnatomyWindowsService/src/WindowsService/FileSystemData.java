@@ -17,16 +17,18 @@ public class FileSystemData implements Runnable {
 	private JSONObject lobjJsonFileSystemData = new JSONObject();
 
 	/**
-	 * 
+	 * Constructor of the class
+	 * Spawns a thread which fetches data from the user system.
 	 */
 	public FileSystemData() {
 		new Thread(this).start();
 	}
 
 	/**
-	 * 
+	 * Fetches FileSystem related data and inserts into a JSON object
+	 * Uses SIGAR's FileSystem class to fetch details.
 	 */
-	private void getSystemStatistics() {
+	private void getFileSystemStatistics() {
 		FileSystem[] lobjlstFileSystem = null;
 		try {
 			lobjlstFileSystem = sigar.getFileSystemList();
@@ -53,8 +55,10 @@ public class FileSystemData implements Runnable {
 	}
 
 	/**
+	 * Fetches FileSystem's Directory related data and inserts into a JSON object
+	 * Uses SIGAR's FileSystem class to fetch details.
 	 * 
-	 * @param pobjFileSystem
+	 * @param pobjFileSystem : Contains the file for which details are to be fetched. 
 	 */
 	@SuppressWarnings("unchecked")
 	private void getFileSystemInfo(FileSystem pobjFileSystem) {
@@ -98,6 +102,8 @@ public class FileSystemData implements Runnable {
 	}
 
 	/**
+	 * Fetches FileSystem Usage related data and inserts into a JSON object
+	 * Uses SIGAR's FileSysUsage class to fetch details.
 	 * 
 	 * @param lstrDirectoryName
 	 */
@@ -154,10 +160,12 @@ public class FileSystemData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Called when thread starts
+	 * Calls the functions to fetch FileSystem related data
+	 * And adds the JSON object into a global array
 	 */
 	public void run() {
-		getSystemStatistics();
+		getFileSystemStatistics();
 		synchronized (GlobalObjects.larrlstJson) {
 			if (lobjJsonFileSystemData != null) {
 				GlobalObjects.larrlstJson.add(lobjJsonFileSystemData);

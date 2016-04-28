@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package WindowsService;
 
 import org.apache.logging.log4j.LogManager;
@@ -18,6 +14,7 @@ import org.hyperic.sigar.CpuInfo;
 import org.hyperic.sigar.CpuPerc;
 
 /**
+ * Captures CPU related data from the client system
  *
  * @author Saranya
  */
@@ -28,14 +25,16 @@ public class CpuData implements Runnable {
 	private JSONObject lobjJsonCpuData = new JSONObject();;
 
 	/**
-	 * 
+	 * Constructor of the class
+	 * Spawns a thread which fetches data from the user system.
 	 */
 	public CpuData() {
 		new Thread(this).start();
 	}
 
 	/**
-	 * 
+	 * Fetches CPU related data and inserts into a JSON object
+	 * Uses SIGAR's Cpu class to fetch details.
 	 */
 	@SuppressWarnings("unchecked")
 	private void getDataFromCpu() {
@@ -89,7 +88,8 @@ public class CpuData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Fetches CPU related data and inserts into a JSON object
+	 * Uses SIGAR's CpuInfo class to fetch details. 
 	 */
 	private static void getDataFromCpuInfo() {
 		LOGGER.info("Inside getDataFromCpuInfo");
@@ -116,7 +116,8 @@ public class CpuData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Fetches CPU related data and inserts into a JSON object
+	 * Uses SIGAR's CpuPerc class to fetch details. 
 	 */
 	private static void getDataFromCpuPerc() {
 		LOGGER.info("Inside getDataFromCpuPerc (Output in Percentage)");
@@ -146,7 +147,9 @@ public class CpuData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Called when thread starts
+	 * Calls the functions to fetch CPU related data
+	 * And adds the JSON object into a global array
 	 */
 	public void run() {
 		getDataFromCpu();

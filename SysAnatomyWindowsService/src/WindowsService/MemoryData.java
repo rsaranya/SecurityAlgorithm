@@ -26,10 +26,17 @@ public class MemoryData implements Runnable {
 	private JSONObject lobjJsonMemData = null;
 	private boolean IsJsonObjectSent = false;
 
+	/**
+	 * Constructor of the class. Spawns a thread which fetches data from the
+	 * user system.
+	 */
 	public MemoryData() {
 		new Thread(this).start();
 	}
 
+	/**
+	 * 
+	 */
 	@SuppressWarnings("unchecked")
 	private void getDataFromMemClass() {
 
@@ -82,7 +89,8 @@ public class MemoryData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Called when thread starts Calls the functions to fetch Memory related
+	 * data And adds the JSON object into a global array
 	 */
 	public void run() {
 		getDataFromMemClass();
