@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="WindowsService.Request" table="request"
+		catalog="sysanatomy">
+
+		<id name="rq_system_id" type="string">
+			<column name="RQ_SYSTEM_ID"  not-null="true" />
+			<!-- <generator class="native" /> -->
+		</id>
+		<property name="rq_token_id" type="integer">
+			<column name="RQ_TOKEN_ID" length="11" not-null="true"
+				unique="false" />
+		</property>
+	</class>
+</hibernate-mapping>
