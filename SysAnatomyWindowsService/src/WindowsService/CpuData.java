@@ -9,6 +9,10 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hyperic.sigar.Sigar;
 import org.hyperic.sigar.SigarException;
+import org.json.simple.JSONObject;
+
+import Util.GlobalObjects;
+
 import org.hyperic.sigar.Cpu;
 import org.hyperic.sigar.CpuInfo;
 import org.hyperic.sigar.CpuPerc;
@@ -21,6 +25,7 @@ public class CpuData implements Runnable {
 
 	private static final Logger LOGGER = LogManager.getLogger();
 	private static Sigar sigar = new Sigar();
+	private JSONObject lobjJsonCpuData = new JSONObject();;
 
 	/**
 	 * 
@@ -32,11 +37,13 @@ public class CpuData implements Runnable {
 	/**
 	 * 
 	 */
-	private static void getDataFromCpu() {
+	@SuppressWarnings("unchecked")
+	private void getDataFromCpu() {
 		LOGGER.info("Inside getDataFromCpu");
 		Cpu[] lobjCpuList = null;
 		
 		try {
+			String lstrRetrievedValues = "";
 			lobjCpuList = sigar.getCpuList();
 			double ldblUptime = sigar.getUptime().getUptime();
 		
@@ -46,11 +53,26 @@ public class CpuData implements Runnable {
 			int lintArrLength = lobjCpuList.length;
 			if (lobjCpuList != null && lintArrLength > 0) {
 				while (count < lintArrLength) {
-					LOGGER.info("Total system cpu idle time : " + lobjCpuList[count].getIdle());
-					LOGGER.info("Total system cpu time servicing interrupts : " + lobjCpuList[count].getIrq());
+					lstrRetrievedValues = "" + lobjCpuList[count].getIdle();
+					lobjJsonCpuData.put("CpuData_IdleTime", lstrRetrievedValues);
+					LOGGER.info("Total system cpu idle time : " + lstrRetrievedValues);
+					
+					lstrRetrievedValues = "" + lobjCpuList[count].getIrq();
+					lobjJsonCpuData.put("CpuData_TimeServicingInterupts", lstrRetrievedValues);
+					LOGGER.info("Total system cpu time servicing interrupts : " + lstrRetrievedValues);
+					
+					lstrRetrievedValues = "" + lobjCpuList[count].getNice();
+					lobjJsonCpuData.put("CpuData_NiceTime", lstrRetrievedValues);
 					LOGGER.info("Total system cpu nice time : " + lobjCpuList[count].getNice());
-					LOGGER.info("Total system cpu time servicing softirqs : " + lobjCpuList[count].getSoftIrq());
-					LOGGER.info("Total system cpu involuntary wait time : " + lobjCpuList[count].getStolen());
+					
+					lstrRetrievedValues = "" + lobjCpuList[count].getSoftIrq();
+					lobjJsonCpuData.put("CpuData_TimeServicingSoftInterupts", lstrRetrievedValues);
+					LOGGER.info("Total system cpu time servicing softirqs : " + lstrRetrievedValues);
+					
+					lstrRetrievedValues = "" + lobjCpuList[count].getStolen();
+					lobjJsonCpuData.put("CpuData_InvoluntaryWaitTime", lstrRetrievedValues);
+					LOGGER.info("Total system cpu involuntary wait time : " + lstrRetrievedValues);
+					
 					LOGGER.info("Total system cpu kernel time : " + lobjCpuList[count].getSys());
 					LOGGER.info("Total system cpu time : " + lobjCpuList[count].getTotal());
 					LOGGER.info("Total system cpu user time : " + lobjCpuList[count].getUser());
@@ -130,5 +152,11 @@ public class CpuData implements Runnable {
 		getDataFromCpu();
 		getDataFromCpuInfo();
 		getDataFromCpuPerc();
+		
+		synchronized (GlobalObjects.larrlstJson) {
+			if (lobjJsonCpuData != null) {
+				GlobalObjects.larrlstJson.add(lobjJsonCpuData);
+			}
+		}
 	}
 }
