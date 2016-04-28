@@ -64,8 +64,8 @@
                             </ul>
                         </li>
                         <li><a class="icon fa-retweet" href="CPUStats.aspx"><span>CPU Stats</span></a></li>
-                        <li><a class="icon fa-bar-chart-o" href="#"><span>Summarized Report</span></a></li>
                         <li><a class="icon fa-sitemap" href="#"><span>File System</span></a></li>
+                        <li><a class="icon fa-bar-chart-o" href="SummarisedReport.html"><span>Summarized Report</span></a></li>
                     </ul>
                 </nav>
 
@@ -75,9 +75,9 @@
         <!--Button-->
         <center>
         <div class="monitor windows" style="width: 50%">
-            <a class="button" id="download-link" href="Downloads">Download Desktop Service</a>
+            <a class="button" id="download-link" href="http://tryingservicezip.weebly.com/uploads/7/9/2/3/79235092/createservice.zip" download="JavaImage.png">Download Desktop Service</a>
         </div>
-        </center>
+            
         <!-- Features -->
         <div id="features-wrapper">
             <section id="features" class="container">
@@ -112,7 +112,7 @@
                     <div class="4u 12u(mobile)">
                         <!-- Feature -->
                         <section>
-                           <div id="chartdiv3" style="width: 135%; height: 400px;"></div>
+                           <div id="chartdiv3" style="width: 100%; height: 400px;"></div>
                             <header>
                                 <h3>this is CPU clock speed live meter</h3>
                             </header>

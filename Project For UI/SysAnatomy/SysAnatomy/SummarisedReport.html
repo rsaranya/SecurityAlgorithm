@@ -1,0 +1,98 @@
+﻿<!DOCTYPE HTML>
+<!--
+
+Contains info about the user's system
+-->
+<html>
+<head>
+    <title>About your PC(System Information)</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+</head>
+<body class="right-sidebar">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <div id="header-wrapper">
+            <div id="header" class="container">
+
+                <!-- Logo -->
+                <h1 id="logo"><a href="Home.html">Sys-Anatomy</a></h1>
+                <p>A reporting tool that helps you know your System better.</p>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul>
+                        <li><a class="icon fa-home" href="Home.html"><span>Go Home</span></a></li>
+                        <li><a class="icon fa-cog" href="AboutYourPC.html"><span>About your PC</span></a></li>
+
+                        <li>
+                            <a href="#" class="icon fa-bar-chart-o"><span>Process details</span></a>
+                            <ul>
+                                <li><a href="#">Process 1</a></li>
+                                <li><a href="#">Process 2</a></li>
+                                <li><a href="#">Process 3</a></li>
+                                <%--
+                                <li>
+                                    <a href="#">Process 4</a>
+                                    <ul>
+                                        <li><a href="#">Magna phasellus</a></li>
+                                        <li><a href="#">Etiam dolore nisl</a></li>
+                                        <li><a href="#">Phasellus consequat</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Veroeros feugiat</a></li>--%>
+                            </ul>
+                        </li>
+                        <li><a class="icon fa-retweet" href="CPUStats.html"><span>CPU Stats</span></a></li>
+                        <li><a class="icon fa-sitemap" href="#"><span>File System</span></a></li>
+                        <li><a class="icon fa-bar-chart-o" href="#"><span>Summarized Report</span></a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+
+        <!-- Main -->
+        <div id="main-wrapper">
+            <div id="main" class="container">
+
+                <a>
+                    download the license
+                </a>
+
+                <!--Script code for PDF-->>
+                <script>
+                    function createPDFLink(fileName) {
+                        var doc = new pdf();
+                        // whatever content you want to download
+                        var a = document.createElement("a");
+                        a.download = fileName;
+                        a.title = "download as PDF";
+                        a.href = doc.output('datauri', { "fileName": name });
+                        return a;
+                    }
+                </script>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+       
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/skel-viewport.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>

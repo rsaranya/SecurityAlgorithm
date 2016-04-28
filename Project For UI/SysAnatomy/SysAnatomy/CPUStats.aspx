@@ -48,8 +48,8 @@
                             </ul>
                         </li>
                         <li><a class="icon fa-retweet" href="CPUStats.aspx"><span>CPU Stats</span></a></li>
-                        <li><a class="icon fa-bar-chart-o" href="#"><span>Summarized Report</span></a></li>
                         <li><a class="icon fa-sitemap" href="#"><span>File System</span></a></li>
+                        <li><a class="icon fa-bar-chart-o" href="SummarisedReport.html"><span>Summarized Report</span></a></li>
                     </ul>
                 </nav>
 
