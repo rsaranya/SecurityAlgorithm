@@ -35,7 +35,8 @@ public class MemoryData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Fetches Memory related data and inserts into a JSON object
+	 * Uses SIGAR's Mem class to fetch details. 
 	 */
 	@SuppressWarnings("unchecked")
 	private void getDataFromMemClass() {

@@ -29,7 +29,9 @@ public class NetworkData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Called when thread starts Calls the functions 
+	 * to fetch Network related data 
+	 * And adds the JSON object into a global array
 	 */
 	@Override
 	public void run() {
@@ -45,7 +47,11 @@ public class NetworkData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Fetches Network Interface related data 
+	 * And inserts into a JSON object
+	 * Uses SIGAR's getNetInterfaceList function 
+	 * to fetch list of Network Interfaces available.
+	 * E.g.: eth0  
 	 */
 	private void getNetworkInterfaceList() {
 		String[] larrNetInterface = null;
@@ -62,6 +68,12 @@ public class NetworkData implements Runnable {
 		}
 	}
 
+	/**
+	 * Fetches Network Interface related data and inserts into a JSON object.
+	 * Uses SIGAR's NetStat class to fetch data.
+	 * 
+	 * @param lstrValue
+	 */
 	@SuppressWarnings("unchecked")
 	private void getNetworkInterfaceStat(String lstrValue) {
 		NetStat lobjNetStat = null;
@@ -101,7 +113,8 @@ public class NetworkData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Fetches Network Interface related data and inserts into a JSON object.
+	 * Uses SIGAR's NetStat class to fetch data. 
 	 */
 	@SuppressWarnings("unchecked")
 	private void getNetConnections() {
@@ -274,7 +287,6 @@ public class NetworkData implements Runnable {
 
 				count++;
 			}
-
 		} catch (SigarException sigarEx) {
 			LOGGER.error("Exception in getNetworkData : " + sigarEx.getMessage());
 		} finally {

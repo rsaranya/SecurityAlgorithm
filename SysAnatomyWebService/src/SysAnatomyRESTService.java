@@ -1,7 +1,3 @@
-/**
- * @author Crunchify.com
- * 
- */
  
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -15,6 +11,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
  
+/**
+ * 
+ * @author Saranya
+ *
+ */
 @Path("/")
 public class SysAnatomyRESTService {
 	@POST
@@ -38,6 +39,11 @@ public class SysAnatomyRESTService {
 		return Response.status(200).entity(crunchifyBuilder.toString()).build();
 	}
  
+	/**
+	 * 
+	 * @param incomingData
+	 * @return
+	 */
 	@GET
 	@Path("/verify")
 	@Produces(MediaType.TEXT_PLAIN)

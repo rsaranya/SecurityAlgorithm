@@ -26,9 +26,10 @@ public class SystemData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Fetches System related data and inserts into a JSON object
+	 * Uses SIGAR's OperatingSystem class to fetch details. 
 	 */
-	public static void getSystemDetails() {
+	public void getSystemDetails() {
 		OperatingSystem lobjOperatingSystem = OperatingSystem.getInstance();
 
 		try {
