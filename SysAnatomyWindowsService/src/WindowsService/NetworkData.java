@@ -155,7 +155,8 @@ public class NetworkData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Fetches Network Interface related data and inserts into a JSON object.
+	 * Uses SIGAR's NetInterfaceConfig class to fetch data.  
 	 */
 	@SuppressWarnings("unchecked")
 	private void getNetworkInterfaceConfig(String pstrValue) {
@@ -218,7 +219,8 @@ public class NetworkData implements Runnable {
 	}
 
 	/**
-	 * 
+	 * Fetches Network Interface related data and inserts into a JSON object.
+	 * Uses SIGAR's NetInfo class to fetch data.  
 	 */
 	@SuppressWarnings("unchecked")
 	private void getNetworkData() {
@@ -253,6 +255,10 @@ public class NetworkData implements Runnable {
 		LOGGER.info("**************************************");
 	}
 
+	/**
+	 * Fetches Network Interface related data and inserts into a JSON object.
+	 * Uses SIGAR's NetRoute class to fetch data.  
+	 */
 	@SuppressWarnings("unchecked")
 	private void getNetRoute() {
 		NetRoute[] lobjNetRouteArr = null;
