@@ -475,22 +475,30 @@ public class AesCipher {
      @param pstrInputKey : Key taken from the input file
    */
   protected void aes(String pstrInputText, String pstrInputKey) {
+    // If the Input key and Text is not empty
+    // Process the keys and Input to generate cipher text.
     if (!(pstrInputText.trim().equals("") && pstrInputKey.trim().equals(""))) {
+      // Generate Matrices for the given Key and Text.
       aesRoundKeys(pstrInputText, pstrInputKey);
 
       int roundCount = 0;
       String[][] larRoundKey = new String[4][4];
       String[][] larRoundData = new String[4][4];
-
+      
+      //Copy the Input Data matrix into a local Matrix.
       for (int row = 0; row < larWMatrix.length; row++) {
         System.arraycopy(larInputData[row], 0, larRoundData[row], 0, 4);
       }
+      
+      // Take 4x4 matrix from 4x44 as round keys
 	   for (int increment = 0; increment < larWMatrix[0].length ; 
        increment += 4) {
-         // Take 4x4 matrix from 4x44 as round keys
+         // Copy the 4x4 Round Key matrix from the global 4x44 matrix
+         // into a local Matrix.
          for (int row = 0; row < larWMatrix.length; row++) {
            System.arraycopy(larWMatrix[row], increment, larRoundKey[row], 0, 4);
          }
+
 		 if(roundCount == 10)
 			 larRoundData = aesStateXOR(larRoundData, larRoundKey);
 		 else
@@ -540,7 +548,6 @@ public class AesCipher {
           System.out.print(larRoundData[row][cols].toUpperCase());
         }
       }
-	  System.out.println();
     } catch (Exception ex) {
       System.out.println("Exception in printRoundData is : " + ex.getMessage());
     }
