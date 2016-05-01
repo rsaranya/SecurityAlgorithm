@@ -1,5 +1,5 @@
 /**
- * @author Saranya
+ * @author Saranya, , Dixita
  * @CWID 20062589
  * @Program Generates 10 round keys for AES algorithm based on an input key.
  *          Used the input key and input plain text to generate cipher text
@@ -205,7 +205,7 @@ public class AesEncryption {
 	 * @param pstrInputKey
 	 *          : Key taken from the input file
 	 */
-	protected void aes(String pstrInputText, String pstrInputKey) {
+	protected String aes(String pstrInputText, String pstrInputKey) {
 		try {
 			// If the Input key and Text is not empty
 			// Process the keys and Input to generate cipher text.
@@ -213,15 +213,19 @@ public class AesEncryption {
 			    && pstrInputKey.trim().equals(""))) {
 				// Generate Matrices for the given Key and Text.
 				aesRoundKeys(pstrInputText, pstrInputKey);
-				EncryptUsingAes();
-				// AesDecryption.DecryptUsingAes(EncryptUsingAes());
+				return EncryptUsingAes();
 			}
 		} catch (Exception ex) {
 			System.out.println("Exception in aes ");
 			ex.printStackTrace();
 		}
+		return "";
 	}
 	
+	/**
+	 * 
+	 * @return
+	 */
 	private String EncryptUsingAes() {
 		try {
 			int roundCount = 0;
@@ -249,14 +253,6 @@ public class AesEncryption {
 				}
 				if (roundCount == noOfRounds) {
 					larRoundData = aesStateXOR(larRoundData, larRoundKey);
-					
-					System.out.println("After State XOR : ");
-					for (int col = 0; col < larRoundData[0].length; col++) {
-						for (int row = 0; row < larRoundData.length; row++) {
-							System.out.print(larRoundData[row][col] + "\t");
-						}
-						System.out.println();
-					}
 					roundCount++;
 				} else {
 					roundCount++;
@@ -308,9 +304,10 @@ public class AesEncryption {
 		try {
 			for (int cols = 0; cols < 4; cols++) {
 				for (int row = 0; row < 4; row++) {
-					System.out.print(larRoundData[row][cols].toUpperCase());
+					lstrCipherText += larRoundData[row][cols].toUpperCase();
 				}
 			}
+			System.out.println("Cipher Text : " + lstrCipherText);
 		} catch (Exception ex) {
 			System.out.println("Exception in printRoundData is : " + ex.getMessage());
 		}

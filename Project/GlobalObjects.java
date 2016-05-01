@@ -1,4 +1,10 @@
-
+/**
+ * 
+ * @author Saranya, Dixita
+ * @CWID
+ * @Program
+ *
+ */
 public class GlobalObjects {
 	
 	public static enum ALGO_MODE {
@@ -285,11 +291,7 @@ public class GlobalObjects {
 		try {
 			int sRowValue = Integer.parseInt(larSplitHexValue[0], 16);
 			int sColValue = Integer.parseInt(larSplitHexValue[1], 16);
-			// System.out.println("sRowValue : " + larSplitHexValue[0]);
-			// System.out.println("sColValue : " + larSplitHexValue[1]);
-			// System.out.println("genumAlgoMode : " + genumAlgoMode);
-			// System.out.println(
-			// "S_BOX[sRowValue][sColValue] : " + S_BOX[sRowValue][sColValue]);
+			
 			switch (genumAlgoMode) {
 				case ENCRYPT:
 					return S_BOX[sRowValue][sColValue];

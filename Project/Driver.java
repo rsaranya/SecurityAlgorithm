@@ -1,6 +1,6 @@
 
 /**
- * @author Saranya
+ * @author Saranya, Dixita
  * @CWID 20062589
  * @Program Utilizes the AES Key generation class to generate round keys and
  * create a cipher text from a given plain text
@@ -68,8 +68,8 @@ public class Driver {
 				
 				// Call the AES function to process the input key
 				// and generate 10 more round keys
-				aesKeyGen.aes(inputPlainText, inputKey);
-				
+				String lstrCipherText = aesKeyGen.aes(inputPlainText, inputKey);
+				AesDecryption.DecryptUsingAes(lstrCipherText);
 			} else {
 				// If user input is incorrect, terminate the program
 				System.out.println("Invalid Values in the Input File.");
