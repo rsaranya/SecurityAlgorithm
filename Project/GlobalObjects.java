@@ -54,6 +54,9 @@ public class GlobalObjects {
 	
 	public static String[][] larInputKey = null;
 	
+	// Used to hold the entered Data in the form of an Array
+	public static String[][] larInputData = null;
+	
 	// Used to hold the W Matrix, which contains the user entered
 	// and the computed columns
 	public static String[][] larWMatrix = null;
@@ -163,6 +166,16 @@ public class GlobalObjects {
 	    { "61", "C2", "9F", "25", "4A", "94", "33", "66", "CC", "83", "1D", "3A",
 	        "74", "E8", "CB", "8D" } };
 	
+	// The fixed matrix used for column mixing
+	static String[][] GALOIS_MATRIX = { { "02", "03", "01", "01" },
+	    { "01", "02", "03", "01" }, { "01", "01", "02", "03" },
+	    { "03", "01", "01", "02" } };
+	
+	// The fixed matrix used for column mixing
+	static String[][] INV_GALOIS_MATRIX = { { "0E", "0B", "0D", "09" },
+	    { "09", "0E", "0B", "0D" }, { "0D", "09", "0E", "0B" },
+	    { "0B", "0D", "09", "0E" } };
+	
 	/**
 	 * Returns a value from the Round-Key Table using the specified row and column
 	 * values
@@ -195,7 +208,9 @@ public class GlobalObjects {
 	public static String shiftBit(String pstrHexValue) {
 		// Binary value in string format for the input integer
 		String binary = Integer.toBinaryString(Integer.parseInt(pstrHexValue, 16));
-		
+		/*
+		 * while (binary.length() < 8) { binary = "0" + binary; }
+		 */
 		switch (genumAlgoMode) {
 			case ENCRYPT:
 				// If the length of the binary string is less than 8 then pad.
@@ -203,8 +218,8 @@ public class GlobalObjects {
 					binary = "0" + binary;
 				}
 				break;
-			case DECRYPT:
-				// If the length of the binary string is less than 8 then pad.
+			case DECRYPT: // If the length of the binary string is less than 8
+				// then pad.
 				while (binary.length() < 8) {
 					binary = binary + "0";
 				}
@@ -213,9 +228,16 @@ public class GlobalObjects {
 			default:
 				binary = "";
 		}
+		
 		// Shift to left by 1
 		int intvalueIn = Integer.parseInt(binary, 2);
 		String shiftedBinary = "";
+		/*
+		 * shiftedBinary = Integer.toBinaryString(intvalueIn << 1); shiftedBinary =
+		 * (shiftedBinary.length() > 8 ? shiftedBinary.substring(1) :
+		 * shiftedBinary);
+		 */
+		
 		switch (genumAlgoMode) {
 			case ENCRYPT:
 				shiftedBinary = Integer.toBinaryString(intvalueIn << 1);
@@ -234,6 +256,7 @@ public class GlobalObjects {
 				break;
 			
 		}
+		
 		// check if upper significant bit is 1,
 		// then XOR by 27
 		// else return the original value
@@ -471,5 +494,286 @@ public class GlobalObjects {
 		} catch (Exception ex) {
 			System.out.println("Exception in printRoundKeys is : " + ex.getMessage());
 		}
+	}
+	
+	/**
+	 * XOR's two 4*4 matrices and outputs the result
+	 * 
+	 * @param sHex
+	 *          : Input plain text Matrix.
+	 * 
+	 * @param keyHex
+	 *          : Input Key Matrix.
+	 * 
+	 * @return outStateHex : XOR result of key and plain text
+	 */
+	public static String[][] aesStateXOR(String[][] sHex, String[][] keyHex) {
+		String[][] outStateHex = new String[sHex.length][sHex[0].length];
+		for (int i = 0; i < sHex.length; i++) {
+			for (int j = 0; j < sHex[i].length; j++) {
+				outStateHex[i][j] = computeXOR(sHex[i][j], keyHex[i][j]);
+			}
+		}
+		return outStateHex;
+	}
+	
+	/**
+	 * Left shifts each element by their row number
+	 * 
+	 * @param inStateHex
+	 *          : Output received from Nibble Substitution.
+	 * 
+	 * @return outStateHex : Matrix after Shifting the Rows.
+	 */
+	protected static String[][] aesShiftRow(String[][] inStateHex) {
+		String[][] outStateHex = new String[4][4];
+		int row = 0;
+		try {
+			for (int i = 0; i < inStateHex.length; i++, row++) {
+				for (int j = 0; j < inStateHex[0].length; j++) {
+					switch (genumAlgoMode) {
+						case ENCRYPT:
+							outStateHex[i][j] = inStateHex[i][(j + row) % 4];
+							break;
+						case DECRYPT:
+							int lintDiff = ((j - row) % 4);
+							int outpuTCol = (lintDiff < 0 ? inStateHex.length + lintDiff
+							    : lintDiff);
+							
+							outStateHex[i][j] = inStateHex[i][outpuTCol];
+							break;
+						case NONE:
+						default:
+							System.out.println("Algo Mode not set");
+							break;
+					}
+				}
+			}
+		} catch (Exception ex) {
+			System.out.println("Exception in aesShiftRow : " + ex.getMessage());
+		}
+		return outStateHex;
+	}
+	
+	/**
+	 * GaloisMatrix is used to multiply the columns of the 4*4 input matrix
+	 *
+	 * @param inStateHex
+	 *          : Output from ShiftRows
+	 * 
+	 * @return returnMatrix : Matrix after row shift
+	 */
+	public static String[][] aesMixColumn(String[][] inStateHex) {
+		String sum = "0";
+		
+		String[][] returnMatrix = new String[inStateHex.length][inStateHex[0].length];
+		int rowCount = 0;
+		int stateCol = 0;
+		while (stateCol <= 3) {
+			for (int row = 0; row < 4 && stateCol < 4; row++, rowCount++) {
+				sum = "0";
+				for (int col = 0, stateRow = 0; col < 4; col++, stateRow++) {
+					String lstrGalois_Matrix = (genumAlgoMode == ALGO_MODE.ENCRYPT
+					    ? GALOIS_MATRIX[row][col] : INV_GALOIS_MATRIX[row][col]);
+					// System.out.println("lstrGalois_Matrix " + lstrGalois_Matrix);
+					if (null != lstrGalois_Matrix) {
+						switch (lstrGalois_Matrix) {
+							case "02":
+								sum = outputOfCase2(sum, inStateHex[stateRow][stateCol]);
+								break;
+							case "03":
+								// Split it as 02 and 01
+								// Multiply 02 with first part of hex
+								String temp = computeXOR(inStateHex[stateRow][stateCol],
+								    shiftBit(inStateHex[stateRow][stateCol]));
+								sum = computeXOR(sum, temp);
+								break;
+							case "01":
+								sum = computeXOR(sum, inStateHex[stateRow][stateCol]);
+								break;
+							case "0E":
+								int inputInHex = Integer
+								    .parseInt(inStateHex[stateRow][stateCol], 16);
+								sum = computeXOR(sum,
+								    Integer.toHexString(multiplyE(inputInHex)));
+								
+								break;
+							case "0B":
+								inputInHex = Integer.parseInt(inStateHex[stateRow][stateCol],
+								    16);
+								sum = computeXOR(sum,
+								    Integer.toHexString(multiplyB(inputInHex)));
+								
+								break;
+							case "0D":
+								inputInHex = Integer.parseInt(inStateHex[stateRow][stateCol],
+								    16);
+								sum = computeXOR(sum,
+								    Integer.toHexString(multiplyD(inputInHex)));
+								
+								break;
+							case "09":
+								inputInHex = Integer.parseInt(inStateHex[stateRow][stateCol],
+								    16);
+								sum = computeXOR(sum,
+								    Integer.toHexString(multiply9(inputInHex)));
+								
+								break;
+							default:
+								break;
+						}
+					}
+				}
+				returnMatrix[row][stateCol] = sum;
+				if (rowCount == 3) {
+					stateCol++;
+					rowCount = -1;
+				}
+			}
+		}
+		
+		return returnMatrix;
+	}
+	
+	private static String outputOfCase2(String sum, String string) {
+		sum = computeXOR(sum, shiftBit(string));
+		return sum;
+	}
+	
+	/**
+	 * Generates the matrix for the input text from the file.
+	 * 
+	 * @param pstrInputText
+	 *          : Input text received from the file
+	 */
+	public static void generateDataMatrix(String pstrInputText) {
+		larInputData = new String[GlobalObjects.gintArrayRowSize][4];
+		
+		try {
+			int col = 0;
+			for (int colCounter = 0; colCounter < (pstrInputText.length()
+			    - 1); colCounter += (GlobalObjects.gintArrayRowSize * 2), col++) {
+				int row = 0;
+				for (int rowCounter = colCounter; rowCounter < (colCounter
+				    + (GlobalObjects.gintArrayRowSize * 2)); rowCounter += 2, row++) {
+					larInputData[row][col] = pstrInputText.substring(rowCounter,
+					    (rowCounter + 2));
+				}
+			}
+		} catch (Exception ex) {
+			System.out
+			    .println("Exception in generateDataMatrix is : " + ex.getMessage());
+		}
+	}
+	
+	/**
+	 * Prints the cipher generated by AES algorithm
+	 * 
+	 * @param larRoundData
+	 *          : Final Cipher text generated by the algorithm.
+	 */
+	public static String printRoundData(String[][] larRoundData) {
+		String lstrCipherText = "";
+		try {
+			for (int cols = 0; cols < 4; cols++) {
+				for (int row = 0; row < 4; row++) {
+					lstrCipherText += larRoundData[row][cols].toUpperCase();
+				}
+			}
+			switch (genumAlgoMode) {
+				case ENCRYPT:
+					System.out.println("Cipher Text : " + lstrCipherText);
+					break;
+				case DECRYPT:
+					System.out.println("Original Text : " + lstrCipherText);
+					break;
+				case NONE:
+				default:
+					System.out.println("Algo Mode not set.");
+					break;
+			}
+		} catch (Exception ex) {
+			System.out.println("Exception in printRoundData is : " + ex.getMessage());
+		}
+		return lstrCipherText;
+	}
+	
+	public static String mixColShiftBit(String pstrHexValue) {
+		// Binary value in string format for the input integer
+		String binary = Integer.toBinaryString(Integer.parseInt(pstrHexValue, 16));
+		
+		while (binary.length() < 8) {
+			binary = "0" + binary;
+		}
+		
+		// Shift to left by 1
+		int intvalueIn = Integer.parseInt(binary, 2);
+		String shiftedBinary = "";
+		
+		shiftedBinary = Integer.toBinaryString(intvalueIn << 1);
+		shiftedBinary = (shiftedBinary.length() > 8 ? shiftedBinary.substring(1)
+		    : shiftedBinary);
+		
+		// check if upper significant bit is 1,
+		// then XOR by 27
+		// else return the original value
+		if (binary.substring(0, 1).equals("1")) {
+			String constant = Integer.toString(27, 2);
+			while (constant.length() < 8) {
+				constant = "0" + constant;
+			}
+			return computeXOR(Integer.toHexString(Integer.parseInt(shiftedBinary, 2)),
+			    Integer.toHexString(Integer.parseInt(constant, 2)));
+		} else {
+			return Integer.toHexString(Integer.parseInt(shiftedBinary, 2));
+		}
+	}
+	
+	protected static Integer multiply9(Integer InputHex) {
+		return ((multiply2(multiply2(multiply2(InputHex)))) ^ InputHex);
+		
+	}
+	
+	protected static Integer multiplyB(Integer InputHex) {
+		return (multiply2(multiply2(multiply2(InputHex)) ^ InputHex) ^ InputHex);
+		
+	}
+	
+	protected static Integer multiplyD(Integer InputHex) {
+		return (multiply2(multiply2((multiply2(InputHex) ^ InputHex))) ^ InputHex);
+		
+	}
+	
+	protected static Integer multiplyE(Integer InputHex) {
+		return multiply2(multiply2((multiply2(InputHex) ^ InputHex)) ^ InputHex);
+		
+	}
+	
+	protected static Integer multiply2(Integer InputHex) {
+		StringBuilder ABinary = new StringBuilder();
+		String ABinString;
+		ABinString = Integer.toBinaryString(InputHex);
+		
+		// NumZero stores the no. of zeroes to pad with
+		int NumZero = 8 - ABinString.length();
+		ABinary.append(ABinString);
+		
+		// Padding with zeroes now
+		for (int i = 0; i < NumZero; i++) {
+			ABinary.insert(0, '0');
+		}
+		Integer padded;
+		padded = Integer.parseInt((ABinary.substring(1) + "0"), 2);
+		// shiftedNum stores the number after it has been left shifted by 1
+		String shiftedNum = Integer.toHexString(padded);
+		Integer Snum = Integer.parseInt(shiftedNum, 16);
+		
+		// If the MSB of InputHex is 1, xor it with 1B
+		if (NumZero == 0) {
+			return ((Snum) ^ (0x1b));
+		} else {
+			return Snum;
+		}
+		
 	}
 }

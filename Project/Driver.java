@@ -58,9 +58,8 @@ public class Driver {
 				
 				GlobalObjects.gintArrayColSize = (lintInputKeySize / 8);
 				
-				GlobalObjects.gintWArrayColSize = (lintInputKeySize / 8)
-				    * (GlobalObjects.BYTE_ROUND.getValue(GlobalObjects.genumNoOfRounds)
-				        + 1);
+				GlobalObjects.gintWArrayColSize = 4 * (GlobalObjects.BYTE_ROUND
+				    .getValue(GlobalObjects.genumNoOfRounds) + 1);
 				
 				// Call the aesKeyGen class and pass the plain text
 				// and input key as string to the constructor
