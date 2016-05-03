@@ -158,8 +158,9 @@ public class AesEncryption {
     }
 
     /**
-     * This function pads the text with hex value of '&' at the end of the string,
-     * followed by hex value of the remaining string length.
+     * This function pads the text with hex value of '&' at the end of the
+     * string, followed by hex value of the remaining string length.
+     *
      * @param plaintext contains the text that needs to be padded
      * @return the padded string
      */
@@ -171,8 +172,14 @@ public class AesEncryption {
                 str.append(plaintext);
                 char pad = '&';
                 str.append(Integer.toHexString((int) pad));
-                int noCharsToPad = (((str.length() / GlobalObjects.gintInputBlockSize) + 1)
-                        * GlobalObjects.gintInputBlockSize) - str.length();
+                int noCharsToPad;
+                if (str.length() % GlobalObjects.gintInputBlockSize != 0) {
+                    noCharsToPad = (((str.length() / GlobalObjects.gintInputBlockSize) + 1)
+                            * GlobalObjects.gintInputBlockSize) - str.length();
+                } else {
+                    noCharsToPad = (str.length() / GlobalObjects.gintInputBlockSize)
+                            * GlobalObjects.gintInputBlockSize - str.length();
+                }
 
                 //String paddedStr = Integer.toHexString(noCharsToPad);
                 while (noCharsToPad > 0) {

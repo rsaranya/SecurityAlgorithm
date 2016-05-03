@@ -1,4 +1,5 @@
 
+
 /**
  * @author Saranya, Dixita
  * @CWID 20062589,20061841
@@ -65,15 +66,20 @@ public class Driver {
                 AesEncryption aesKeyGen = new AesEncryption();
 
                 // Call the AES function to process the input key
-     
                 int startIndex = 0;
-                int loopCount = inputPlainText.length() / GlobalObjects.gintInputBlockSize + 1;
+                int loopCount;
+                if (inputPlainText.length() % 32 != 0) {
+                    loopCount = inputPlainText.length() / GlobalObjects.gintInputBlockSize + 1;
+                } else {
+                    loopCount = inputPlainText.length() / GlobalObjects.gintInputBlockSize;
+                }
+
                 String strBlock[] = new String[loopCount];
                 int blockSent = 0;
                 for (int noOfBlocks = 0; noOfBlocks < loopCount; noOfBlocks++) {
-                    int minLength = Math.min(GlobalObjects.gintInputBlockSize, 
+                    int minLength = Math.min(GlobalObjects.gintInputBlockSize,
                             (inputPlainText.length() - blockSent * GlobalObjects.gintInputBlockSize));
-                    strBlock[noOfBlocks] = inputPlainText.substring(startIndex,startIndex+ minLength);
+                    strBlock[noOfBlocks] = inputPlainText.substring(startIndex, startIndex + minLength);
                     blockSent++;
 
                     String temp = aesKeyGen.addPadding(strBlock[noOfBlocks]);

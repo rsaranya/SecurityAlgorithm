@@ -1,4 +1,4 @@
-package Project;
+
 
 /**
  * This class contains all common methods and variables that are used for 
