@@ -4,7 +4,7 @@ package Project;
  * This class contains all common methods and variables that are used for 
  * encryption and decryption.
  * @author Saranya, Dixita
- * @CWID 20062589,20061841
+ * @CWID
  * @Program
  *
  */
@@ -67,6 +67,8 @@ public class GlobalObjects {
     public static int gintArrayColSize = 0;
 
     public static int gintWArrayColSize = 0;
+    
+    public static int gintInputBlockSize=32;
 
     public static String[][] larInputKey = null;
 
@@ -770,52 +772,6 @@ public class GlobalObjects {
             return ((Snum) ^ (0x1b));
         } else {
             return Snum;
-        }
-
-    }
-
-    public static String addPadding(String plaintext) {
-        try {
-            StringBuilder str = new StringBuilder();
-            if ((plaintext.length() % 32) != 0) {
-                //len 63..63/32=1+1*32-63=1
-                int noCharsToPad = (((plaintext.length() / 32) + 1) * 32) - plaintext.length();
-                str.append(plaintext);
-                str.append("&");
-                String pad = Integer.toHexString(noCharsToPad);
-                if (pad.length() < 2) {
-                    pad = "0" + pad;
-                }
-                while (noCharsToPad > 0) {
-                    str.append(pad);
-                    noCharsToPad -= pad.length();
-                }
-
-                return str.toString();
-            } else {
-                return plaintext;
-            }
-        } catch (Exception ex) {
-            System.out.println("Exception in addPadding():" + ex.getMessage());
-            return "";
-        }
-
-    }
-
-    public static String removePadding(String paddedText) {
-        try {
-            StringBuilder str = new StringBuilder();
-            if ((paddedText.length() % 32) == 0) {
-                int noCharsPadded = Integer.parseInt(paddedText.substring(paddedText.length() - 2, paddedText.length()), 2);
-                str.delete(paddedText.length() - noCharsPadded, paddedText.length());
-
-                return str.toString();
-            } else {
-                return "";
-            }
-        } catch (Exception ex) {
-            System.out.println("Exception in removePadding():" + ex.getMessage());
-            return "";
         }
 
     }

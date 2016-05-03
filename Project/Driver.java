@@ -1,3 +1,4 @@
+
 /**
  * @author Saranya, Dixita
  * @CWID 20062589,20061841
@@ -36,17 +37,12 @@ public class Driver {
             }
             // If condition makes sure that user has entered
             // exactly 32 hexadecimal digits
-            if ((inputKey.matches("[0-9A-F]{32,64}$"))
-                    && (inputPlainText.matches("[0-9A-F]{32,64}$"))) {
-                /* if ((inputKey.matches("[0-9A-F]+$"))
+
+            if ((inputKey.matches("[0-9A-F]+$"))
                     && (inputPlainText.matches("[0-9A-F]+$"))) {
 
                 // Add padding if the size is less than the required size
                 // Size will be 32- , 48- , 64 - bits
-                String paddedString = GlobalObjects.addPadding(inputPlainText);
-                System.out.println(paddedString);*/
-
-                // System.out.println(GlobalObjects.removePadding(paddedString));
                 int lintInputKeySize = inputKey.length();
 
                 // RowSize : size(in bits) / 2 => size(in bytes)
@@ -69,16 +65,34 @@ public class Driver {
                 AesEncryption aesKeyGen = new AesEncryption();
 
                 // Call the AES function to process the input key
-                // and generate 10 more round keys
-                String lstrCipherText = aesKeyGen.aes(inputPlainText, inputKey);
-                AesDecryption.DecryptUsingAes(lstrCipherText);
+     
+                int startIndex = 0;
+                int loopCount = inputPlainText.length() / GlobalObjects.gintInputBlockSize + 1;
+                String strBlock[] = new String[loopCount];
+                int blockSent = 0;
+                for (int noOfBlocks = 0; noOfBlocks < loopCount; noOfBlocks++) {
+                    int minLength = Math.min(GlobalObjects.gintInputBlockSize, 
+                            (inputPlainText.length() - blockSent * GlobalObjects.gintInputBlockSize));
+                    strBlock[noOfBlocks] = inputPlainText.substring(startIndex,startIndex+ minLength);
+                    blockSent++;
+
+                    String temp = aesKeyGen.addPadding(strBlock[noOfBlocks]);
+                    String lstrCipherText = aesKeyGen.aes(temp, inputKey);
+                    String decryptMsgList = AesDecryption.DecryptUsingAes(lstrCipherText);
+                    AesDecryption.removePadding(decryptMsgList);
+                    startIndex += GlobalObjects.gintInputBlockSize;
+
+                }
+
             } else {
                 // If user input is incorrect, terminate the program
                 System.out.println("Invalid Values in the Input File.");
                 System.exit(0);
             }
+
         } catch (Exception ex) {
             System.out.println("Exception in main : " + ex.getMessage());
         }
     }
+
 }

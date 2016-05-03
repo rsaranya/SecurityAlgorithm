@@ -1,8 +1,8 @@
 /**
- * @author Saranya,  Dixita
- * @CWID 20062589,20061841
+ * @author Saranya, Dixita
+ * @CWID 20062589
  * @Program Generates 10 round keys for AES algorithm based on an input key.
- *          Used the input key and input plain text to generate cipher text
+ * Used the input key and input plain text to generate cipher text
  */
 public class AesEncryption {
 
@@ -91,6 +91,7 @@ public class AesEncryption {
      */
     protected String aes(String pstrInputText, String pstrInputKey) {
         try {
+            GlobalObjects.genumAlgoMode = GlobalObjects.ALGO_MODE.ENCRYPT;
             // If the Input key and Text is not empty
             // Process the keys and Input to generate cipher text.
             if (!(pstrInputText.trim().equals("")
@@ -106,8 +107,9 @@ public class AesEncryption {
     }
 
     /**
-     *This function gets the round key and round data and performs encryption 
+     * This function gets the round key and round data and performs encryption
      * operations based on the round number.
+     *
      * @return the encrypted text in string format.
      */
     private String EncryptUsingAes() {
@@ -149,8 +151,41 @@ public class AesEncryption {
             }
         } catch (Exception ex) {
             System.out.println("Exception in EncryptUsingAes() in "
-                    + "AesEncryption.java:"+ex.getMessage());
+                    + "AesEncryption.java:" + ex.getMessage());
         }
         return "";
+    }
+
+    protected String addPadding(String plaintext) {
+        try {
+            StringBuilder str = new StringBuilder();
+            if ((plaintext.length() % GlobalObjects.gintInputBlockSize) != 0) {
+                //len 63..63/32=1+1*32-63=1
+                str.append(plaintext);
+                char pad = '&';
+                str.append(Integer.toHexString((int) pad));
+                int noCharsToPad = (((str.length() / GlobalObjects.gintInputBlockSize) + 1)
+                        * GlobalObjects.gintInputBlockSize) - str.length();
+
+                //String paddedStr = Integer.toHexString(noCharsToPad);
+                while (noCharsToPad > 0) {
+                    String hexVal = Integer.toHexString(noCharsToPad);
+                    if (hexVal.length() < 2) {
+                        str.append("0");
+                    }
+                    str.append(hexVal);
+                    noCharsToPad -= 2;
+                }
+                System.out.println("Padded str:" + str.toString());
+                return str.toString();
+            } else {
+                System.out.println("No Padding added:" + str.toString());
+                return plaintext;
+            }
+        } catch (Exception ex) {
+            System.out.println("Exception in addPadding():" + ex.getMessage());
+            return "";
+        }
+
     }
 }
