@@ -90,7 +90,7 @@ public class AesEncryption {
      * @param pstrInputKey : Key taken from the input file
      * @return
      */
-    protected String aes(String pstrInputText, String pstrInputKey) {
+    protected String aesEncrypt(String pstrInputText, String pstrInputKey) {
         try {
             GlobalObjects.genumAlgoMode = GlobalObjects.ALGO_MODE.ENCRYPT;
             // If the Input key and Text is not empty
@@ -170,8 +170,7 @@ public class AesEncryption {
             if ((plaintext.length() % GlobalObjects.gintInputBlockSize) != 0) {
                 //len 63..63/32=1+1*32-63=1
                 str.append(plaintext);
-                char pad = '&';
-                str.append(Integer.toHexString((int) pad));
+                str.append(Integer.toHexString((int)(GlobalObjects.lstrDelimiter)));
                 int noCharsToPad;
                 if (str.length() % GlobalObjects.gintInputBlockSize != 0) {
                     noCharsToPad = (((str.length() / GlobalObjects.gintInputBlockSize) + 1)
