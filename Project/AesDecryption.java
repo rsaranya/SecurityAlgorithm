@@ -1,3 +1,4 @@
+
 /**
  * @author Saranya, Dixita
  * @CWID 20062589
@@ -110,12 +111,19 @@ public class AesDecryption {
         return larInputToNextStep;
     }
 
+    /**
+     * This function removes padding from the decrypted text. It checks for the
+     * hex value of '&' and gets the data before the '&'
+     *
+     * @param paddedText the text for which padded data needs to be removed
+     * @return the original text.
+     */
     public static String removePadding(String paddedText) {
         try {
             String str = "";
             if ((paddedText.length() % GlobalObjects.gintInputBlockSize) == 0) {
-                String padHex=Integer.toHexString((int)'&');
-               
+                String padHex = Integer.toHexString((int) '&');
+
                 if (paddedText.contains(padHex)) {
                     int index = paddedText.lastIndexOf(padHex);
                     str = paddedText.substring(0, index);
