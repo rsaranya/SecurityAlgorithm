@@ -1,28 +1,33 @@
 
 /**
  * @author: Saranya, Dixita
- * @CWID: 20062589,20061841
+ * @CWID: 20062589, 20061841
  * @Program: Contains the functions specific to Decryption process.
  */
 public class AesDecryption {
 
 	/**
-	 * Makes function call to all
+	 * Makes function call to all decryption functions in a sequence.
 	 * 
 	 * @param pstrCipherText
-	 * @return
+	 *            : Cipher text to be decrypted.
+	 * @return : Returns the unpadded and decrypted cipher text
 	 */
 	private static String DecryptUsingAes(String pstrCipherText) {
+		// Set the Algo mode to DECRYPT
 		GlobalObjects.genumAlgoMode = GlobalObjects.ALGO_MODE.DECRYPT;
 
+		// Create a 4 x 4 matrix of the Cipher Text.
 		GlobalObjects.generateDataMatrix(pstrCipherText);
 
+		// Decrypt the cipher text
 		return decryptWithRoundKeys();
 	}
 
 	/**
+	 * Uses the Round Keys to decrypt the Cipher Text
 	 * 
-	 * @return
+	 * @return : Padded Decrypted Plain Text
 	 */
 	private static String decryptWithRoundKeys() {
 		try {
@@ -37,30 +42,32 @@ public class AesDecryption {
 				}
 			}
 			int noOfRounds = GlobalObjects.BYTE_ROUND.getValue(GlobalObjects.genumNoOfRounds);
-			// Take 4x4 matrix from 4x44 as round keys
+			// Take 4x4 matrix from 4x44 | 4x48 | 4x56 as round keys
 
 			for (int lintDecrement = GlobalObjects.gintWArrayColSize - 4; lintDecrement >= 0
 					&& roundCount <= noOfRounds; lintDecrement -= 8) {
-				// Copy the 4x4 Round Key matrix from the global 4x44 matrix
-				// into a local Matrix.
+				// Copy the 4x4 Round Key matrix from the global 4x44 | 4x48 |
+				// 4x56 matrix into a local Matrix.
 				for (int col = 0; col < 4 && lintDecrement < GlobalObjects.gintWArrayColSize; col++, lintDecrement++) {
 					for (int row = 0; row < 4; row++) {
 						larRoundKey[row][col] = GlobalObjects.larWMatrix[row][lintDecrement];
 					}
 				}
 
+				// In the 1st round, perform State XOR, Shift Rows and Nibble
+				// Substitution
+				// In the last round, Perform State XOR with the last round key.
 				if (roundCount == 0 || roundCount == GlobalObjects.BYTE_ROUND.getValue(GlobalObjects.genumNoOfRounds)) {
-
 					// Step 1: Perform XOR of the data and round key.
 					larRoundData = GlobalObjects.aesStateXOR(larRoundData, larRoundKey);
 
 					if (roundCount == 0) {
-						// Step 3: Perform Shifting on Rows
+						// Step 2: Perform Shifting on Rows
 						if (larRoundData != null) {
 							larRoundData = GlobalObjects.aesShiftRow(larRoundData);
 						}
 
-						// Step 2: Perform Nibble Substitution of the XOR
+						// Step 3: Perform Nibble Substitution of the XOR
 						if (larRoundData != null) {
 							larRoundData = GlobalObjects.aesNibbleSub(larRoundData);
 						}
@@ -71,6 +78,7 @@ public class AesDecryption {
 					roundCount++;
 				}
 			}
+			// Prints the decrypted data
 			if (larRoundData != null) {
 				return GlobalObjects.printRoundData(larRoundData);
 			}
@@ -83,11 +91,16 @@ public class AesDecryption {
 	}
 
 	/**
+	 * Computed the data for each round
 	 * 
 	 * @param larRoundData
+	 *            : Input to be decrypted, received from the previous round.
 	 * @param larRoundKey
+	 *            : Key to be used for this round for decryption.
 	 * @param pintRoundCount
-	 * @return
+	 *            : Round Number to keep track of the number of rounds left and
+	 *            skip mix columns for the last round
+	 * @return : Returns data computed at each round.
 	 */
 	private static String[][] computeDataForEachRound(String[][] larRoundData, String[][] larRoundKey,
 			int pintRoundCount) {
@@ -98,7 +111,7 @@ public class AesDecryption {
 			// Step 1: Perform XOR of the data and round key.
 			larInputToNextStep = GlobalObjects.aesStateXOR(larInputToNextStep, larRoundKey);
 
-			// Step 4: Perform Mixing of column if not
+			// Step 2: Perform Mixing of column if not
 			// the last round
 			if (pintRoundCount != GlobalObjects.BYTE_ROUND.getValue(GlobalObjects.genumNoOfRounds)) {
 				if (larInputToNextStep != null) {
@@ -111,7 +124,7 @@ public class AesDecryption {
 				larInputToNextStep = GlobalObjects.aesShiftRow(larInputToNextStep);
 			}
 
-			// Step 2: Perform Nibble Substitution of the XOR
+			// Step 4: Perform Nibble Substitution of the XOR
 			if (larInputToNextStep != null) {
 				larInputToNextStep = GlobalObjects.aesNibbleSub(larInputToNextStep);
 			}
@@ -151,9 +164,11 @@ public class AesDecryption {
 	}
 
 	/**
+	 * Makes function calls to decrypt the cipher text
 	 * 
 	 * @param lstrCipherText
-	 * @return
+	 *            : Cipher Text to be decypted
+	 * @return : Decrypted Plain Text
 	 */
 	public static String aesDecrypt(String lstrCipherText) {
 		String decryptMsgList = DecryptUsingAes(lstrCipherText);
@@ -168,9 +183,11 @@ public class AesDecryption {
 	}
 
 	/**
+	 * Removes the extra delimiter added to the text.
 	 * 
 	 * @param pstrInputText
-	 * @return
+	 *            : Contains the decrypted text with extra delimiter characters
+	 * @return : Plain Text without the extra delimiter character
 	 */
 	private static String removeAnExtraDelimiter(String pstrInputText) {
 		// Check if the input text contains the delimiter i.e. '&&' in hex

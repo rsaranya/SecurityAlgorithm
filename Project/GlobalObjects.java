@@ -1,19 +1,19 @@
 
 /**
- * This class contains all common methods and variables that are used for
- * encryption and decryption.
- * 
  * @author Saranya, Dixita
- * @CWID
- * @Program
+ * @CWID 20062589, 20061841
+ * @Program Contains all the functions which are common to both Encrytion and
+ *          Decryption process
  *
  */
 public class GlobalObjects {
 
+	// Used to identify if the process is Encryption or decryption.
 	public static enum ALGO_MODE {
 		ENCRYPT, DECRYPT, NONE
 	}
 
+	// Used to fetch the No of rounds based on the Key size
 	public static enum BYTE_ROUND {
 		BYTE_32(10), BYTE_48(12), BYTE_64(14);
 
@@ -198,7 +198,7 @@ public class GlobalObjects {
 			binary = "";
 		}
 
-		// Shift to left by 1
+		// Shift to left or right by 1
 		int intvalueIn = Integer.parseInt(binary, 2);
 		String shiftedBinary = "";
 
@@ -524,12 +524,10 @@ public class GlobalObjects {
 				for (int col = 0, stateRow = 0; col < 4; col++, stateRow++) {
 					String lstrGalois_Matrix = (genumAlgoMode == ALGO_MODE.ENCRYPT ? GALOIS_MATRIX[row][col]
 							: INV_GALOIS_MATRIX[row][col]);
-					// System.out.println("lstrGalois_Matrix " +
-					// lstrGalois_Matrix);
 					if (null != lstrGalois_Matrix) {
 						switch (lstrGalois_Matrix) {
 						case "02":
-							sum = outputOfCase2(sum, inStateHex[stateRow][stateCol]);
+							sum = computeXOR(sum, shiftBit(inStateHex[stateRow][stateCol]));
 							break;
 						case "03":
 							// Split it as 02 and 01
@@ -543,23 +541,22 @@ public class GlobalObjects {
 							break;
 						case "0E":
 							int inputInHex = Integer.parseInt(inStateHex[stateRow][stateCol], 16);
-							sum = computeXOR(sum, Integer.toHexString(multiplyE(inputInHex)));
+							sum = computeXOR(sum, Integer.toHexString(calculateForE(inputInHex)));
 
 							break;
 						case "0B":
 							inputInHex = Integer.parseInt(inStateHex[stateRow][stateCol], 16);
-							sum = computeXOR(sum, Integer.toHexString(multiplyB(inputInHex)));
+							sum = computeXOR(sum, Integer.toHexString(calculateForB(inputInHex)));
 
 							break;
 						case "0D":
 							inputInHex = Integer.parseInt(inStateHex[stateRow][stateCol], 16);
-							sum = computeXOR(sum, Integer.toHexString(multiplyD(inputInHex)));
+							sum = computeXOR(sum, Integer.toHexString(calculateForD(inputInHex)));
 
 							break;
 						case "09":
 							inputInHex = Integer.parseInt(inStateHex[stateRow][stateCol], 16);
-							sum = computeXOR(sum, Integer.toHexString(multiply9(inputInHex)));
-
+							sum = computeXOR(sum, Integer.toHexString(calculateFor9(inputInHex)));
 							break;
 						default:
 							break;
@@ -573,13 +570,7 @@ public class GlobalObjects {
 				}
 			}
 		}
-
 		return returnMatrix;
-	}
-
-	private static String outputOfCase2(String sum, String string) {
-		sum = computeXOR(sum, shiftBit(string));
-		return sum;
 	}
 
 	/**
@@ -625,7 +616,7 @@ public class GlobalObjects {
 				System.out.println("Cipher Text : " + lstrCipherText);
 				break;
 			case DECRYPT:
-				System.out.println("Original Text : " + lstrCipherText);
+				//System.out.println("Original Text : " + lstrCipherText);
 				break;
 			case NONE:
 			default:
@@ -638,6 +629,14 @@ public class GlobalObjects {
 		return lstrCipherText;
 	}
 
+	/**
+	 * Shifts the value by 1 and performs the desired operations for matrix
+	 * multiplication.
+	 *
+	 * @param pstrHexValue
+	 *            : Value for matrix multiplication.
+	 * @return : Value that has been bit shifted.
+	 */
 	public static String mixColShiftBit(String pstrHexValue) {
 		// Binary value in string format for the input integer
 		String binary = Integer.toBinaryString(Integer.parseInt(pstrHexValue, 16));
@@ -668,41 +667,74 @@ public class GlobalObjects {
 		}
 	}
 
-	protected static Integer multiply9(Integer InputHex) {
-		return ((multiply2(multiply2(multiply2(InputHex)))) ^ InputHex);
+	/**
+	 * Used for mix column value 09
+	 * 
+	 * @param InputHex
+	 *            : Input from State XOR
+	 * @return : Calculated value to reverse mix columns
+	 */
+	protected static Integer calculateFor9(Integer InputHex) {
+		return ((calculateFor2(calculateFor2(calculateFor2(InputHex)))) ^ InputHex);
+	}
+
+	/**
+	 * Used for mix column value 0B
+	 * 
+	 * @param InputHex
+	 *            : Input from State XOR
+	 * @return : Calculated value to reverse mix columns
+	 */
+	protected static Integer calculateForB(Integer InputHex) {
+		return (calculateFor2(calculateFor2(calculateFor2(InputHex)) ^ InputHex) ^ InputHex);
+	}
+
+	/**
+	 * Used for mix column value 0D
+	 * 
+	 * @param InputHex
+	 *            : Input from State XOR
+	 * @return : Calculated value to reverse mix columns
+	 */
+	protected static Integer calculateForD(Integer InputHex) {
+		return (calculateFor2(calculateFor2((calculateFor2(InputHex) ^ InputHex))) ^ InputHex);
+	}
+
+	/**
+	 * Used for mix column value 0E
+	 * 
+	 * @param InputHex
+	 *            : Input from State XOR
+	 * @return : Calculated value to reverse mix columns
+	 */
+	protected static Integer calculateForE(Integer InputHex) {
+		return calculateFor2(calculateFor2((calculateFor2(InputHex) ^ InputHex)) ^ InputHex);
 
 	}
 
-	protected static Integer multiplyB(Integer InputHex) {
-		return (multiply2(multiply2(multiply2(InputHex)) ^ InputHex) ^ InputHex);
-
-	}
-
-	protected static Integer multiplyD(Integer InputHex) {
-		return (multiply2(multiply2((multiply2(InputHex) ^ InputHex))) ^ InputHex);
-
-	}
-
-	protected static Integer multiplyE(Integer InputHex) {
-		return multiply2(multiply2((multiply2(InputHex) ^ InputHex)) ^ InputHex);
-
-	}
-
-	protected static Integer multiply2(Integer InputHex) {
-		StringBuilder ABinary = new StringBuilder();
-		String ABinString;
-		ABinString = Integer.toBinaryString(InputHex);
+	/**
+	 * Used for mix column value 02
+	 * 
+	 * @param InputHex
+	 *            : Input from State XOR
+	 * @return : Calculated value to reverse mix columns
+	 */
+	protected static Integer calculateFor2(Integer pintInputInHex) {
+		StringBuilder lstrBinary = new StringBuilder();
+		String lstrBinaryString;
+		lstrBinaryString = Integer.toBinaryString(pintInputInHex);
 
 		// NumZero stores the no. of zeroes to pad with
-		int NumZero = 8 - ABinString.length();
-		ABinary.append(ABinString);
+		int NumZero = 8 - lstrBinaryString.length();
+		lstrBinary.append(lstrBinaryString);
 
-		// Padding with zeroes now
+		// Padding with zeroes
 		for (int i = 0; i < NumZero; i++) {
-			ABinary.insert(0, '0');
+			lstrBinary.insert(0, '0');
 		}
+
 		Integer padded;
-		padded = Integer.parseInt((ABinary.substring(1) + "0"), 2);
+		padded = Integer.parseInt((lstrBinary.substring(1) + "0"), 2);
 		// shiftedNum stores the number after it has been left shifted by 1
 		String shiftedNum = Integer.toHexString(padded);
 		Integer Snum = Integer.parseInt(shiftedNum, 16);
@@ -713,6 +745,5 @@ public class GlobalObjects {
 		} else {
 			return Snum;
 		}
-
 	}
 }

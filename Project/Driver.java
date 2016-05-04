@@ -97,6 +97,8 @@ public class Driver {
 	private static void checkForPaddingAndEncrypt(String pstrInputText, String pstrInputKey) {
 		// Call the aesKeyGen class and pass the plain text
 		// and input key as string to the constructor
+		System.out.println("Original Text : "+ pstrInputText);
+
 		AesEncryption aesKeyGen = new AesEncryption();
 
 		pstrInputText = appendAnExtraDelimiter(pstrInputText);
@@ -136,6 +138,14 @@ public class Driver {
 
 	}
 
+	/**
+	 * Appends an extra delimiter to an existing delimiter in the Input Text
+	 * 
+	 * @param pstrInputText
+	 *            : Contains the Input Text to be checked and appended with the
+	 *            delimiter.
+	 * @return : Returns the Input text appended with an extra delimiter.
+	 */
 	private static String appendAnExtraDelimiter(String pstrInputText) {
 		// Check if the input text contains the delimiter i.e. '&' in hex
 		// i.e. : "26"
@@ -143,12 +153,19 @@ public class Driver {
 		boolean lblnIsEndWithDelimiter = false;
 		String lstrHexOfDelimiter = Integer.toHexString((int) (GlobalObjects.lstrDelimiter)).toString();
 
+		// Check if the last byte is '&'
+		// if yes, then set the flag to true.
+		// At the end of padding, if this flag is true
+		// Add the delimter to the end of the Input Text
 		if (pstrInputText.substring(pstrInputText.length() - 2, pstrInputText.length()).equals(lstrHexOfDelimiter)) {
 			lblnIsEndWithDelimiter = true;
 		}
 
+		// Split the Input string based on delimiter
+		// Add the text without the delimiter
+		// Add the delimiter twice.
+		// Add the remaining text.
 		String[] larInputText = pstrInputText.split(lstrHexOfDelimiter);
-
 		if (larInputText.length > 0) {
 			pstrInputText = larInputText[0];
 			for (int count = 1; count < larInputText.length; count++) {
