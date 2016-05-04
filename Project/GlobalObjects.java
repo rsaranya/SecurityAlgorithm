@@ -616,7 +616,7 @@ public class GlobalObjects {
 				System.out.println("Cipher Text : " + lstrCipherText);
 				break;
 			case DECRYPT:
-				//System.out.println("Original Text : " + lstrCipherText);
+				// System.out.println("Original Text : " + lstrCipherText);
 				break;
 			case NONE:
 			default:

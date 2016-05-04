@@ -97,8 +97,6 @@ public class Driver {
 	private static void checkForPaddingAndEncrypt(String pstrInputText, String pstrInputKey) {
 		// Call the aesKeyGen class and pass the plain text
 		// and input key as string to the constructor
-		System.out.println("Original Text : "+ pstrInputText);
-
 		AesEncryption aesKeyGen = new AesEncryption();
 
 		pstrInputText = appendAnExtraDelimiter(pstrInputText);

@@ -152,7 +152,7 @@ public class AesDecryption {
 					int index = paddedText.lastIndexOf(padHex);
 					str = paddedText.substring(0, index);
 				}
-				return str;
+				return str.equals("") ? paddedText : str;
 			} else {
 				return "";
 			}
